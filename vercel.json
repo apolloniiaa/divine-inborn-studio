@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "styles/**/*.scss", "use": "@now/node-sass" },
+    { "src": "styles/**/*.scss", "use": "@now/next-sass" },
     { "src": "public/**/*", "use": "@now/static" }
   ]
 }
