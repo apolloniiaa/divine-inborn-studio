@@ -46,3 +46,21 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .promo {
+    .promo__text {
+      h2 {
+        width: 80%;
+      }
+      .text__promo {
+        flex-direction: column;
+        gap: 3rem;
+        .left_text,
+        .right_text {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

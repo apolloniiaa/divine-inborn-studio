@@ -31,23 +31,21 @@
   font-weight: 300;
 }
 
-@media screen and (max-width: 768px) {
-  .sec {
+@media screen and (max-width: 1024px) {
+  .intro {
+    padding: 7rem 5rem;
+  }
+  .intro .centered {
+    width: 81%;
+    font-size: 2.5rem;
+    line-height: 36px;
+  }
+  .intro .sec {
     flex-direction: column;
   }
-  .sec .et,
-  .sec .etc {
-    width: auto;
-    padding: 3rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .sec {
-    flex-direction: column;
-  }
-  .sec .et,
-  .sec .etc {
-    width: auto;
-    padding: 3rem;
+  .intro .sec .et,
+  .intro .sec .etc {
+    width: 100%;
+    padding: 5rem 0rem 0 0rem;
   }
 }/*# sourceMappingURL=about.css.map */

@@ -43,4 +43,18 @@
   width: 50%;
   font-family: "Noto Serif Display", serif;
   font-size: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .promo .promo__text h2 {
+    width: 80%;
+  }
+  .promo .promo__text .text__promo {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .promo .promo__text .text__promo .left_text,
+  .promo .promo__text .text__promo .right_text {
+    width: 100%;
+  }
 }/*# sourceMappingURL=promo.css.map */

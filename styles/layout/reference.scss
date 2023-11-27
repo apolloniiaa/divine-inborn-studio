@@ -93,5 +93,28 @@ html {
 @media (max-width: 1024px) {
   .containers {
     grid-template-columns: 1fr;
+    padding: 0 0 5rem 0;
+  }
+  .image-container {
+    grid-column: span 1;
+    margin-bottom: 0;
+    img {
+      width: 600px;
+      height: 430px;
+    }
+  }
+  .text-container {
+    padding: 0;
+    margin: 5rem;
+    text-align: center;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .second {
+    margin: 5rem;
+  }
+  .desktop-only {
+    display: none;
   }
 }

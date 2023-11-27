@@ -163,18 +163,28 @@ header .nav-list .nav-item:nth-child(5) .nav-link {
 }
 
 @media screen and (max-width: 1024px) {
-  .title {
+  header nav {
+    padding: 0 4rem;
+  }
+  header nav .navbar-brand {
+    width: 4rem;
+    height: 4rem;
+  }
+  header .nav-link {
+    margin: 0 1.5rem;
+  }
+  header .title {
     font-size: 6rem;
   }
-  .text-overlay {
+  header .text-overlay {
     top: 47%;
     left: 20%;
     transform: translate(50%, -6%);
   }
-  .image {
+  header .image {
     width: 80%;
   }
-  .main-boxi {
+  header .main-boxi {
     flex-direction: column;
     justify-content: center;
   }

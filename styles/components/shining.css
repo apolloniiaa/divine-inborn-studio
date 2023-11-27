@@ -26,4 +26,10 @@
   100% {
     background-position-x: 500%;
   }
+}
+@media screen and (max-width: 1024px) {
+  .ambitios-text .luxury {
+    font-size: 3rem;
+    line-height: 44px;
+  }
 }/*# sourceMappingURL=shining.css.map */

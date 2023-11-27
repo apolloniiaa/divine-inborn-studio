@@ -169,23 +169,35 @@ header {
 }
 
 @media screen and (max-width: 1024px) {
-  .title {
-    font-size: 6rem;
-  }
+  header {
+    nav {
+      padding: 0 4rem;
+      .navbar-brand {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+    .nav-link {
+      margin: 0 1.5rem;
+    }
+    .title {
+      font-size: 6rem;
+    }
 
-  .text-overlay {
-    top: 47%;
-    left: 20%;
-    transform: translate(50%, -6%);
-  }
+    .text-overlay {
+      top: 47%;
+      left: 20%;
+      transform: translate(50%, -6%);
+    }
 
-  .image {
-    width: 80%;
-  }
+    .image {
+      width: 80%;
+    }
 
-  .main-boxi {
-    flex-direction: column;
-    justify-content: center;
+    .main-boxi {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }
 

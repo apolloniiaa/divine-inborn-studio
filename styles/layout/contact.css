@@ -112,4 +112,15 @@
   font-style: italic;
   font-size: 1.5rem;
   font-weight: 200;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact {
+    height: auto;
+    padding-top: 7rem;
+  }
+  .contact .work-together {
+    font-size: 3rem;
+    top: 60%;
+  }
 }/*# sourceMappingURL=contact.css.map */
