@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "styles/**/*.scss", "use": "@now/node-sass" },
+    { "src": "public/**/*", "use": "@now/static" }
+  ],
+  "devDependencies": {
+    "now": "^21.1.0",
+    "@now/node-sass": "^1.1.3"
+  }
+}

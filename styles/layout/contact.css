@@ -1,0 +1,115 @@
+@charset "UTF-8";
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background-color: #525252;
+  height: 70vh; /* Teljes képernyő magasságú háttér */
+}
+
+.center-image {
+  width: 300px; /* Ne hagyjon üres helyet a kép körül */
+  height: auto; /* Biztosítja, hogy a kép arányos maradjon */
+  display: block;
+  margin: 0 auto;
+}
+
+.work-together {
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #d7d7d7;
+  padding: 20px; /* Módosíthatod az üres teret a szöveg körül */
+}
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1623150502742-6a849aa94be4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-size: cover;
+  font-family: "Noto Serif Display", serif;
+  color: #282828;
+}
+.contact-page h1 {
+  margin-bottom: 3rem;
+  font-family: "Avenue", "Times New Roman", Times, serif;
+  font-size: 3rem;
+}
+.contact-page .contact2 {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  padding: 2rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  min-width: 260px;
+}
+.contact-page .contact2 .login-form {
+  padding: 2rem;
+  min-width: 260px;
+}
+.contact-page .contact2 .login-form .login-input-container {
+  margin-top: 2rem;
+}
+.contact-page .contact2 .login-form .login-input-container label {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.contact-page .contact2 .login-form .login-input-container .input-content {
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-size: 16px;
+  width: 100%;
+  color: #fff;
+}
+.contact-page .contact2 .login-form .login-input-container .input-content:focus {
+  outline: none !important;
+}
+.contact-page .contact2 .login-form .login-input-container input:not(:-moz-placeholder-shown) ~ label {
+  margin-top: -60px;
+  font-size: 12px;
+}
+.contact-page .contact2 .login-form .login-input-container input:focus ~ label,
+.contact-page .contact2 .login-form .login-input-container input:not(:placeholder-shown) ~ label {
+  margin-top: -60px;
+  font-size: 12px;
+}
+.contact-page .contact2 .login-form .login-btn {
+  background-color: #f3f3f3;
+  margin-top: 2rem;
+  padding: 0.3rem;
+  border-radius: 5rem;
+  transform: scale(1);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.contact-page .contact2 .login-form .login-btn:active {
+  transform: scale(0.95);
+}
+.contact-page .contact2 .login-form .login-btn p {
+  color: #5d5d5d;
+  text-align: center;
+  font-family: "Avenue", "Times New Roman", Times, serif;
+}
+
+.error-message {
+  color: #ff8989;
+  font-family: "Noto Serif Display", serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 200;
+}/*# sourceMappingURL=contact.css.map */

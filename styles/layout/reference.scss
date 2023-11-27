@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;1,200&family=Open+Sans:wght@600&display=swap');
+
+@font-face {
+  font-family: 'Avenue';
+  src: url('/fonts/Avenue.ttf') format('opentype'),
+    url('fonts/Avenue.ttf') format('truetype');
+}
+
+html {
+  font-size: 10px;
+}
+
+.containers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 10rem;
+}
+.text-container,
+.image-container {
+  margin-bottom: 20rem;
+}
+.text-container {
+  max-width: 100%;
+  padding: 10rem;
+  box-sizing: border-box;
+  position: relative; // Hozzáadva
+  margin-left: 7rem;
+
+  h2 {
+    line-height: 55px;
+    font-size: 5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: 'Noto Serif Display', serif;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-size: 1.7rem;
+    font-family: 'Noto Serif Display', serif;
+    font-weight: 300;
+  }
+}
+.second {
+  margin-left: -6rem;
+  // background-color: saddlebrown;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  img {
+    width: 490px;
+    height: 630px;
+    object-fit: cover;
+    box-shadow: 20px -19px 1px #ffffff;
+  }
+
+  &:nth-child(3) {
+    position: relative;
+
+    img {
+      content: ''; // Az abszolút pozícióhoz szükséges tartalom
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 18rem; // Állítsd be a megfelelő margint
+      z-index: -1;
+      box-shadow: -20px -19px 1px #ffffff; // Háttérrel való ütközések elkerülése
+    }
+  }
+
+  @media (max-width: 1024px) {
+    grid-column: span 2;
+
+    &:nth-child(3) {
+      &::before {
+        left: 0; // Teljes szélesség a mobil nézeten
+      }
+
+      img {
+        right: 0; // Mobil nézeten is a szélen legyen
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .containers {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,46 @@
+.promo {
+  background-image: url("https://i.pinimg.com/564x/13/8e/77/138e77b7365593b205361497ccc27c0a.jpg");
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 5rem;
+}
+.promo .promo__text {
+  padding: 15rem;
+  background-color: rgba(13, 13, 13, 0.853);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.promo .promo__text .subtitle {
+  font-family: "Noto Serif Display", serif;
+  padding: 2rem;
+  font-style: italic;
+}
+.promo .promo__text h2 {
+  width: 64%;
+  font-size: 6rem;
+  font-family: "Noto Serif Display", serif;
+  line-height: 62px;
+  text-align: center;
+}
+.promo .promo__text .text__promo {
+  display: flex;
+  margin-top: 5rem;
+  gap: 13rem;
+}
+.promo .promo__text .text__promo p {
+  font-family: "Noto Serif Display", serif;
+  font-size: 2rem;
+}
+.promo .promo__text .text__promo .left_text {
+  width: 50%;
+  font-family: "Noto Serif Display", serif;
+  font-size: 2rem;
+}
+.promo .promo__text .text__promo .right_text {
+  width: 50%;
+  font-family: "Noto Serif Display", serif;
+  font-size: 2rem;
+}/*# sourceMappingURL=promo.css.map */

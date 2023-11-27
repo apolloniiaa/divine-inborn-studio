@@ -1,0 +1,29 @@
+.ambitios-text {
+  padding: 7rem;
+  background-color: #525252;
+  .luxury {
+    text-align: center;
+    font-family: 'Avenue';
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #494949, #fff, #1d1f1d);
+    letter-spacing: 5px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: shine 10s linear infinite;
+    position: relative;
+    font-size: 5rem;
+    line-height: 55px;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}

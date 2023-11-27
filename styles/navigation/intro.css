@@ -1,0 +1,145 @@
+.class {
+  position: relative;
+  text-align: center;
+  padding: 13rem 0;
+  background-color: #e5e4e0;
+}
+.class .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 50px);
+}
+.class .main-content {
+  position: relative;
+}
+.class .main-content .main-image {
+  display: block;
+  height: 576px;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.class .main-content .small-image {
+  position: absolute;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+  height: 300px;
+}
+.class .main-content .left {
+  top: 50%;
+  left: calc(50% - 380px);
+  transform: translateY(-50%);
+}
+.class .main-content .right {
+  top: 50%;
+  right: calc(50% - 340px);
+  transform: translateY(-50%);
+}
+.class header {
+  width: 100%;
+  background: #e5e4e0;
+}
+.class header .container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.text-over-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+}
+.text-over-image h1,
+.text-over-image p {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-overlay {
+  position: absolute;
+  top: 66%;
+  left: 70%;
+  transform: translate(47%, -6%);
+  z-index: 3;
+  text-align: center;
+  color: #fefefe;
+  font-size: 2rem;
+  line-height: 25px;
+  text-shadow: 0px -2px 4px rgba(0, 0, 0, 0.5);
+}
+.text-overlay p {
+  width: 465px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.class {
+  position: relative;
+  background-color: #555555;
+}
+.class .title {
+  font-size: 9rem;
+  margin: 0;
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  color: white;
+  font-family: "Avenue", "Times New Roman", Times, serif;
+  text-shadow: 2px 2px 4px rgba(62, 60, 60, 0.1);
+}
+
+.main-image,
+.text-overlay,
+.small-image,
+.title {
+  opacity: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 6rem;
+  }
+  .text-overlay {
+    top: 47%;
+    left: 20%;
+    transform: translate(50%, -6%);
+  }
+  .image {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-image {
+    height: 300px;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .left {
+    left: calc(50% - 185px);
+  }
+  .small-image {
+    height: 181px;
+  }
+  .image {
+    height: 450px;
+  }
+}/*# sourceMappingURL=intro.css.map */

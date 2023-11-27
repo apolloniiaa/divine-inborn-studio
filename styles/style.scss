@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,200;0,400;1,100;1,200;1,300;1,400;1,600&display=swap');
+
+@import 'navigation/navigation.css';
+@import 'navigation/intro.css';
+@import 'layout/about.css';
+@import 'components/slider.css';
+@import 'components/shining.css';
+@import 'layout/reference.css';
+@import 'layout/contact.css';
+@import 'layout/testimonals.css';
+@import 'layout/footer.css';
+@import 'layout/promo.css';
+@import 'components/services.css';
+@import 'components/templates.css';
+
+@font-face {
+  font-family: 'Avenue';
+  src: url('/fonts/Avenue.ttf') format('opentype'),
+    url('fonts/Avenue.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Noto Serif Display', serif;
+  font-weight: 200;
+  scroll-behavior: smooth;
+  background: #e5e4e0;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Avenue', 'Times New Roman', Times, serif;
+  line-height: 25px;
+}
