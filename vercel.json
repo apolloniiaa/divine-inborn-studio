@@ -1,7 +1,14 @@
 {
   "version": 2,
   "builds": [
-    { "src": "styles/**/*.scss", "use": "@now/next-sass" },
-    { "src": "public/**/*", "use": "@now/static" }
-  ]
+    { "src": "public/**/*", "use": "@now/static" },
+    {
+      "use": "@now/node",
+      "src": "build:css",
+      "config": { "zeroConfig": true }
+    }
+  ],
+  "dependencies": {
+    "sass": "^1.47.0"
+  }
 }
