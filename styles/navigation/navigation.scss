@@ -244,7 +244,8 @@ header {
   }
 
   .nav-list.active {
-    bottom: -78px;
+    bottom: -77px;
+    z-index: 99999;
   }
 
   nav {

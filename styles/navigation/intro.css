@@ -20,16 +20,18 @@
   z-index: 1;
   -o-object-fit: cover;
      object-fit: cover;
+  filter: grayscale(1);
 }
 .class .main-content .small-image {
   position: absolute;
   z-index: 2;
   transition: opacity 0.3s ease;
-  height: 300px;
+  height: 400px;
+  filter: grayscale(1);
 }
 .class .main-content .left {
-  top: 50%;
-  left: calc(50% - 380px);
+  top: 107;
+  left: calc(50% - 480px);
   transform: translateY(-50%);
 }
 .class .main-content .right {
@@ -92,7 +94,7 @@
   top: 22%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 9999;
+  z-index: 5;
   color: white;
   font-family: "Avenue", "Times New Roman", Times, serif;
   text-shadow: 2px 2px 4px rgba(62, 60, 60, 0.1);
@@ -114,12 +116,19 @@
   }
 }
 @media screen and (max-width: 1024px) {
+  .class .title {
+    font-size: 8rem;
+    line-height: 70px;
+  }
+  .class .main-content .small-image {
+    top: 58%;
+  }
   .title {
     font-size: 6rem;
   }
   .text-overlay {
-    top: 47%;
-    left: 20%;
+    top: 85%;
+    left: 31%;
     transform: translate(50%, -6%);
   }
   .image {
@@ -127,17 +136,20 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .main-image {
-    height: 300px;
-  }
-  .title {
+  .class .title {
     font-size: 2.5rem;
+    line-height: 30px;
   }
-  .left {
+  .class .main-content .main-image {
+    height: 200px;
+  }
+  .class .main-content .left {
     left: calc(50% - 185px);
   }
-  .small-image {
+  .class .main-content .small-image {
     height: 181px;
+    top: 98%;
+    height: 125px;
   }
   .image {
     height: 450px;

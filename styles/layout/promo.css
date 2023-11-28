@@ -57,4 +57,22 @@
   .promo .promo__text .text__promo .right_text {
     width: 100%;
   }
+}
+@media screen and (max-width: 780px) {
+  .promo .promo__text {
+    padding: 0;
+  }
+  .promo .promo__text h2 {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 20px;
+  }
+  .promo .promo__text .text__promo {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .promo .promo__text .text__promo .left_text,
+  .promo .promo__text .text__promo .right_text {
+    width: 100%;
+  }
 }/*# sourceMappingURL=promo.css.map */

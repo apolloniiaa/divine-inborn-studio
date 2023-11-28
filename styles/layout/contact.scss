@@ -36,11 +36,12 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-image: url('https://images.unsplash.com/photo-1623150502742-6a849aa94be4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  // background-image: url('https://images.unsplash.com/photo-1623150502742-6a849aa94be4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-position: center;
   background-size: cover;
   font-family: 'Noto Serif Display', serif;
-  color: #282828;
+  color: #ffffff;
+  background-image: url('/assets/divine.jpg');
 
   h1 {
     margin-bottom: 3rem;
@@ -52,10 +53,10 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    padding: 2rem;
+    padding: 5rem;
     border-radius: 0.4rem;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-    min-width: 260px;
+    min-width: 390px;
 
     .login-form {
       padding: 2rem;
@@ -130,5 +131,8 @@
       font-size: 3rem;
       top: 60%;
     }
+  }
+  .contact-page {
+    height: 60vh;
   }
 }

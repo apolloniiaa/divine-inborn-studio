@@ -225,7 +225,8 @@ header .nav-list .nav-item:nth-child(5) .nav-link {
     display: block;
   }
   .nav-list.active {
-    bottom: -78px;
+    bottom: -77px;
+    z-index: 99999;
   }
   nav {
     width: 90%;

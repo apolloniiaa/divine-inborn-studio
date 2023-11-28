@@ -159,4 +159,13 @@
 
 footer {
   background-color: rgb(188, 188, 188);
+}
+
+@media screen and (max-width: 1024px) {
+  .main .title p {
+    padding: 2rem;
+  }
+  .main .explan {
+    padding: 5rem;
+  }
 }/*# sourceMappingURL=templates.css.map */

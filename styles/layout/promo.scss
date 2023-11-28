@@ -64,3 +64,23 @@
     }
   }
 }
+@media screen and (max-width: 780px) {
+  .promo {
+    .promo__text {
+      padding: 0;
+      h2 {
+        width: 100%;
+        font-size: 2rem;
+        line-height: 20px;
+      }
+      .text__promo {
+        flex-direction: column;
+        gap: 3rem;
+        .left_text,
+        .right_text {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

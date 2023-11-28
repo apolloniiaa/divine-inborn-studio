@@ -48,4 +48,24 @@
     width: 100%;
     padding: 5rem 0rem 0 0rem;
   }
+}
+@media screen and (max-width: 1024px) {
+  .intro {
+    padding: 3rem;
+    text-align: center;
+  }
+  .intro .centered {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 22px;
+    font-weight: 200;
+  }
+  .intro .sec {
+    flex-direction: column;
+  }
+  .intro .sec .et,
+  .intro .sec .etc {
+    width: 100%;
+    padding: 0;
+  }
 }/*# sourceMappingURL=about.css.map */

@@ -145,7 +145,7 @@
     margin-top: 35px;
     text-align: center;
   }
-  // A.exdd this to your existing SCSS
+
   .explan {
     color: white;
     padding: 12rem;
@@ -168,4 +168,17 @@
 }
 footer {
   background-color: rgb(188 188 188);
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    .title {
+      p {
+        padding: 2rem;
+      }
+    }
+    .explan {
+      padding: 5rem;
+    }
+  }
 }

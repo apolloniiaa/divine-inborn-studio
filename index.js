@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   gsap.to('.title', {
-    y: 50, // Végleges pozíció
+    y: 3, // Végleges pozíció
     duration: 1,
     ease: 'power2.out',
     opacity: 0,
