@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .contact {
   display: flex;
   flex-direction: column;
@@ -7,12 +6,12 @@
   text-align: center;
   position: relative;
   background-color: #525252;
-  height: 70vh; /* Teljes képernyő magasságú háttér */
+  height: 70vh;
 }
 
 .center-image {
-  width: 300px; /* Ne hagyjon üres helyet a kép körül */
-  height: auto; /* Biztosítja, hogy a kép arányos maradjon */
+  width: 300px;
+  height: auto;
   display: block;
   margin: 0 auto;
 }
@@ -27,7 +26,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #d7d7d7;
-  padding: 20px; /* Módosíthatod az üres teret a szöveg körül */
+  padding: 20px;
 }
 
 .contact-page {
@@ -49,12 +48,12 @@
 }
 .contact-page .contact2 {
   border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 5rem;
   border-radius: 0.4rem;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-  min-width: 390px;
+  min-width: 290px;
 }
 .contact-page .contact2 .login-form {
   padding: 2rem;
@@ -89,7 +88,7 @@
   font-size: 12px;
 }
 .contact-page .contact2 .login-form .login-btn {
-  background-color: #f3f3f3;
+  background: #6a5451;
   margin-top: 2rem;
   padding: 0.3rem;
   border-radius: 5rem;
@@ -101,17 +100,17 @@
   transform: scale(0.95);
 }
 .contact-page .contact2 .login-form .login-btn p {
-  color: #5d5d5d;
+  color: whitesmoke;
   text-align: center;
   font-family: "Avenue", "Times New Roman", Times, serif;
 }
 
 .error-message {
-  color: #ff8989;
+  color: #ffcac3;
   font-family: "Noto Serif Display", serif;
   font-style: italic;
   font-size: 1.5rem;
-  font-weight: 200;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1024px) {
@@ -125,6 +124,20 @@
     top: 60%;
   }
   .contact-page {
+    height: auto;
+    margin-top: 20rem;
+  }
+  .contact-page .contact2 {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .contact-page {
+    height: auto;
+    margin-top: 9rem;
     height: 60vh;
+  }
+  .contact-page .contact2 {
+    padding: 0;
   }
 }/*# sourceMappingURL=contact.css.map */
