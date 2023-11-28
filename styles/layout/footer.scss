@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 
 * {
-  font-family: Open Sans;
+  font-family: 'Noto Serif Display', serif;
 }
 
-section {
+.section {
   width: 100%;
   display: inline-block;
   background: #333;
@@ -35,8 +35,6 @@ footer {
   vertical-align: top;
 }
 
-/* Footer left */
-
 .footer-distributed .footer-left {
   width: 42%;
 }
@@ -44,21 +42,28 @@ footer {
 .footer-left {
   padding-left: 6rem;
 }
-/* The company logo */
 
 .footer-distributed h3 {
-  color: #565656;
+  color: whitesmoke;
   font-family: 'Noto Serif Display', serif;
   font-size: 3rem;
   font-weight: 600;
   font-style: italic;
   margin: 0;
 }
-
+.left-foo {
+  color: white;
+  a {
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+    font-family: 'Noto Serif Display', serif;
+  }
+}
 /* Footer links */
 
 .footer-distributed .footer-links {
-  color: #565656;
+  color: whitesmoke;
   font-family: 'Noto Serif Display', serif;
   margin: 20px 0 12px;
   padding: 0;
@@ -69,11 +74,11 @@ footer {
   line-height: 1.8;
   font-weight: 400;
   text-decoration: none;
-  color: #565656;
+  color: whitesmoke;
 }
 
 .footer-distributed .footer-company-name {
-  color: #565656;
+  color: whitesmoke;
   font-family: 'Noto Serif Display', serif;
   margin: 0;
 }
@@ -84,14 +89,9 @@ footer {
   width: 35%;
 }
 
-.footer-distributed .footer-center i.fa-envelope {
-  font-size: 17px;
-  line-height: 38px;
-}
-
 .footer-distributed .footer-center p {
   display: inline-block;
-  color: #565656;
+  color: whitesmoke;
   font-family: 'Noto Serif Display', serif;
   font-weight: 400;
   vertical-align: middle;
@@ -110,7 +110,7 @@ footer {
   font-weight: 300;
   font-size: 20px;
   left: 0;
-  color: #fff;
+  color: #dcdcdc;
   display: inline-block;
   padding-right: 5px;
 }
@@ -119,15 +119,13 @@ footer {
   content: none;
 }
 
-/* Footer Right */
-
 .footer-distributed .footer-right {
   width: 20%;
 }
 
 .footer-distributed .footer-company-about {
   line-height: 20px;
-  color: #92999f;
+  color: whitesmoke;
   font-size: 13px;
   font-weight: normal;
   margin: 0;
@@ -141,50 +139,66 @@ footer {
   margin-bottom: 20px;
 }
 
-.footer-distributed .footer-icons {
-  margin-top: 25px;
+.footer-icons {
+  .texts {
+    color: white !important;
+  }
 }
 
-.footer-distributed .footer-icons a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  border-radius: 2px;
-
-  font-size: 1rem;
-  font-family: 'Noto Serif Display', serif;
-  font-weight: 400;
-  text-align: center;
-  line-height: 35px;
-  color: gray;
-  font-weight: 200;
-  font-style: italic;
-  margin-right: 3px;
-  margin-bottom: 5px;
-}
-
-/* If you don't want the footer to be responsive, remove these media queries */
-
-@media (max-width: 880px) {
+@media (max-width: 1024px) {
+  footer {
+    .logo {
+      height: 100px;
+    }
+    .footer-left {
+      padding-left: 0;
+    }
+  }
   .footer-distributed {
-    font: bold 14px sans-serif;
-  }
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right {
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
+    min-height: 70vh;
+    padding: 55px 50px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    .footer-left,
+    .footer-center,
+    .footer-right {
+      width: 100%;
+    }
+    .footer-company-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+    }
+    .footer-right {
+      p {
+        display: flex;
+        justify-content: center;
+        width: 41%;
+        margin: 0 auto;
+      }
+    }
   }
 
-  .footer-distributed .footer-center i {
-    margin-left: 0;
+  @media (max-width: 768px) {
+    footer {
+      logo {
+        height: 125px;
+      }
+    }
+    .footer-distributed {
+      padding: 5rem 0;
+      h3 {
+        font-size: 2rem;
+      }
+      .footer-right {
+        p {
+          width: 90%;
+          margin: 0 auto;
+          line-height: 20px;
+        }
+      }
+    }
   }
-}
-.logo {
-  height: 10vh;
-  width: 10vh;
 }
