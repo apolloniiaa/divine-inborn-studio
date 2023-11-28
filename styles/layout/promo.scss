@@ -67,18 +67,30 @@
 @media screen and (max-width: 780px) {
   .promo {
     .promo__text {
-      padding: 0;
+      padding: 3rem;
       h2 {
         width: 100%;
         font-size: 2rem;
         line-height: 20px;
+        .subtitle {
+          font-size: 1.5rem;
+          line-height: 23px;
+        }
       }
       .text__promo {
         flex-direction: column;
         gap: 3rem;
+        p {
+          text-align: center;
+          font-size: 1.5rem;
+          line-height: 22px;
+        }
         .left_text,
         .right_text {
           width: 100%;
+          text-align: center;
+          font-size: 1.5rem;
+          line-height: 22px;
         }
       }
     }

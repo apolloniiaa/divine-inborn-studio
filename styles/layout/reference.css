@@ -130,11 +130,17 @@ html {
     text-align: center;
   }
   .text-container h2 {
-    line-height: 42px;
-    font-size: 3rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 26px;
   }
   .text-container p {
-    margin-bottom: 0;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .text-container .last {
+    margin-bottom: 2rem;
+    font-weight: 600;
   }
   .second {
     margin: 2rem;

@@ -190,17 +190,9 @@ header .nav-list .nav-item:nth-child(5) .nav-link {
   }
 }
 @media screen and (max-width: 768px) {
-  .main-image {
-    height: 300px;
-  }
-  .title {
-    font-size: 2.5rem;
-  }
-  .left {
-    left: calc(50% - 185px);
-  }
-  .small-image {
-    height: 181px;
+  header nav {
+    padding: 0 3rem;
+    height: 6rem;
   }
   .et,
   .etc {
@@ -225,8 +217,11 @@ header .nav-list .nav-item:nth-child(5) .nav-link {
     display: block;
   }
   .nav-list.active {
-    bottom: -77px;
+    bottom: -59px;
     z-index: 99999;
+  }
+  .nav-list.active .nav-item {
+    line-height: 4rem;
   }
   nav {
     width: 90%;
