@@ -74,6 +74,7 @@
   .promo .promo__text .text__promo {
     flex-direction: column;
     gap: 3rem;
+    margin-top: 0;
   }
   .promo .promo__text .text__promo p {
     text-align: center;

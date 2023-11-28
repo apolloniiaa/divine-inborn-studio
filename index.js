@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     y: 0,
     duration: 2,
     ease: 'power2.out',
-    delay: 1.5,
+    delay: 1.8,
   });
   gsap.set('.email', {
     opacity: 0,
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
     y: 0,
     duration: 2,
     ease: 'power2.out',
-    delay: 1.6,
+    delay: 2,
   });
 
   gsap.set('.message', {
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
     y: 0,
     duration: 2,
     ease: 'power2.out',
-    delay: 1.7,
+    delay: 2.1,
   });
 
   gsap.set('.login-btn', {
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
     y: 0,
     duration: 2,
     ease: 'power2.out',
-    delay: 1.8,
+    delay: 2.5,
   });
 });
 
