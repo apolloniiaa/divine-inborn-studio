@@ -229,11 +229,11 @@ header .nav-list .nav-item:nth-child(5) .nav-link {
     display: none;
   }
   .nav-list.active {
-    bottom: -59px;
+    bottom: -60px;
     z-index: 99999;
   }
   .nav-list.active .nav-item {
-    line-height: 4rem;
+    line-height: 5rem;
   }
   nav {
     width: 90%;
