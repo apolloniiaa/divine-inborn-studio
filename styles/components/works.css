@@ -1,6 +1,16 @@
+@charset "UTF-8";
+.workee-page .page {
+  width: 100%;
+  left: 74%;
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .workee-page .wrapper {
   position: absolute;
-  top: 10%;
+  top: 30%;
   left: 40%;
   width: 300px;
   height: 500px;
@@ -161,7 +171,7 @@
 }
 .workee-page h4 {
   color: #111;
-  position: absolute;
+  /* position: absolute; */
   top: 45%;
   left: -45%;
   letter-spacing: 2px;
@@ -171,6 +181,10 @@
   font-weight: 600;
   font-family: "Noto Serif Display", serif;
   line-height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .workee-page h1 {
   color: #111;
@@ -182,18 +196,10 @@
 .workee-page p {
   font-size: 14px;
   color: #fff;
-  padding: 0px 20px 20px 20px;
+  padding: 0px 9px 9px 9px;
   line-height: 150%;
   text-align: center;
   letter-spacing: 1px;
-}
-.workee-page .page {
-  position: absolute;
-  top: 109%;
-  width: 100%;
-  left: 0%;
-  height: 20%;
-  z-index: 30;
 }
 .workee-page li {
   position: absolute;
@@ -209,11 +215,9 @@
   display: flex;
   justify-content: center;
   text-decoration: none;
-  top: 17rem;
-  left: 12rem;
-  position: absolute;
   padding: 1rem 2rem;
   color: white;
+  margin-top: 3rem;
 }
 .workee-page li:nth-child(1) {
   left: -57%;
@@ -251,5 +255,65 @@
   }
   100% {
     top: 0%;
+  }
+}
+@media (max-width: 1024px) {
+  .workee-page #c0,
+  .workee-page #c1,
+  .workee-page #c2 {
+    position: static;
+  }
+  .workee-page .home-page a {
+    margin: 3rem 0 3rem 0;
+  }
+  .workee-page .wrapper {
+    position: static;
+    width: 440px;
+    height: 181rem;
+    perspective: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 4rem 0 4rem;
+  }
+  .workee-page .container {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 20px;
+    transform: none !important; /* Az előző transform ne alkalmazódjon */
+    box-shadow: 0px 20px 50px #555;
+    animation: none !important; /* Az előző animáció ne alkalmazódjon */
+  }
+  .workee-page .container:hover {
+    cursor: pointer;
+    transform: none !important; /* Az előző hover transform ne alkalmazódjon */
+    transition: 0.5s all ease;
+    z-index: 400;
+  }
+  .workee-page h4 {
+    letter-spacing: 2px;
+    width: 45rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Noto Serif Display", serif;
+    line-height: 25px;
+  }
+}
+@media (max-width: 780px) {
+  .workee-page .page {
+    margin-top: 2rem;
+  }
+  .workee-page .page h4 {
+    letter-spacing: 2px;
+    width: 22rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Noto Serif Display", serif;
+    line-height: 19px;
   }
 }/*# sourceMappingURL=works.css.map */
