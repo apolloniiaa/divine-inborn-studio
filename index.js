@@ -133,15 +133,31 @@ document.addEventListener('DOMContentLoaded', function () {
     ease: 'power2.out',
     delay: 2.5,
   });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-  const hamburger = document.querySelector('.hamburger');
-  const navList = document.querySelector('.nav-list');
+  gsap.set('.name', {
+    opacity: 0,
+    y: 20,
+  });
 
-  hamburger.addEventListener('click', function () {
-    hamburger.classList.toggle('active');
-    navList.classList.toggle('active');
+  gsap.to('.name', {
+    opacity: 1,
+    y: 0,
+    duration: 2,
+    ease: 'power2.out',
+    delay: 1.8,
+  });
+  gsap.to('label.navigation_button', {
+    opacity: 1,
+    y: 20, // Kezdeti pozíció (fentről érkezik)
+    duration: 1,
+    ease: 'power2.out',
+    delay: 2, /// Késleltetés
+  });
+
+  gsap.to('label.navigation_button', {
+    y: 0, // Végleges pozíció (nem mozdul el, marad a helyén)
+    duration: 1,
+    ease: 'power2.out',
   });
 });
 
@@ -309,3 +325,4 @@ function submitForm() {
       alert('Form submission failed. Please try again.');
     });
 }
+//hambi

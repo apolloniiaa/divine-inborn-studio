@@ -103,7 +103,8 @@
 .main-image,
 .text-overlay,
 .small-image,
-.title {
+.title,
+.navigation_button {
   opacity: 0;
 }
 
@@ -136,9 +137,6 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .class {
-    top: 36px;
-  }
   .class .title {
     font-size: 5rem;
     line-height: 47px;

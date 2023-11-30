@@ -1,5 +1,5 @@
 .intro {
-  padding: 13rem 11rem;
+  padding: 14rem 11rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -9,6 +9,7 @@
   flex-direction: column;
   background: #e5e4e0;
   color: #121212;
+  font-family: "Noto Serif Display", serif;
 }
 .intro .centered {
   width: 91%;
@@ -16,6 +17,7 @@
   line-height: 46px;
   font-family: "Noto Serif Display", serif;
   font-weight: 600;
+  margin: 5rem 0 2rem 0;
 }
 .intro .sec {
   display: flex;
@@ -25,7 +27,7 @@
 .intro .sec .etc {
   width: 50%;
   padding: 6rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: "Noto Serif Display", serif;
   font-weight: 300;
   margin-bottom: 2rem;

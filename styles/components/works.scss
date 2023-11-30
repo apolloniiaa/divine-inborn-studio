@@ -152,7 +152,7 @@
   }
 
   .st2 {
-    fill: #cd775c;
+    background: linear-gradient(to top, #c4c4c4 0%, #795548 120%);
   }
 
   .st3 {
@@ -166,16 +166,16 @@
     left: 0%;
     height: 55%;
     width: 100%;
-    background: linear-gradient(to bottom, #eba65b 0%, #d99267 40%);
+    background: linear-gradient(to top, #c4c4c4 0%, #795548 120%);
     z-index: 30;
   }
 
   #s1 {
-    background: linear-gradient(to top, #5b62a2 0%, #7b88d1 100%);
+    background: linear-gradient(to top, #c4c4c4 0%, #795548 120%);
   }
 
   #s2 {
-    background: linear-gradient(to top, #5b62a2 0%, #7b88d1 120%);
+    background: linear-gradient(to top, #c4c4c4 0%, #795548 120%);
   }
 
   .info {
@@ -347,20 +347,19 @@
 @media (max-width: 780px) {
   .workee-page {
     .page {
-      margin-top: 2rem;
+      margin-top: 5rem;
       h4 {
         letter-spacing: 2px;
-        width: 22rem;
+        width: 28rem;
         text-align: center;
         font-size: 1rem;
         font-weight: 600;
         font-family: 'Noto Serif Display', serif;
-        line-height: 19px;
+        line-height: 21px;
       }
     }
     .wrapper {
-      //   left: 11%;
-      //   width: 500px;
+      width: 323px;
     }
   }
 }

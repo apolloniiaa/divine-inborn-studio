@@ -10,6 +10,43 @@ html {
   font-size: 10px;
 }
 
+.number01 {
+  &::before {
+    content: 'Divine Inborn Studio';
+    display: block;
+    position: fixed;
+    font-size: 25rem;
+    line-height: 1;
+    color: rgb(98 97 97 / 3%);
+    left: 46px;
+    top: 339px;
+    font-family: 'Avenue', sans-serif;
+    text-align: center;
+  }
+}
+
+// .number02 {
+//   &::before {
+//     content: '02';
+
+//     right: 42rem;
+//     top: -3rem;
+//   }
+// }
+
+// .number02 {
+//   &::before {
+//     content: '02';
+//     display: block;
+//     position: absolute;
+//     font-size: 24rem;
+//     line-height: 1;
+//     color: #62616117;
+//     right: 42rem;
+//     top: -3rem;
+//     font-family: 'Avenue', sans-serif;
+//   }
+// }
 .containers {
   display: grid;
   grid-template-columns: 1fr 1fr;

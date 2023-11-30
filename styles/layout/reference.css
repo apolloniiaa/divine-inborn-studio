@@ -7,6 +7,19 @@ html {
   font-size: 10px;
 }
 
+.number01::before {
+  content: "Divine Inborn Studio";
+  display: block;
+  position: fixed;
+  font-size: 25rem;
+  line-height: 1;
+  color: rgba(98, 97, 97, 0.03);
+  left: 46px;
+  top: 339px;
+  font-family: "Avenue", sans-serif;
+  text-align: center;
+}
+
 .containers {
   display: grid;
   grid-template-columns: 1fr 1fr;
