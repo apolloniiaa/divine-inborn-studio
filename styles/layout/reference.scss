@@ -19,34 +19,14 @@ html {
     line-height: 1;
     color: rgb(98 97 97 / 5%);
     left: 46px;
-    top: 339px;
+    top: 100px;
     font-family: 'Avenue', sans-serif;
     text-align: center;
+    z-index: 10;
+    pointer-events: none;
   }
 }
 
-// .number02 {
-//   &::before {
-//     content: '02';
-
-//     right: 42rem;
-//     top: -3rem;
-//   }
-// }
-
-// .number02 {
-//   &::before {
-//     content: '02';
-//     display: block;
-//     position: absolute;
-//     font-size: 24rem;
-//     line-height: 1;
-//     color: #62616117;
-//     right: 42rem;
-//     top: -3rem;
-//     font-family: 'Avenue', sans-serif;
-//   }
-// }
 .containers {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -97,6 +77,7 @@ html {
     margin-top: 3rem;
     font-weight: 400;
     text-decoration: none;
+    z-index: 100;
   }
 
   .slide_down:hover {

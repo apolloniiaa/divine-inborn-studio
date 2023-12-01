@@ -1,28 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
   gsap.to('.main-image', {
     opacity: 1,
-    y: 20, // Kezdeti pozíció (fentről érkezik)
+    y: 20,
     duration: 1,
     ease: 'power2.out',
-    delay: 1, // Késleltetés 1 másodperc
+    delay: 1,
   });
 
   gsap.to('.main-image', {
-    y: 0, // Végleges pozíció (nem mozdul el, marad a helyén)
+    y: 0,
     duration: 1,
     ease: 'power2.out',
   });
 
   gsap.to('.title', {
     opacity: 1,
-    y: 0, // Kezdeti pozíció
+    y: 0,
     duration: 1,
     ease: 'power2.out',
-    delay: 1.5, // Két másodperces késleltetés
+    delay: 1.5,
   });
 
   gsap.to('.title', {
-    y: 5, // Végleges pozíció
+    y: 5,
     duration: 1,
     ease: 'power2.out',
     opacity: 0,
@@ -30,28 +30,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
   gsap.to('.text-overlay', {
     opacity: 1,
-    x: 0, // Kezdeti pozíció
+    x: 0,
     duration: 1,
     ease: 'power2.out',
-    delay: 1, // Két másodperces késleltetés
+    delay: 1,
   });
 
   gsap.to('.text-overlay', {
-    x: 50, // Végleges pozíció
+    x: 50,
     duration: 1,
     ease: 'power2.out',
   });
 
   gsap.to('.small-image', {
     opacity: 1,
-    x: 30, // Kezdeti pozíció
+    x: 30,
     duration: 1,
     ease: 'power2.out',
-    delay: 1.2, // 1.2 másodperces késleltetés
+    delay: 1.2,
   });
 
   gsap.to('.small-image', {
-    x: 0, // Végleges pozíció
+    x: 0,
     duration: 1,
     ease: 'power2.out',
   });
@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
     y: 20,
   });
 
-  // Animáció
   gsap.to('.login-form', {
     opacity: 1,
     y: 0,
@@ -75,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
     y: 20,
   });
 
-  // Animáció
   gsap.to('.contact2', {
     opacity: 1,
     y: 0,
@@ -148,29 +146,28 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   gsap.to('label.navigation_button', {
     opacity: 1,
-    y: 20, // Kezdeti pozíció (fentről érkezik)
+    y: 20,
     duration: 1,
     ease: 'power2.out',
-    delay: 2, /// Késleltetés
+    delay: 2,
   });
 
   gsap.to('label.navigation_button', {
-    y: 0, // Végleges pozíció (nem mozdul el, marad a helyén)
+    y: 0,
     duration: 1,
     ease: 'power2.out',
   });
 });
 
-//FORM
+// FORM VALIDATION AND SUBMISSION
+
 function submitForm() {
   var name = document.getElementById('name').value;
   var email = document.getElementById('email').value;
 
-  // Clear previous error messages
   document.getElementById('nameError').innerHTML = '';
   document.getElementById('emailError').innerHTML = '';
 
-  // Simple validation
   if (name.trim() === '') {
     document.getElementById('nameError').innerHTML = 'Name is required';
     return;
@@ -181,7 +178,6 @@ function submitForm() {
     return;
   }
 
-  // Validate email format
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     document.getElementById('emailError').innerHTML = 'Invalid Email format';
@@ -194,7 +190,6 @@ function submitForm() {
     message: document.getElementById('message').value,
   };
 
-  // Send data to getform.io
   fetch('https://getform.io/f/97facff9-3ed8-46bc-abc8-031a10c61426', {
     method: 'POST',
     headers: {
