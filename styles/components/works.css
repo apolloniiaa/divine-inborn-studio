@@ -40,11 +40,9 @@
 .workee-page #c1 {
   box-shadow: 2px 20px 19px 6px rgba(0, 0, 0, 0.6705882353);
   left: 100%;
-  z-index: 0;
 }
 .workee-page #c2 {
   left: -100%;
-  z-index: 0;
   box-shadow: 2px 20px 19px 6px rgba(0, 0, 0, 0.6705882353);
 }
 .workee-page .container:hover {
@@ -74,38 +72,6 @@
   height: 50%;
   left: 0%;
   width: 100%;
-}
-.workee-page .sun1 {
-  width: 50px;
-  height: 50px;
-  box-shadow: 0px 0px 10px #fff;
-}
-.workee-page .st4 {
-  opacity: 1;
-}
-.workee-page #sh2 {
-  opacity: 0.5;
-}
-.workee-page #sh3 {
-  opacity: 0.3;
-}
-.workee-page #sh1 {
-  opacity: 0.4;
-}
-.workee-page .st0 {
-  stroke: none;
-  stroke-miterlimit: 10;
-}
-.workee-page .st1 {
-  fill: none;
-  stroke-width: 2;
-  stroke-miterlimit: 10;
-}
-.workee-page .st2 {
-  background: linear-gradient(to top, #c4c4c4 0%, #795548 120%);
-}
-.workee-page .st3 {
-  opacity: 0.3;
 }
 .workee-page .story {
   position: absolute;
@@ -188,25 +154,26 @@
   color: #111;
 }
 .workee-page .home-page {
+  z-index: 9999;
   position: relative;
 }
 .workee-page .home-page .button_slide {
-  color: #101010;
+  color: #eaeaea;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 0px;
   padding: 8px 28px;
   display: inline-block;
   font-family: "Noto Serif Display", serif;
-  font-weight: 300;
-  letter-spacing: 5px;
+  font-weight: 400;
   font-size: 1.5rem;
+  text-decoration: none;
   text-transform: uppercase;
+  background-color: #111;
+  letter-spacing: 5px;
   cursor: pointer;
   box-shadow: inset 0 0 0 0 #2d2d2d;
   transition: ease-out 0.4s;
   margin-top: 3rem;
-  font-weight: 400;
-  text-decoration: none;
 }
 .workee-page li:nth-child(1) {
   left: -57%;
