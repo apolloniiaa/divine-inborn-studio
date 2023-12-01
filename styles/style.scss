@@ -38,26 +38,3 @@ html {
   font-size: 10px;
   scroll-behavior: smooth;
 }
-
-body {
-  font-family: 'Avenue', 'Times New Roman', Times, serif;
-  line-height: 25px;
-}
-
-@include respond(phone) {
-  font-size: 30%;
-}
-@include respond(tab-land) {
-  font-size: 56.25%;
-}
-
-@include respond(tab-port) {
-  font-size: 50%;
-}
-
-@include respond(big-desktop) {
-  font-size: 75%;
-}
-@include respond(tab-port) {
-  padding: 0;
-}
