@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.workee-page {
+  background: #a6a6a6;
+}
 .workee-page .page {
   width: 100%;
   left: 74%;
@@ -32,21 +35,18 @@
   top: 0%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #eba65b 30%, #d99267 100%);
   z-index: 300;
-  box-shadow: 0px 20px 100px #555;
+  box-shadow: 2px 20px 19px 6px rgba(0, 0, 0, 0.6705882353);
 }
 .workee-page #c1 {
-  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
-  box-shadow: 0px 20px 100px #555;
+  box-shadow: 2px 20px 19px 6px rgba(0, 0, 0, 0.6705882353);
   left: 100%;
   z-index: 0;
 }
 .workee-page #c2 {
   left: -100%;
   z-index: 0;
-  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
-  box-shadow: 0px 20px 100px #555;
+  box-shadow: 2px 20px 19px 6px rgba(0, 0, 0, 0.6705882353);
 }
 .workee-page .container:hover {
   cursor: pointer;
@@ -60,13 +60,6 @@
   left: 0%;
   width: 100%;
   height: 45%;
-  background: linear-gradient(to top, #eba65b 30%, #d99267 100%);
-}
-.workee-page #i1 {
-  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
-}
-.workee-page #i2 {
-  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
 }
 .workee-page span {
   position: absolute;
@@ -89,12 +82,7 @@
   box-shadow: 0px 0px 10px #fff;
 }
 .workee-page .st4 {
-  fill: #f8c56f;
   opacity: 1;
-}
-.workee-page .st5,
-.workee-page .st7 {
-  fill: #fff;
 }
 .workee-page #sh2 {
   opacity: 0.5;
@@ -102,29 +90,15 @@
 .workee-page #sh3 {
   opacity: 0.3;
 }
-.workee-page .st6 {
-  fill: #59476f;
-}
-.workee-page .st10 {
-  fill: #c5a7e5;
-  stroke: #222;
-}
-.workee-page .st11 {
-  stroke: #212121;
-  opacity: 0.5;
-}
 .workee-page #sh1 {
-  fill: #f8c56f;
   opacity: 0.4;
 }
 .workee-page .st0 {
-  fill: #a25a62;
   stroke: none;
   stroke-miterlimit: 10;
 }
 .workee-page .st1 {
   fill: none;
-  stroke: #a25a62;
   stroke-width: 2;
   stroke-miterlimit: 10;
 }
@@ -132,14 +106,13 @@
   background: linear-gradient(to top, #c4c4c4 0%, #795548 120%);
 }
 .workee-page .st3 {
-  fill: #fff;
   opacity: 0.3;
 }
 .workee-page .story {
   position: absolute;
-  top: 45%;
+  top: 32%;
   left: 0%;
-  height: 55%;
+  height: 68%;
   width: 100%;
   background: linear-gradient(to top, #c4c4c4 0%, #795548 120%);
   z-index: 30;
@@ -160,25 +133,34 @@
   display: flex;
   justify-content: center;
   font-size: 2rem;
-  font-weight: 600;
   font-family: "Noto Serif Display", serif;
+  margin: 1rem 0 3rem 0;
+  font-weight: 400;
+  font-style: italic;
+}
+.workee-page .info .disabled_btn {
+  color: grey;
+  text-decoration: none;
+  cursor: default;
+  margin: 2rem;
 }
 .workee-page h3 {
   text-align: center;
-  text-shadow: 0px 0px 10px #eee;
   color: #eee;
   letter-spacing: 2px;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-style: italic;
 }
 .workee-page h4 {
   color: #111;
-  /* position: absolute; */
   top: 45%;
   left: -45%;
   letter-spacing: 2px;
   width: 61rem;
   text-align: center;
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 300;
   font-family: "Noto Serif Display", serif;
   line-height: 32px;
   display: flex;
@@ -210,14 +192,39 @@
 .workee-page .home-page {
   position: relative;
 }
-.workee-page .home-page a {
-  background: rgb(82, 82, 82);
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  color: white;
+.workee-page .home-page .button_slide {
+  color: #101010;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 0px;
+  padding: 8px 28px;
+  display: inline-block;
+  font-family: "Noto Serif Display", serif;
+  font-weight: 300;
+  letter-spacing: 5px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #2d2d2d;
+  transition: ease-out 0.4s;
   margin-top: 3rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+.workee-page .home-page .slide_down:hover {
+  box-shadow: inset 0 100px 0 0 rgb(5, 5, 5);
+  color: whitesmoke;
+}
+.workee-page .home-page .slide_right:hover {
+  box-shadow: inset 400px 0 0 0 rgb(5, 5, 5);
+  color: whitesmoke;
+}
+.workee-page .home-page .slide_left:hover {
+  box-shadow: inset 0 0 0 50px rgb(5, 5, 5);
+  color: whitesmoke;
+}
+.workee-page .home-page .slide_diagonal:hover {
+  box-shadow: inset 400px 50px 0 0 rgb(5, 5, 5);
+  color: whitesmoke;
 }
 .workee-page li:nth-child(1) {
   left: -57%;
@@ -262,6 +269,7 @@
   .workee-page #c1,
   .workee-page #c2 {
     position: static;
+    margin-bottom: 5rem;
   }
   .workee-page .home-page a {
     margin: 3rem 0 3rem 0;
@@ -293,14 +301,23 @@
     transition: 0.5s all ease;
     z-index: 400;
   }
+  .workee-page h3 {
+    margin: 2rem 0;
+  }
   .workee-page h4 {
     letter-spacing: 2px;
-    width: 45rem;
+    width: 66rem;
     text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 3rem;
+    font-weight: 500;
     font-family: "Noto Serif Display", serif;
     line-height: 25px;
+  }
+  .workee-page .home-page .button_slide {
+    margin: 6rem 0 6rem 0;
+  }
+  .workee-page .info .disabled_btn {
+    margin: 1rem;
   }
 }
 @media (max-width: 780px) {
@@ -308,15 +325,47 @@
     margin-top: 5rem;
   }
   .workee-page .page h4 {
-    letter-spacing: 2px;
-    width: 28rem;
+    letter-spacing: 0;
+    width: 34rem;
     text-align: center;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 400;
     font-family: "Noto Serif Display", serif;
-    line-height: 21px;
+    line-height: 25px;
   }
   .workee-page .wrapper {
-    width: 323px;
+    width: 320px;
+    margin-top: -21rem;
+  }
+  .workee-page .home-page .button_slide {
+    border: 1px solid rgb(0, 0, 0);
+    letter-spacing: 5px;
+    font-size: 1rem;
+    margin-top: 3rem;
+    font-weight: 400;
+  }
+  .workee-page .story {
+    top: 31%;
+    left: 0%;
+    height: 75%;
+  }
+  .workee-page .info {
+    top: 2%;
+  }
+  .workee-page .info .button_pro {
+    font-size: 1rem;
+    margin: 0rem 0 3rem 0;
+  }
+  .workee-page #c0 {
+    width: 100%;
+    height: 22%;
+  }
+  .workee-page #c1 {
+    width: 100%;
+    height: 22%;
+  }
+  .workee-page #c2 {
+    width: 100%;
+    height: 22%;
   }
 }/*# sourceMappingURL=works.css.map */
