@@ -15,7 +15,7 @@
     top: 35%;
     left: 40%;
     width: 300px;
-    height: 500px;
+    height: 460px;
     perspective: 900px;
   }
 
@@ -159,13 +159,12 @@
       font-style: italic;
     }
     p {
-      color: grey;
       text-decoration: none;
       cursor: default;
       margin: 2rem;
     }
     position: absolute;
-    top: 10%;
+    top: 16%;
   }
 
   h3 {
@@ -330,14 +329,14 @@
       width: 100%;
       max-width: none;
       margin-bottom: 20px;
-      transform: none !important; /* Az előző transform ne alkalmazódjon */
+      transform: none !important;
       box-shadow: 0px 20px 50px #555;
-      animation: none !important; /* Az előző animáció ne alkalmazódjon */
+      animation: none !important;
     }
 
     .container:hover {
       cursor: pointer;
-      transform: none !important; /* Az előző hover transform ne alkalmazódjon */
+      transform: none !important;
       transition: 0.5s all ease;
       z-index: 400;
     }
@@ -394,6 +393,27 @@
         font-size: 1rem;
         margin-top: 3rem;
         font-weight: 400;
+        transition: none;
+      }
+
+      .slide_left {
+        box-shadow: none;
+        transition: none;
+      }
+      .button_slide,
+      .slide_down,
+      .slide_right,
+      .slide_left,
+      .slide_diagonal {
+        box-shadow: none;
+        transition: none;
+      }
+      .button_slide:hover,
+      .slide_down:hover,
+      .slide_right:hover,
+      .slide_left:hover,
+      .slide_diagonal:hover {
+        box-shadow: none;
       }
     }
     .story {

@@ -137,7 +137,7 @@ body {
   .navigation_link:link, .navigation_link:visited {
     font-size: 3rem;
     font-weight: 300;
-    line-height: 71px;
+    line-height: 40px;
   }
 }
 @media screen and (max-width: 780px) {

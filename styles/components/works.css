@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .workee-page {
   background: #a6a6a6;
 }
@@ -16,7 +15,7 @@
   top: 35%;
   left: 40%;
   width: 300px;
-  height: 500px;
+  height: 460px;
   perspective: 900px;
 }
 .workee-page .container {
@@ -125,7 +124,7 @@
 }
 .workee-page .info {
   position: absolute;
-  top: 10%;
+  top: 16%;
 }
 .workee-page .info .button_pro {
   color: white;
@@ -139,7 +138,6 @@
   font-style: italic;
 }
 .workee-page .info p {
-  color: grey;
   text-decoration: none;
   cursor: default;
   margin: 2rem;
@@ -291,13 +289,13 @@
     width: 100%;
     max-width: none;
     margin-bottom: 20px;
-    transform: none !important; /* Az előző transform ne alkalmazódjon */
+    transform: none !important;
     box-shadow: 0px 20px 50px #555;
-    animation: none !important; /* Az előző animáció ne alkalmazódjon */
+    animation: none !important;
   }
   .workee-page .container:hover {
     cursor: pointer;
-    transform: none !important; /* Az előző hover transform ne alkalmazódjon */
+    transform: none !important;
     transition: 0.5s all ease;
     z-index: 400;
   }
@@ -347,6 +345,26 @@
     font-size: 1rem;
     margin-top: 3rem;
     font-weight: 400;
+    transition: none;
+  }
+  .workee-page .home-page .slide_left {
+    box-shadow: none;
+    transition: none;
+  }
+  .workee-page .home-page .button_slide,
+  .workee-page .home-page .slide_down,
+  .workee-page .home-page .slide_right,
+  .workee-page .home-page .slide_left,
+  .workee-page .home-page .slide_diagonal {
+    box-shadow: none;
+    transition: none;
+  }
+  .workee-page .home-page .button_slide:hover,
+  .workee-page .home-page .slide_down:hover,
+  .workee-page .home-page .slide_right:hover,
+  .workee-page .home-page .slide_left:hover,
+  .workee-page .home-page .slide_diagonal:hover {
+    box-shadow: none;
   }
   .workee-page .story {
     top: 31%;
