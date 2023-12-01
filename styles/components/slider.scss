@@ -1,32 +1,39 @@
+@mixin white-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
 .slider {
-  background: white;
+  background-color: white !important;
+  opacity: 1 !important;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 100px;
-  margin: auto;
+  margin: 3rem 0 3rem 0;
   overflow: hidden;
   position: relative;
-
-  .slide-track {
-    animation: scroll 40s linear infinite;
-    display: flex;
-    width: calc(250px * 14);
-  }
-
-  .slide {
-    height: 100px;
-    width: 250px;
-  }
+  width: 100%;
 
   &::before,
   &::after {
-    background: linear-gradient(
-      to right,
-      rgb(172 172 172 / 57%) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    @include white-gradient;
     content: '';
     height: 100px;
     position: absolute;
-    width: 200px;
     z-index: 2;
   }
 
@@ -40,13 +47,15 @@
     left: 0;
     top: 0;
   }
-}
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
+  .slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    width: calc(250px * 14);
   }
-  100% {
-    transform: translateX(calc(-250px * 7));
+
+  .slide {
+    height: 100px;
+    width: 250px;
   }
 }

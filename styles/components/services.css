@@ -22,7 +22,6 @@
   transform: translateX(-50%);
   width: 100px;
   height: 5px;
-  background-color: var(--main-color);
   border-radius: 20px;
 }
 .service-container h3 {
