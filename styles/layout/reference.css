@@ -176,12 +176,13 @@ html {
     margin-bottom: 0;
   }
   .image-container img {
-    width: 215px;
-    height: 272px;
+    width: 266px;
+    height: 304px;
+    margin: 1rem 2rem 2rem 0rem;
   }
   .text-container {
     padding: 0;
-    margin: 2rem;
+    margin: 0 3rem;
     text-align: center;
   }
   .text-container h2 {
@@ -198,10 +199,9 @@ html {
     font-weight: 600;
   }
   .text-container .button_slide {
-    padding: 5px 13px;
+    padding: 10px;
     font-size: 1rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin: 1rem 0 4rem 0;
   }
   .second {
     margin: 2rem;

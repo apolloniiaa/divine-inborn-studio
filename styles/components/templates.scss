@@ -185,20 +185,23 @@ footer {
 }
 @media screen and (max-width: 780px) {
   .main {
+    img {
+      height: 260px;
+    }
     .title {
-      padding: 4rem;
+      padding: 5rem;
       p {
         padding: 1rem;
       }
       h1 {
         line-height: 29px;
         font-size: 2.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
       }
     }
     .cards {
       .cards_item {
-        padding: 0 5rem 5 rem 5 rem;
+        padding: 3rem 5rem 5rem 3rem;
       }
     }
     .explan {

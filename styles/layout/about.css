@@ -61,8 +61,9 @@
     font-size: 2rem;
     line-height: 22px;
     font-weight: 400;
-    margin-bottom: 2rem;
     font-style: italic;
+    margin-bottom: 0;
+    padding: 3rem;
   }
   .intro .sec {
     flex-direction: column;
@@ -72,5 +73,32 @@
     width: 100%;
     padding: 0;
     font-weight: 300;
+    margin-bottom: 6rem;
+  }
+}
+@media screen and (max-width: 780px) {
+  .intro {
+    padding: 3rem;
+    text-align: center;
+  }
+  .intro .centered {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 22px;
+    font-weight: 400;
+    margin-bottom: 0;
+    font-style: italic;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+  }
+  .intro .sec {
+    flex-direction: column;
+  }
+  .intro .sec .et,
+  .intro .sec .etc {
+    width: 100%;
+    padding: 0;
+    font-weight: 300;
+    margin-bottom: 3rem;
   }
 }/*# sourceMappingURL=about.css.map */
