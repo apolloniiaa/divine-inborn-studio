@@ -17,9 +17,8 @@ body {
     right: 6rem;
     border-radius: 51%;
     z-index: 20000;
-    box-shadow: -3px 0rem 0rem white;
+    // box-shadow: -3px 0rem 0rem white;
     text-align: center;
-    background-color: rgb(0 0 0);
     cursor: pointer;
   }
   &_background {
@@ -79,7 +78,6 @@ body {
       transition: all 0.4s;
       padding: 5px 3rem 5px 1rem;
       border-radius: 10px;
-      /* width: 242px; */
       font-family: 'Noto Serif Display';
       display: inline-block;
       font-size: 3rem;
@@ -115,7 +113,9 @@ body {
     &::after {
       width: 4rem;
       height: 1px;
-      background-color: #ffffff;
+      width: 4rem;
+      height: 3px;
+      background-color: #b7b7b6;
       display: inline-block;
     }
     &::before,
@@ -152,16 +152,6 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .navigation {
-    &_button {
-    }
-    &_background {
-    }
-    &_nav {
-    }
-    &_list {
-    }
-    &_item {
-    }
     &_link {
       &:link,
       &:visited {
@@ -170,8 +160,6 @@ body {
         line-height: 40px;
       }
     }
-  }
-  .text-overlay {
   }
 }
 @media screen and (max-width: 780px) {
@@ -182,13 +170,6 @@ body {
       position: fixed;
       top: 0rem;
       right: 1rem;
-    }
-    &_background {
-    }
-    &_nav {
-    }
-
-    &_item {
     }
     &_link {
       &:link,
@@ -203,7 +184,7 @@ body {
       &,
       &::before,
       &::after {
-        width: 2rem;
+        width: 4rem;
       }
       &::before,
       &::after {

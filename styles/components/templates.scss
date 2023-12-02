@@ -106,9 +106,9 @@
       }
 
       .card {
-        background-color: rgb(175, 170, 170);
+        background-color: rgb(156, 156, 156);
         border-radius: 0.25rem;
-        box-shadow: 20px -19px 0px 0px rgb(255 255 255);
+        box-shadow: 20px -19px 0px 0px rgb(96, 95, 95);
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -171,15 +171,37 @@ footer {
   background-color: rgb(132 131 131);
 }
 
+@media screen and (max-width: 1300px) {
+  .main {
+    img {
+      height: 340px;
+    }
+    .explan {
+      padding: 7rem;
+    }
+    .title {
+      h1 {
+        width: 75%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1024px) {
   .main {
-    .title {
-      p {
-        padding: 2rem;
+    .cards {
+      .cards_item {
+        width: 48.3333%;
       }
     }
     .explan {
       padding: 5rem;
+    }
+    .title {
+      p {
+        width: 86%;
+        margin: 3rem auto;
+      }
     }
   }
 }
@@ -189,23 +211,25 @@ footer {
       height: 260px;
     }
     .title {
-      padding: 5rem;
+      padding: 3rem;
       p {
-        padding: 1rem;
+        padding: 0;
       }
       h1 {
         line-height: 29px;
         font-size: 2.5rem;
         margin-bottom: 2rem;
+        width: 77%;
       }
     }
     .cards {
       .cards_item {
-        padding: 3rem 5rem 5rem 3rem;
+        width: 100%;
+        padding: 0 4rem 5rem 4rem;
       }
     }
     .explan {
-      padding: 3rem;
+      padding: 0 4rem 4rem 4rem;
       p {
         font-size: 1.5rem;
         line-height: 28px;

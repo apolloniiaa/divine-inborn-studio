@@ -102,7 +102,7 @@
   stroke-miterlimit: 10;
 }
 .workee-page .st2 {
-  background: linear-gradient(to top, #c4c4c4 0%, #795548 120%);
+  background: linear-gradient(to top, #0b0b0b 0%, #0e0d0d 120%);
 }
 .workee-page .st3 {
   opacity: 0.3;
@@ -113,14 +113,14 @@
   left: 0%;
   height: 68%;
   width: 100%;
-  background: linear-gradient(to top, #c4c4c4 0%, #795548 120%);
+  background: linear-gradient(to top, #0b0b0b 0%, #0e0d0d 120%);
   z-index: 30;
 }
 .workee-page #s1 {
-  background: linear-gradient(to top, #c4c4c4 0%, #795548 120%);
+  background: linear-gradient(to top, #0b0b0b 0%, #0e0d0d 120%);
 }
 .workee-page #s2 {
-  background: linear-gradient(to top, #c4c4c4 0%, #795548 120%);
+  background: linear-gradient(to top, #0b0b0b 0%, #0e0d0d 120%);
 }
 .workee-page .info {
   position: absolute;
