@@ -53,15 +53,16 @@ footer .logo {
 
 .left-foo {
   color: white;
-}
-.left-foo a {
-  color: white;
-  text-decoration: none;
-  font-style: italic;
-  font-family: "Noto Serif Display", serif;
+  margin: 2rem 0 2rem 0;
 }
 
 /* Footer links */
+.left-foo-a a {
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+}
+
 .footer-distributed .footer-links {
   color: whitesmoke;
   font-family: "Noto Serif Display", serif;
@@ -186,7 +187,7 @@ footer .logo {
   }
   .footer-distributed .footer-right p {
     width: 90%;
-    margin: 0 auto;
+    margin: 1rem auto;
     line-height: 20px;
   }
 }/*# sourceMappingURL=footer.css.map */

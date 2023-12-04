@@ -53,14 +53,16 @@ footer {
 }
 .left-foo {
   color: white;
+  margin: 2rem 0 2rem 0;
+}
+/* Footer links */
+.left-foo-a {
   a {
     color: white;
     text-decoration: none;
     font-style: italic;
-    font-family: 'Noto Serif Display', serif;
   }
 }
-/* Footer links */
 
 .footer-distributed .footer-links {
   color: whitesmoke;
@@ -195,7 +197,7 @@ footer {
       .footer-right {
         p {
           width: 90%;
-          margin: 0 auto;
+          margin: 1rem auto;
           line-height: 20px;
         }
       }

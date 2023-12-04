@@ -48,7 +48,6 @@
   box-shadow: 2px 20px 19px 6px rgba(0, 0, 0, 0.6705882353);
 }
 .workee-page .container:hover {
-  cursor: pointer;
   transform: rotate(0deg) scale(1) translateY(10px);
   transition: 0.5s all ease;
   z-index: 400;
@@ -279,7 +278,6 @@
     animation: none !important;
   }
   .workee-page .container:hover {
-    cursor: pointer;
     transform: none !important;
     transition: 0.5s all ease;
     z-index: 400;

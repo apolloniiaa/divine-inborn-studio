@@ -156,7 +156,8 @@ body {
     margin-top: 2rem;
   }
   .navigation__icon, .navigation__icon::before, .navigation__icon::after {
-    width: 4rem;
+    width: 3rem;
+    height: 2px;
   }
   .navigation__icon::before, .navigation__icon::after {
     content: "";
