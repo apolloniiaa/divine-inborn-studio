@@ -17,6 +17,16 @@
 </head>
 
 <body id="templates">
+
+    <div id="language-selector">
+        <select id="language-dropdown">
+            <option value="en">Select language</option>
+            <option value="en">English</option>
+            <option value="hu">Magyar</option>
+        </select>
+    </div>
+
+    <div id="content"></div>
     <div class="navigation">
         <input type="checkbox" class="navigation_checkbox" id="navi_toggle">
         <label for="navi_toggle" class="navigation_button">
@@ -26,22 +36,24 @@
 
         <nav class="navigation_nav">
             <ul class="navigation_list">
-                <li class="navigation_item"><a href="index.html" class="navigation_link">
-                        <span>01</span> Home</a></li>
-
-                <li class="navigation_item"><a href="works.html" class="navigation_link"><span>02</span>
-                        Works</a>
+                <li class="navigation_item"><a href="index.html" class="navigation_link" data-translate="navHome"></a>
                 </li>
 
-                <li class="navigation_item"><a href="templates.html" class="navigation_link"><span>03</span>
-                        Templates</a></li>
-                <li class="navigation_item"><a href="contact.html" class="navigation_link"><span>04</span> Contact</a>
+                <li class="navigation_item"><a href="works.html" class="navigation_link" data-translate="navWorks"></a>
+                </li>
+
+                <li class="navigation_item"><a href=" templates.html" class="navigation_link"
+                        data-translate="navTemplates"></a></li>
+                <li class="navigation_item"><a href=" contact.html" class="navigation_link"
+                        data-translate="navContact"></a>
                 </li>
                 <li class="navigation_item"><a
-                        href="https://3d-portfolio-nine-tau.vercel.app/?fbclid=IwAR2Zk79yA6rxfaMIXYxhj3t4kxyjnL5bs_r0Ub1lAFAagw6lIIqxqVTiMyA"
-                        class="navigation_link"><span>05</span>Frontend Porfolio</a></li>
+                        href="
+                            https://3d-portfolio-nine-tau.vercel.app/?fbclid=IwAR2Zk79yA6rxfaMIXYxhj3t4kxyjnL5bs_r0Ub1lAFAagw6lIIqxqVTiMyA"
+                        class="navigation_link">Frontend Portfolio</a></li>
             </ul>
         </nav>
+    </div>
     </div>
     <div class=" main"">
         <video autoplay muted playsinline loop class=" background-video" id="backgroundVideo">
@@ -49,9 +61,8 @@
         Your browser does not support the video tag.
         </video>
         <div class=" title">
-            <h1>Craft a stunning website without coding </h1>
-            <p>– all my templates offer seamless customization and pre-designed UI blocks. Simplify your online presence
-                with style!</p>
+            <h1 data-translate="templateTitle"></h1>
+            <p data-translate="templateSub"></p>
 
         </div>
         <ul class=" cards">
@@ -59,10 +70,9 @@
                 <div class="card">
                     <div class="card_image"><img src="assets/Laptop Mockup Instagram Post (2000 × 1080 px).jpg"></div>
                     <div class="card_content">
-                        <h2 class="card_title">Skincare Template Unveiled</h2>
-                        <p class="card_text">This website template is dedicated to introducing a curated selection of
-                            skincare products designed to enhance your natural beauty. </p>
-                        <button class="btn card_btn">Sold out</button>
+                        <h2 class="card_title" data-translate="templateCardTitle1"></h2>
+                        <p class="card_text" data-translate="templateCardText1"> </p>
+                        <button class="btn card_btn" data-translate="templateCardBtbn"></button>
                     </div>
                 </div>
             </li>
@@ -71,10 +81,9 @@
                     <div class="card_image"><img src="assets/Laptop Mockup of Fashion Clothing Instagram Post.jpg">
                     </div>
                     <div class="card_content">
-                        <h2 class="card_title"> Coffee Shop Template Unveiledt</h2>
-                        <p class="card_text">From the rich aroma of freshly ground beans to the cozy ambiance, this
-                            template invites visitors to savor every sip.</p>
-                        <button class="btn card_btn">Sold out</button>
+                        <h2 class="card_title" data-translate="templateCardTitle2"> </h2>
+                        <p class="card_text" data-translate="templateCardText2"></p>
+                        <button class="btn card_btn" data-translate="templateCardBtbn"></button>
                     </div>
                 </div>
             </li>
@@ -82,33 +91,17 @@
                 <div class="card">
                     <div class="card_image"><img src="assets/movkupp.jpg"></div>
                     <div class="card_content">
-                        <h2 class="card_title">Photography Template Unveiledt</h2>
-                        <p class="card_text">Discover the blend of aesthetics and functionality in this
-                            template, designed to showcase your photographic journey with elegance and style.</p>
-                        <button class="btn card_btn">Sold out</button>
+                        <h2 class="card_title" data-translate="templateCardTitle3"></h2>
+                        <p class="card_text" data-translate="templateCardText3"></p>
+                        <button class="btn card_btn" data-translate="templateCardBtbn"></button>
                     </div>
                 </div>
             </li>
         </ul>
 
         <div class="explan">
-            <p>Imagine a website template as a unique design concept for your online space. These templates are like
-                ready-made blueprints, and typically, there are about 10 variations available. They serve as a fantastic
-                starting point for your website.
-
-                Now, if you want a personalized touch or have specific preferences,I offer the option to create a
-                custom template just for you. In this case, I crafts a tailored design to match your vision, and
-                the process usually takes 1-3 days. Once it's ready, you can enjoy your very own website with the
-                flexibility to change content whenever you want.
-            </p>
-            <br>
-            <p>
-                I am about to launch new templates, available for purchase
-                on Etsy. These new templates are crafted with care and attention to detail, ensuring a seamless and
-                visually
-                appealing experience for your visitors. Feel free to reach out if you have any questions or need
-                assistance.
-                Farawell, and thank you for making <span>Divine Inborn Studio</span> a part of your digital story! ♡</p>
+            <p data-translate="templateDescription1"></p>
+            <p data-translate="templateDescription2"></p>
         </div>
     </div>
 

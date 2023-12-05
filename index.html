@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DI STUDIO - Web Fejlesztes es Web tervezes">
+    <meta name="description" content="DI STUDIO - Web Development and Web Design">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DI STUDIO - Web Development and Web Design</title>
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
@@ -13,11 +13,24 @@
 
     <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="/index.js"></script>
-
 </head>
 
 <body>
+    <div id="language-selector">
+        <div class="custom-select">
+            <select id="language-dropdown">
+                <option value="en">Select language</option>
+                <option value="en">English</option>
+                <option value="hu">Magyar</option>
+            </select>
 
+        </div>
+    </div>
+
+
+
+
+    <div id="content"></div>
     <div class="navigation">
         <input type="checkbox" class="navigation_checkbox" id="navi_toggle">
         <label for="navi_toggle" class="navigation_button">
@@ -27,40 +40,34 @@
 
         <nav class="navigation_nav">
             <ul class="navigation_list">
-                <li class="navigation_item"><a href="index.html" class="navigation_link">
-                        <span>01</span> Home</a></li>
-
-                <li class="navigation_item"><a href=" works.html" class="navigation_link"><span>02</span>
-                        Works</a>
+                <li class="navigation_item"><a href="index.html" class="navigation_link" data-translate="navHome"></a>
                 </li>
 
-                <li class="navigation_item"><a href=" templates.html" class="navigation_link"><span>03</span>
-                        Templates</a></li>
-                <li class="navigation_item"><a href=" contact.html" class="navigation_link"><span>04</span>
-                        Contact</a>
+                <li class="navigation_item"><a href="works.html" class="navigation_link" data-translate="navWorks"></a>
+                </li>
+
+                <li class="navigation_item"><a href=" templates.html" class="navigation_link"
+                        data-translate="navTemplates"></a></li>
+                <li class="navigation_item"><a href=" contact.html" class="navigation_link"
+                        data-translate="navContact"></a>
                 </li>
                 <li class="navigation_item"><a
                         href="
                         https://3d-portfolio-nine-tau.vercel.app/?fbclid=IwAR2Zk79yA6rxfaMIXYxhj3t4kxyjnL5bs_r0Ub1lAFAagw6lIIqxqVTiMyA"
-                        class="navigation_link"><span>05</span>Frontend Porfolio</a></li>
+                        class="navigation_link">Frontend Portfolio</a></li>
             </ul>
         </nav>
     </div>
 
     <div class="class" id="home">
-        <h2 class="title">Hi, I'm Apollónia, </h2>
+        <h2 class="title" data-translate="greeting">Hi, I'm Apollónia, </h2>
 
         <div class="container">
             <div class="main-content">
-
                 <img src="/assets/41411807-A08B-40D2-B389-F017EEE30E39.jpeg" alt="web developer " class="main-image">
                 <div class="text-overlay">
                     <div class="lorem-text">
-                        <p> a passionate creator in the world of web development and design. Through innovative
-                            solutions and a keen eye for aesthetics, I bring your ideas to life online. Let's embark on
-                            a
-                            journey to make your digital presence extraordinary together. Your vision, my expertise – a
-                            perfect match for crafting exceptional websites!</p>
+                        <p data-translate="intro"> </p>
                     </div>
                 </div>
                 <img src="https://i.pinimg.com/474x/9f/7e/4c/9f7e4c17c27379c1366b75a90c00607e.jpg" alt="aesthetic photo"
@@ -70,73 +77,31 @@
     </div>
 
     <div class="intro" id="about">
-        <div class="centered">Together, let's sculpt a digital masterpiece that mirrors your vision and captivates
-            the
-            online stage. Welcome to a fusion of style, technology, and boundless creativity.</div>
-
+        <div class="centered" data-translate="introSec"></div>
         <div class="sec">
-            <div class="et">
-                My journey began draped in threads
-                of
-                creativity, navigating the world of haute couture. However, the winds of change, guided by the
-                pandemic,
-                led me to a new frontier—web design. From stitches to pixels, I immersed myself in the artistry of
-                digital landscapes. What started as a diversion became a fervent exploration, a journey beyond
-                fashion,
-                embracing the entire tapestry of web development and now, it's not just a profession; it's my
-                passion.
-            </div>
-            <div class="etc">My goal? To assist those whose dreams hinge on a creatively imagined and functional
-                website. Let's bridge the gap between imagination and reality, crafting digital spaces that define
-                your
-                brand. Join me on this odyssey of turning visions into captivating online experiences.
-                Explore my frontend portfolio and browse through my past projects and upcoming web
-                design templates set to launch soon. Dive into the dynamic world of my work, where innovation meets
-                client satisfaction.</div>
+            <div class="et" data-translate="about"> </div>
+            <div class="etc" data-translate="aboutSec"></div>
         </div>
-
     </div>
-
-
-
 
     <div class="promo">
         <div class="promo__text">
-            <h2>Take your first step toward your very first website</h2>
-            <p class="subtitle">what would happen if you say "YES"?</p>
+            <h2 data-translate="promoText"></h2>
+            <p class="subtitle" data-translate="promoSub"></p>
 
             <div class="text__promo">
                 <div class="left_text">
-                    how would having an updated, professional looking website that represents you and your work
-                    impact? sition you in your industry? how would it impact
-                    the
-                    way
-                    potential clients see you and your work?
-
-                    <p> only good things can come from upgrading. don't allow what
-                        feels
-                        foreign in
-                        this moment to keep you from experiencing golden opportunities
-                    </p>
+                    <p data-translate="promoTextLeft"></p>
+                    <p data-translate="promoTextSecond"> </p>
                 </div>
 
-                <div class="right_text">
-                    divine connection. the days of being frustrated about your brand and website in the past. it's
-                    time
-                    to
-                    step into a new era of success and reach your full potential. your talent and calling is to
-                    great to
-                    continue to play it small. the solution to your problem is finally here.
-                    <p> take it. in a
-                        matter
-                        of
-                        days,
-                        you
-                        could be launching your new website and stepping into the next era of success.</p>
+                <div class="right_text" data-translate="promoTextThird">
+                    <p data-translate="promoTextThirds"></p>
                 </div>
             </div>
         </div>
     </div>
+
 
     <div class="slider">
         <div class="slide-track">
@@ -186,27 +151,15 @@
     </div>
 
 
-
     <div class="containers">
 
         <div id="reference" class="text-container number01 ">
-            <h2> Empower Your Business</h2>
-            <p>In the ever-evolving landscape of the digital world, your business deserves more than just a
-                website—it deserves an immersive online experience. Whether you're envisioning a bespoke
-                website, a
-                captivating welcome page, or exploring unique ideas to enhance your brand, I specialize in
-                crafting
-                personalized, cutting-edge web solutions. In today's diverse digital landscape, your online
-                presence
-                should captivate audiences on every screen. With a commitment to responsive design, I ensure
-                your
-                website delivers an exceptional viewing experience on both mobile and desktop devices.</p>
-            <p class="last"> Ready to kickstart your business journey? I'm here to turn your vision into a
-                compelling
-                reality.
+            <h2 data-translate="businessTitle"></h2>
+            <p data-translate="businessSub"></p>
+            <p class="last" data-translate="businessSubSec">
             </p>
 
-            <a href="works.html" class="button_slide slide_left "> last projects </a>
+            <a href="works.html" class="button_slide slide_left" data-translate="businessBtn"> </a>
         </div>
         <div class="image-container">
             <img src="https://i.pinimg.com/564x/c4/6a/bb/c46abb1d7651cc2d244cdc67cd48db33.jpg"
@@ -221,86 +174,64 @@
                 alt=" Kép">
         </div>
         <div class="text-container second number02" id="portfolio">
-            <h2>My Frontend Journey</h2>
-            <p>Dive into my , where I venture into the dynamic world of web development.
-                While I initially embraced frontend, my exploration extends to
-                backend realms, showcasing a comprehensive skill set
-                Engage with my work, where I prioritize
-                responsiveness, adopt the latest technologies, and strive for a harmonious blend of aesthetics and
-                functionality.
-                .</p>
-            <p> As you navigate through, envision not just a portfolio but a demonstration of my
-                commitment to staying at the forefront of web development. Visit my portfolio to witness firsthand
-                how I
-                turn challenges into opportunities.
-            </p>
-
+            <h2 data-translate="frontendTitle"></h2>
+            <p data-translate="frontendSub"></p>
+            <p data-translate="frontendSec"></p>
             <a target="_blank"
                 href="https://3d-portfolio-nine-tau.vercel.app/?fbclid=IwAR2Zk79yA6rxfaMIXYxhj3t4kxyjnL5bs_r0Ub1lAFAagw6lIIqxqVTiMyA"
                 class="button_slide slide_left">portfolio </a>
-
         </div>
 
 
         <div class="text-container number03">
-            <h2>Soon Available – Web Design Templates</h2>
-            <p>Like a virtual canvas, these templates are not just pre-made designs; they're a dynamic toolkit.
-                Personalize every detail - from colors to fonts, creating a bespoke and modern user interface.
-                Imagine a platform as versatile as Squarespace, as customizable as WordPress, or as user-friendly as
-                Showit. Whether you want to take the reins and build it yourself or leave it entirely to me, your
-                dream website will soon be just a click away.</p>
-            <a href="templates.html" class="button_slide slide_left">Templates </a>
+            <h2 data-translate="templateTitleMain"></h2>
+            <p data-translate="templateSubMain"></p>
+            <a href="templates.html" class="button_slide slide_left" data-translate="templateBtn"></a>
         </div>
         <div class=" image-container">
             <img src="https://i.pinimg.com/originals/7b/30/9f/7b309ff8d319ae399d25d780bc1e4cb4.jpg" alt="Kép">
-
         </div>
-
     </div>
 
 
 
     <div class="service-container" id="services">
-        <h2>Here's a glimpse of the puzzle pieces I'm sharing with you, and there's so much more waiting to unfold.
-            For
-            additional details and the full picture, connect with me. For more, reach out—let's dive deeper into
-            what
-            lies ahead.</h2>
+        <h2 data-translate="serviceIntro"></h2>
         <div class="row">
             <div class="service">
                 <i class="ri-macbook-line"></i>
-                <h3>Web-Focused UI/UX</h3>
-                <p>Enhancing your website's design and functionality for an intuitive and enjoyable user experience.
-                </p>
+                <h3 data-translate="serviceTitle1"></h3>
+                <p data-translate="serviceDescription1"></p>
             </div>
+
             <div class="service">
                 <i class="ri-store-3-line"></i>
-                <h3>Web Integrations</h3>
-                <p>Connecting your website with external tools and services to expand its capabilities.</p>
+                <h3 data-translate="serviceTitle2"></h3>
+                <p data-translate="serviceDescription2"></p>
             </div>
+
             <div class="service">
                 <i class="ri-database-2-line"></i>
-                <h3>Content Writing</h3>
-                <p>Crafting compelling and informative text content to engage and inform your website visitors.</p>
+                <h3 data-translate="serviceTitle3"></h3>
+                <p data-translate="serviceDescription3"></p>
             </div>
+
             <div class="service">
                 <i class="ri-database-2-line"></i>
-                <h3>Hosting</h3>
-                <p>Providing the necessary infrastructure to make your website accessible and available on the
-                    internet
-                </p>
+                <h3 data-translate="serviceTitle4"></h3>
+                <p data-translate="serviceDescription4"></p>
             </div>
+
             <div class="service">
                 <i class="ri-database-2-line"></i>
-                <h3>Mobile Friendly Design</h3>
-                <p> Designing projects to ensure a smooth and user-friendly experience on various devices, including
-                    mobile phones and tablets like iPads.</p>
+                <h3 data-translate="serviceTitle5"></h3>
+                <p data-translate="serviceDescription5"></p>
             </div>
+
             <div class="service">
                 <i class="ri-database-2-line"></i>
-                <h3>Newest Technologies</h3>
-                <p>Experience a digital transformation as I harness the power of the latest tools and solutions,
-                    providing you with cutting-edge web development</p>
+                <h3 data-translate="serviceTitle6"></h3>
+                <p data-translate="serviceDescription6"></p>
             </div>
         </div>
     </div>
@@ -311,11 +242,12 @@
     <div class="contact">
         <img src="https://i.pinimg.com/564x/65/12/32/65123257add7b9d6e9a52bf384c92949.jpg" alt="branding"
             class="center-image">
-        <a href="contact.html" class="work-together">Let's work together</a>
+        <a href="contact.html" class="work-together" data-translate="contactBtn"></a>
     </div>
 
     <div class="ambitios-text">
-        <p class="luxury">Luxury products designed for ambitious and gorgeous individuals</p>
+        <p class="luxury" data-translate="ambitiosText"></p>
+        </p>
     </div>
 
 
@@ -327,32 +259,20 @@
     <footer class="footer-distributed">
 
         <div class="footer-left">
-
-            <h3>Divine Inborn Studio
-            </h3>
-
+            <h3>Divine Inborn Studio</h3>
             <p class="footer-links">
-
-                <a href="#home"" class=" link-1"> Back to Top ⬆ </a>
-
-
-
-                <a href="contact.html" id="contact-link"> Contact</a>
-
+                <a href="#home" class=" link-1" data-translate="backToTopBtn"></a>
+                <a href="contact.html" id="contact-link" data-translate="contactText"></a>
             </p>
 
             <p class="footer-company-name">Divine Inborn © 2023</p>
         </div>
 
         <div class="footer-center">
-
             <div>
                 <img class="logo" src="/assets/big_transparent_5.png" alt="dream website">
 
             </div>
-
-
-
         </div>
 
         <div class="footer-right">
@@ -361,26 +281,15 @@
             <p class="footer-links footer-company-about">
 
                 <a href="#portfolio">Portfolio</a>
-
-                <a href="works.html" id="contact-link">Works</a>
-
-                <a href="templates.html">Templates</a>
-
+                <a href="works.html" id="contact-link" data-translate="navWorks"></a>
+                <a href="templates.html" data-translate="navTemplates"></a>
             </p>
-
             <div class="footer-icons">
-                <p class="left-foo"> Curious or have ideas? Connect and collaborate by dropping me an email. Let's
-                    bring
-                    your visions
-                    to life!</p>
-
+                <p class="left-foo" data-translate="contactTextSub"></p>
                 <p class="left-foo-a"><a href="mailto:divineinborn@gmail.com">divineinborn@gmail.com</a></p>
             </div>
-
         </div>
-
         </div>
-
     </footer>
 </body>
 

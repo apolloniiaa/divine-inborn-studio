@@ -13,6 +13,21 @@
 </head>
 
 <body id="contact" class="contact-page">
+    <div id="language-selector">
+        <div class="custom-select">
+            <select id="language-dropdown">
+                <option value="en">Select language</option>
+                <option value="en">English</option>
+                <option value="hu">Magyar</option>
+            </select>
+
+        </div>
+    </div>
+
+
+
+
+    <div id="content"></div>
     <div class="navigation">
         <input type="checkbox" class="navigation_checkbox" id="navi_toggle">
         <label for="navi_toggle" class="navigation_button">
@@ -22,42 +37,43 @@
 
         <nav class="navigation_nav">
             <ul class="navigation_list">
-                <li class="navigation_item"><a href="index.html" class="navigation_link">
-                        <span>01</span> Home</a></li>
-
-                <li class="navigation_item"><a href="works.html" class="navigation_link"><span>02</span>
-                        Works</a>
+                <li class="navigation_item"><a href="index.html" class="navigation_link" data-translate="navHome"></a>
                 </li>
 
-                <li class="navigation_item"><a href="templates.html" class="navigation_link"><span>03</span>
-                        Templates</a></li>
-                <li class="navigation_item"><a href="contact.html" class="navigation_link"><span>04</span> Contact</a>
+                <li class="navigation_item"><a href="works.html" class="navigation_link" data-translate="navWorks"></a>
                 </li>
-                <li class="navigation_item"><a target="_blank"
-                        href="https://3d-portfolio-nine-tau.vercel.app/?fbclid=IwAR2Zk79yA6rxfaMIXYxhj3t4kxyjnL5bs_r0Ub1lAFAagw6lIIqxqVTiMyA"
-                        class="navigation_link"><span>05</span>Frontend Porfolio</a></li>
+
+                <li class="navigation_item"><a href=" templates.html" class="navigation_link"
+                        data-translate="navTemplates"></a></li>
+                <li class="navigation_item"><a href=" contact.html" class="navigation_link"
+                        data-translate="navContact"></a>
+                </li>
+                <li class="navigation_item"><a
+                        href="
+                        https://3d-portfolio-nine-tau.vercel.app/?fbclid=IwAR2Zk79yA6rxfaMIXYxhj3t4kxyjnL5bs_r0Ub1lAFAagw6lIIqxqVTiMyA"
+                        class="navigation_link">Frontend Portfolio</a></li>
             </ul>
         </nav>
     </div>
     <div class="contact2">
         <div class="login-form ">
-            <h1>Get in touch!</h1>
+            <h1 data-translate="contactPageTitle">Get in touch!</h1>
             <div class="login-input-container">
-                <label class="name" for="name">Name</label>
+                <label class="name" for="name" data-translate="contactPageName">Name</label>
                 <input id="name" class="input-content" type="text" placeholder="" maxlength="50" required />
                 <div id="nameError" class="error-message"></div>
             </div>
             <div class="login-input-container">
-                <label class="email" for="email">Email</label>
+                <label class="email" for="email" data-translate="contactPageEmail">Email</label>
                 <input id="email" class="input-content" type="email" placeholder="" maxlength="50" required />
                 <div id="emailError" class="error-message"></div>
             </div>
             <div class="login-input-container">
-                <label class="message" for="message">Message</label>
+                <label class="message" for="message" data-translate="contactPageMessage">Message</label>
                 <textarea id="message" class="input-content" placeholder="" required></textarea>
             </div>
             <div class="login-btn" onclick="submitForm()">
-                <p>Send</p>
+                <p data-translate="contactPageBtn">Send</p>
             </div>
         </div>
     </div>

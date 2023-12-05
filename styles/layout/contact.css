@@ -9,6 +9,10 @@
   height: 70vh;
 }
 
+.no-contact-page {
+  display: block !important;
+}
+
 .center-image {
   width: 300px;
   height: auto;
@@ -111,6 +115,12 @@
   font-style: italic;
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+/* styles/style.css */
+/* Add this style to hide the language selector on the contact page */
+.contact-page .lang-menu {
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {
