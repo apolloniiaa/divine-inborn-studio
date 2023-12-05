@@ -182,12 +182,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (language === 'en') {
       languageData = {
         greeting: 'Hi, I am Apollónia',
-        intro: `a passionate creator in the world of web development and design. Through innovative solutions and a keen eye for aesthetics, I bring your ideas to life online. Let's embark on a
-         journey to make your digital presence extraordinary together. Your vision, my expertise –a perfect match for crafting exceptional websites!`,
+        intro: `a passionate creator in the world of web development and design. Through innovative solutions and a keen eye for aesthetics, I bring your ideas to life online. Let's embark on a journey to make your digital presence extraordinary together. Your vision, my expertise –a perfect match for crafting exceptional websites!`,
         introSec: `Together, let's sculpt a digital masterpiece that mirrors your vision and captivates the online stage. Welcome to a fusion of style, technology, and boundless creativity.`,
-        about: ` My journey began draped in threads of creativity, navigating the world of haute couture. However, the winds of change, guided by the pandemic, led me to a new frontier—web design. From stitches to pixels, I immersed myself in the artistry of digital landscapes. What started as a diversion became a fervent exploration, a journey beyond fashion,
-        embracing the entire tapestry of web development and now, it's not just a profession; it's my
-        passion.`,
+        about: ` My journey began draped in threads of creativity, navigating the world of haute couture. However, the winds of change, guided by the pandemic, led me to a new frontier—web design. From stitches to pixels, I immersed myself in the artistry of digital landscapes. What started as a diversion became a fervent exploration, a journey beyond fashion,embracing the entire tapestry of web development and now, it's not just a profession; it's my passion.`,
         aboutSec: `My goal? To assist those whose dreams hinge on a creatively imagined and functional website. Let's bridge the gap between imagination and reality, crafting digital spaces that define your brand. Join me on this odyssey of turning visions into captivating online experiences. Explore my frontend portfolio and browse through my past projects and upcoming web design templates set to launch soon. Dive into the dynamic world of my work, where innovation meets client satisfaction.`,
         promoText: `Take your first step toward your very first website`,
         promoSub: `what would happen if you say "YES"?,`,
