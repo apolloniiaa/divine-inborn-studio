@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // GSAP animációk
   gsap.to('.main-image', {
     opacity: 1,
     y: 20,
@@ -172,29 +171,26 @@ document.addEventListener('DOMContentLoaded', function () {
     delay: 1.8,
   });
 
-  //////asdsad
-
   const languageDropdown = document.getElementById('language-dropdown');
   let languageData;
 
   function loadLanguageData(language) {
-    // AJAX vagy más módon betöltöd a nyelvi adatokat
     if (language === 'en') {
       languageData = {
         greeting: 'Hi, I am Apollónia',
-        intro: `a passionate creator in the world of web development and design. Through innovative solutions and a keen eye for aesthetics, I bring your ideas to life online. Let's embark on a journey to make your digital presence extraordinary together. Your vision, my expertise –a perfect match for crafting exceptional websites!`,
-        introSec: `Together, let's sculpt a digital masterpiece that mirrors your vision and captivates the online stage. Welcome to a fusion of style, technology, and boundless creativity.`,
-        about: ` My journey began draped in threads of creativity, navigating the world of haute couture. However, the winds of change, guided by the pandemic, led me to a new frontier—web design. From stitches to pixels, I immersed myself in the artistry of digital landscapes. What started as a diversion became a fervent exploration, a journey beyond fashion,embracing the entire tapestry of web development and now, it's not just a profession; it's my passion.`,
-        aboutSec: `My goal? To assist those whose dreams hinge on a creatively imagined and functional website. Let's bridge the gap between imagination and reality, crafting digital spaces that define your brand. Join me on this odyssey of turning visions into captivating online experiences. Explore my frontend portfolio and browse through my past projects and upcoming web design templates set to launch soon. Dive into the dynamic world of my work, where innovation meets client satisfaction.`,
-        promoText: `Take your first step toward your very first website`,
+        intro: `as a web developer and designer, I assist in bringing your ideas to life in the online space with innovative solutions and refined aesthetic sensibility. Throughout our collaboration, your visions and my expertise converge to create stunning and effective websites. Your satisfaction is paramount to me, and I strive to exceed your expectations in every way possible.`,
+        introSec: `Development of customized websites and web solutions. Welcome to a fusion of style, technology, and boundless creativity.`,
+        about: ` 
+        Your satisfaction is of paramount importance to me, and it is always the primary focus in every project. Before diving into the design and development process, I pay close attention to fully understanding your needs. This fundamental step allows me to approach each project with a personalized touch.`,
+        aboutSec: `My goal is for the website to not only be aesthetically pleasing and functional but also to create real value and contribute to the growth and success of your brand, while achieving the best results possible. To achieve this, I implement solutions that highlight its uniqueness and attract visitors, all while optimizing the user experience and supporting business objectives.`,
+        promoText: `Let's create the most outstanding website for your business!`,
         promoSub: `what would happen if you say "YES"?,`,
-        promoTextLeft: `how would having an updated, professional looking website that represents you and your work impact? sition you in your industry? how would it impact the way potential clients see you and your work? don't allow what feels foreign in this moment to keep you from experiencing golden opportunities.`,
-        promoTextSecond: ``,
-        promoTextThird: `divine connection. the days of being frustrated about your brand and website in the past. it's time to step into a new era of success and reach your full potential. your talent and calling is to great to continue to play it small. the solution to your problem is finally here.`,
-        promoTextThirds: `in a matter of days, you could be launching your new website and stepping into the next era of success.`,
+        promoTextLeft: `First, I thoroughly acquaint myself with your brand and objectives. Then, strategically, we determine the content needed to engage your target audience effectively and how best to reach them.`,
+        promoTextSecond: `Based on the acquired knowledge, I personally design your website, taking into account the results of the surveys and the preferences of your target audience.`,
+        promoTextThird: `Finally, after the design phase, comes the implementation of the website, with special attention to ensuring that every detail aligns precisely with the plans. Additionally, I will employ the latest technologies to optimize the site, ensuring maximum performance and user-friendly experience.`,
         businessTitle: `Empower Your Business`,
-        businessSub: `In the ever-evolving landscape of the digital world, your business deserves more than just a website—it deserves an immersive online experience. Whether you're envisioning a bespoke website, a captivating welcome page, or exploring unique ideas to enhance your brand, I specialize in crafting personalized, cutting-edge web solutions. In today's diverse digital landscape, your online presence should captivate audiences on every screen. With a commitment to responsive design, I ensure your website delivers an exceptional viewing experience on both mobile and desktop devices.`,
-        businessSubSec: `Ready to kickstart your business journey? I'm here to turn your vision into a compelling reality.`,
+        businessSub: `For a brand, a well-designed website is indispensable. A well-developed online platform provides the opportunity to showcase its story, values, and products. Additionally, it adds various functionalities that can assist in building and strengthening customer relationships, thus enhancing brand authenticity and competitiveness.`,
+
         businessBtn: `last projects`,
         frontendTitle: `My Frontend Journey`,
         frontendSub: `While my initial focus lies in frontend technologies, I would gladly explore the backend as well. Engage with my work, where I prioritize responsiveness, adopt the latest technologies, and strive for a harmonious blend of aesthetics and functionality.`,
@@ -202,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
         templateTitleMain: `Soon Available – Web Design Templates`,
         templateSubMain: `Like a virtual canvas, these templates are not just pre-made designs; they're a dynamic toolkit. Personalize every detail - from colors to fonts, creating a bespoke and modern user interface. Imagine a platform as versatile as Squarespace, as customizable as WordPress, or as user-friendly as Showit. Whether you want to take the reins and build it yourself or leave it entirely to me, your dream website will soon be just a click away`,
         templateBtn: `Templates`,
-        serviceIntro: `Here's a glimpse of the puzzle pieces I'm sharing with you, and there's so much more waiting to unfold. For additional details and the full picture, connect with me. For more, reach out—let's dive deeper into what lies ahead.`,
+        serviceIntro: `By crafting personalized, modern websites and harnessing the latest technologies, I ensure you stand out from the digital crowd and make a lasting impression.`,
         serviceTitle1: `Web-Focused UI/UX`,
         serviceDescription1: `Enhancing your website's design and functionality for an intuitive and enjoyable user experience`,
         serviceTitle2: `Web Integrations`,
@@ -219,16 +215,16 @@ document.addEventListener('DOMContentLoaded', function () {
         ambitiosText: `Luxury products designed for ambitious and gorgeous individuals`,
         backToTopBtn: `Back to Top ⬆ `,
         contactText: `Contact`,
-        contactTextSub: `Curious or have ideas? Connect and collaborate by dropping me an email. Let's bring your visions to life!"`,
+        contactTextSub: `Curious or have ideas? Connect and collaborate by dropping me an email. Let's bring your visions to life!`,
         navHome: `Home`,
         navTemplates: `Templates`,
         navContact: `Contact`,
         navWorks: `Works`,
         workPageTitle: `Embark on a visual journey through my most recent works`,
-        workPageDescription: ` A dedicated online platform crafted for fitness enthusiasts and professionals alike.`,
+        workPageDescription: ` On Brigi's page, captivating makeup artworks await every visitor.`,
         workPageDescription1: ``,
         workPageDescription2: `This website serves serves as a gateway to cutting-edge technological solutions, offering a glimpse into the future of innovative digital experiences.`,
-        workPageDescription3: `This platform is János's curated photography showcase, inviting you to explore the artistry through captivating visuals`,
+        workPageDescription3: `On this page, marvelous photos await the visitor, where each image captures a unique moment.`,
         workPageBtnLink: `Preparing for Launch`,
         workPageVisitBtn: `Visit Website`,
         workPageBtn: `Portal to Home`,
@@ -253,27 +249,26 @@ document.addEventListener('DOMContentLoaded', function () {
       languageData = {
         greeting: 'Szia! Apollónia vagyok',
         intro:
-          'Egy szenvedélyes alkotó  a webfejlesztés és dizájn világában. Innovatív megoldásokkal és esztétikai érzékkel az ötleteidet valósítom meg az online térben. Együtt vállalkozzunk arra, hogy digitális jelenléted rendkívülivé váljon. A te elképzeléseid, az én szakértelmem – tökéletes párosítás kivételes weboldalak létrehozásához!',
-        introSec: `Formáljunk együtt egy digitális remekművet, ami tükrözi a te elképzeléseidet, és lenyűgözi az online színpadot. Üdvözöllek egy stílus, technológia és határtalan kreativitás összefonódásában.`,
-        about: `Az utazásom kreativitás szálakba burkolva kezdődött, a haute couture világát járva be. Azonban a változás szelei, amelyeket a járvány irányított, egy új határ felé vezettek — a webdesign felé. A varrásoktól a pixelekig belemerültem a digitális tájfestés művészetébe. Ami kezdetben eltérítés volt, az szenvedélyes felfedezéssé vált, egy utazássá a divat határain túl, az egész webfejlesztés szövetét átfonva, és most már ez nem csak egy szakma; ez az én szenvedélyem.`,
-        aboutSec: `Hogy mi a célom? Segíteni azoknak, akik álmaikat egy kreatívan elképzelt és funkcionális weboldalhoz kapcsolják. Hozzuk létre az elképzelésed és valóság közötti hidat, olyan digitális terek kialakításával, amelyek meghatározzák a márkádat. Csatlakozz hozzám ezen odüsszeiában, ahol a víziókat lenyűgöző online élményekké alakítjuk. Fedezd fel frontend portfóliómat, böngészd át korábbi projekteimet és hamarosan induló webdesign sablonjaimat. Mergelj be a munkáim dinamikus világába, ahol az innováció találkozik az ügyfél elégedettségével.`,
-        promoText: `Indulj el az első lépéseid felé, hogy létrehozd az első weboldaladat!`,
-        promoSub: `mi történne, ha azt mondanád: "IGEN"?`,
-        promoTextLeft: `Hogyan befolyásolná az, ha frissített, szakmailag megjelenő weboldalad lenne, amely téged és munkádat képviseli? Hogyan pozícionálná magad az iparágadban? Hogyan befolyásolná azoknak a potenciális ügyfeleknek a véleményét, akik látnak téged és a munkádat?`,
-        promoTextSecond: `Csak jó dolgok származhatnak az újítástól. Ne engedd meg, hogy az, ami most idegennek tűnik, akadályozzon meg abban, hogy arany lehetőségeket tapasztalj meg.`,
-        promoTextThird: ` Azok a napok, amikor frusztrált voltál a márkáddal és a weboldaladdal, már a múlté. Ideje belépned az új siker korszakába és elérned a teljes potenciálodat. A tehetséged és hivatásod túl nagy ahhoz, hogy továbbra is kicsiben gondolkodj. A problémádra végre itt a megoldás.`,
-        promoTextThirds: ` Néhány nap alatt elindíthatod az új weboldaladat és beléphetsz a következő siker korszakába.`,
+          'Webfejlesztő és dizájnerként innovatív megoldásokkal és kifinomult esztétikai érzékkel segítek megvalósítani ötleteidet az online térben. Együttműködésünk során a te elképzeléseid és az én tapasztalatom ötvöződik, hogy lenyűgöző és hatékony weboldalakat hozzunk létre. Az elégedettséged a legfontosabb számomra, és mindent megteszek, hogy túlszárnyaljam a várakozásaidat.',
+        introSec: `Egyedi igényekre szabott weboldal- és webes megoldások fejlesztése.`,
+        about: `Az elégedettséged kiemelten fontos számomra, és ez mindig elsődleges szempont minden projekt során. Mielőtt nekikezdenénk a tervezésnek és fejlesztésnek, nagy figyelmet szentelek az igényeid teljes körű megértésére. Ez az alapvető lépés lehetőséget ad arra, hogy minden egyes projektet személyre szabott megközelítéssel kezeljek.`,
+        aboutSec: `Célom, hogy a weboldal ne csak szép és funkcionális legyen, hanem valódi értéket teremtsen és hozzájáruljon a márkád növekedéséhez és sikeréhez, valamint a legjobb eredményeket érjük el. Ennek érdekében olyan megoldásokat alkalmazok, amelyek kiemelik az egyediségét és vonzzák a látogatókat, miközben optimalizálják a felhasználói élményt és támogatják az üzleti célokat.`,
+        promoSub: `mi fog történni, ha azt mondod: "VÁGJUNK BELE"?`,
+        promoText: `Készítsük el a vállalkozásod legkiemelkedőbb weboldalát!`,
+        promoTextLeft: `Először megismerem a márkádat és céljaidat. Ezután stratégikusan meghatározzuk, milyen tartalmakra van szükségük a célközönségednek, és hogyan érhetjük el őket hatékonyan.`,
+        promoTextSecond: `Ezután a megszerzett ismeretek alapján személyesen tervezem meg az oldaladat. Figyelembe véve a felmérések eredményeit és a célközönség preferenciáit.`,
+        promoTextThird: ` Végül, a tervezési fázis után jöhet az oldal megvalósítása, kiemelt figyelmet fordítva arra, hogy minden részlet pontosan illeszkedjen a tervekhez. Emellett a legmodernebb technikákat alkalmazva optimalizálom az oldalt, hogy biztosítsam a maximális teljesítményt és a felhasználóbarát élményt.`,
         businessTitle: `Erősítsd meg az üzletedet!`,
-        businessSub: `A digitális világ folyamatos fejlődése során az üzleted többet érdemel csupán egy weboldalnál - egy elbűvölő online élményt. Legyen szó egyedi weboldalról, lenyűgöző üdvözlő oldalról, vagy olyan egyedi ötletek felfedezéséről, amelyek fokozzák a márkádat, én szakosodva személyre szabott és élvonalbeli webes megoldások készítésére. A mai változatos digitális környezetben az online jelenlétednek minden képernyőn lenyűgözőnek kell lennie. A rugalmas dizájn iránti elkötelezettségemmel biztosítom, hogy a weboldalad kivételes nézeti élményt nyújtson mind mobil-, mind asztali eszközökön.`,
+        businessSub: `Egy márka számára elengedhetetlen egy jól megtervezett weboldal. Egy jól kidolgozott online platform lehetőséget kínál arra, hogy bemutassa történetét, értékeit és termékeit. Emellett számos funkcionalitást is hozzáad, amelyek segíthetnek az ügyfélkapcsolatok építésében és erősítésében, továbbá növeli a márkahitelességet és versenyképességet.`,
         businessBtn: `Legutóbbi munkáim`,
-        businessSubSec: `Készen állsz elindítani vállalkozásod útját? Itt vagyok, hogy a látomásod izgalmas valósággá változtassam.`,
+
         frontendTitle: `Frontend Utazásom`,
         frontendSub: `Mélyedj el a munkáimban, ahol a webfejlesztés dinamikus világába merülök. Bár eredeti fókuszom a frontend technológiákra irányul, szívesen tanulnék a backend területéről is. Ismerd meg a munkáimat, ahol a reszponzivitásra helyezem a hangsúlyt, alkalmazom a legújabb technológiákat, és törekszem az esztétika és funkcionalitás harmonikus egyesítésére.`,
         frontendSec: ` Ahogy navigálsz, ne csak egy portfóliót képzelj el, hanem az elkötelezettségem bemutatását a webfejlesztés élén maradása iránt. Látogasd meg a portfóliómat, hogy első kézből tapasztald meg, hogyan változtatom kihívásokat lehetőségekké.`,
         templateTitle: `Hamarosan elérhető - Webdesign sablonok`,
         templateSub: `Mint egy virtuális vászon, ezek a sablonok nem csak előre elkészített tervek; egy dinamikus eszközkészlet. Személyre szabhatod minden részletét - a színektől a betűtípusokig, létrehozva egyedi és modern felhasználói felületet. Képzeld el egy olyan platformot, amely annyira sokoldalú, mint a Squarespace, annyira testreszabható, mint a WordPress, vagy annyira felhasználóbarát, mint a Showit. Akár magad akarod építeni, akár teljesen rám bízod, az álomweboldalad csak egy kattintásnyira van.`,
         templateBtn: `Sablonok`,
-        serviceIntro: `Íme egy pillantás arra, hogy milyen puzzle-darabokat osztok meg veled, és még sok más vár arra, hogy kibontakozzon. További részletekért és a teljes képért kapcsolatba léphetsz velem. Ha többet szeretnél tudni, keress bátran – merüljünk el együtt abban, ami előttünk áll.`,
+        serviceIntro: `A legújabb technológiák alkalmazásával segítek abban, hogy kitűnj a digitális tér zajából, és maradandó benyomást kelts.`,
         serviceTitle1: ` Webcentrikus felhasználói felület/élmény`,
         serviceDescription1: `A weboldal tervezésének és funkcionalitásának fejlesztése az intuitív és élvezetes felhasználói élmény érdekében.`,
         serviceTitle2: `Web Integrációk`,
@@ -283,24 +278,24 @@ document.addEventListener('DOMContentLoaded', function () {
         serviceTitle4: `Hosting`,
         serviceDescription4: `A szükséges infrastruktúra biztosítása annak érdekében, hogy a weboldalad elérhető és hozzáférhető legyen az interneten`,
         serviceTitle5: `Mobilbarát tervezés`,
-        serviceDescription5: `A projektek tervezése annak érdekében, hogy zökkenőmentes és felhasználóbarát élményt biztosítson különböző eszközökön, beleértve a mobiltelefonokat és táblagépeket, például az iPad-et.`,
+        serviceDescription5: `A projektek tervezése annak érdekében, hogy zökkenőmentes és felhasználóbarát élményt biztosítson különböző eszközökön, beleértve a mobiltelefonokat is`,
         serviceTitle6: `Legújabb technológiák`,
         serviceDescription6: `Tapasztald meg a digitális átalakulást, amint kihasználom a legújabb eszközök és megoldások erejét, és korszerű webfejlesztést nyújtok számodra.`,
         contactBtn: `Dologzzunk együtt!`,
-        ambitiosText: `Luxus termékek ambiciózus és gyönyörű egyének számára tervezve`,
+        ambitiosText: ``,
         backToTopBtn: `Vissza a tetejére ⬆️`,
         contactText: `Kapcsolat`,
-        contactTextSub: `Kíváncsi vagy vagy van ötleted? Írj és mükődj együtt velem egy e-mail küldésével.`,
+        contactTextSub: `Eljött az ideje, hogy megbeszéljük a projekted?`,
         navHome: `Főoldal`,
         navTemplates: `Sablonok`,
         navContact: `Kapcsolat`,
         navWorks: `Munkáim`,
         workPageTitle: `Indulj el egy vizuális utazáson legfrissebb munkáimon keresztül.`,
-        workPageDescription: `Egy odaadó online platform, amelyet fitness rajongók és szakemberek egyaránt számára terveztek.`,
+        workPageDescription: `Brigi oldalán elragadó sminkművészeti alkotások várnak majd minden látogatóra.`,
         workPageBtn: `Vissza a Főoldalra`,
         workPageDescription1: ``,
         workPageDescription2: `Ez a weboldal egy kaput szolgáltat a legújabb technológiai megoldásokhoz, betekintést nyújtva az innovatív digitális élmények jövőjébe.`,
-        workPageDescription3: `Ez a platform János gondosan összeállított fotókiállítása, amely arra hívja fel a figyelmet, hogy fedezze fel a művészetet lenyűgöző vizuális elemeken keresztül.`,
+        workPageDescription3: `Jani oldalán csodálatos fotók fogadják majd a látogatót, ahol minden kép egyedi pillanatot örökít meg.`,
         workPageBtnLink: `Hamarosan..`,
         workPageVisitBtn: `Megtekintés`,
         templateTitle: `Készíts lenyűgöző weboldalt kódolás nélkül`,
@@ -312,6 +307,7 @@ document.addEventListener('DOMContentLoaded', function () {
         templateCardText2: `A frissen őrölt kávé bájos illatától kezdve a hangulatos környezetig ez a sablon arra ösztönzi a látogatókat, hogy élvezzék minden kortyot.`,
         templateCardText3: `Fedezd fel az esztétika és funkcionalitás elegáns keverékét ebben a sablonban, amelyet azért terveztek, hogy a fotós utadat stílusosan és elegánsan mutassa be.`,
         templateCardBtbn: `ELFOGYOTT`,
+        templateSubMain: `Mint egy virtuális vászon, ezek a sablonok nemcsak előre elkészített tervek hanem egy dinamikus eszköztár. Személyre szabhatod minden részletet - a színektől a betűtípusokig -, létrehozva egyedi és modern felhasználói felületet. Képzeld el egy olyan platformot, ami olyan sokoldalú, mint a Squarespace, olyan testre szabható, mint a WordPress, vagy olyan felhasználóbarát, mint a Showit. Akár magad szeretnéd megépíteni, akár teljesen rám bíznád, weboldalad csak egy kattintásra lesz.`,
         templateDescription1: `Képzeld el egy weboldal sablont, mint egyedi design koncepciót az online tér számára. Ezek a sablonok olyanok, mintha előre elkészített vázlatok lennének, és általában körülbelül 10 variáció áll rendelkezésre. Fantasztikus kiindulópontot nyújtanak a weboldaladnak. Most, ha személyre szabott érintésre vágysz, vagy konkrét preferenciáid vannak, lehetőséged van egyedi sablon készítésére is. Ebben az esetben egy személyre szabott design-t hozok létre, amely megfelel a te elképzeléseidnek, és a folyamat általában 1-3 napot vesz igénybe. Amikor elkészül, élvezheted a saját weboldaladat azzal a lehetőséggel, hogy bármikor megváltoztathatod a tartalmat, amikor csak szeretnéd.`,
         templateDescription2: `Nemsokára elérhetők lesznek vásárlásra az új sablonjaim az Etsy oldalamon keresztül. Ezeket  gondosan és részletességgel terveztem, hogy zökkenőmentes és látványos élményt nyújtsanak a látogatóidnak. Ne habozz megkeresni, ha kérdéseid vannak, vagy segítségre van szükséged. Viszontlátásra, és köszönöm, hogy a Divine Inborn Studio részévé váltál digitális történetednek! ♡`,
         contactPageTitle: `Lépj kapcsolatba velem!`,
@@ -368,8 +364,8 @@ document.addEventListener('DOMContentLoaded', function () {
 // FORM VALIDATION AND SUBMISSION
 
 function submitForm() {
-  var name = document.getElementById('name').value;
-  var email = document.getElementById('email').value;
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
 
   document.getElementById('nameError').innerHTML = '';
   document.getElementById('emailError').innerHTML = '';
@@ -384,13 +380,13 @@ function submitForm() {
     return;
   }
 
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     document.getElementById('emailError').innerHTML = 'Invalid Email format';
     return;
   }
 
-  var formData = {
+  let formData = {
     name: name,
     email: email,
     message: document.getElementById('message').value,
@@ -407,7 +403,7 @@ function submitForm() {
     .then((data) => {
       if (data.includes('success')) {
         alert(
-          'Hooray! Your message just landed in my inbox. 🚀 I am excited to read it and will get back to you in a heartbeat.✨'
+          'Hooray! Your message just landed in my inbox. I am excited to read it and will get back to you in a heartbeat.✨'
         );
       } else {
         alert('Form submission failed. Please try again.');
@@ -418,3 +414,36 @@ function submitForm() {
       alert('Form submission failed. Please try again.');
     });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  var langFlag = document.querySelector('.lang-flag');
+  var langDropdown = document.querySelector('.language-dropdown');
+  var langListItems = document.querySelectorAll('ul.lang-list li');
+  var langSelected = document.getElementById('lang_selected');
+
+  langFlag.addEventListener('click', function () {
+    langDropdown.classList.toggle('open');
+  });
+
+  langListItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      langListItems.forEach(function (li) {
+        li.classList.remove('selected');
+      });
+      item.classList.add('selected');
+
+      if (item.classList.contains('lang-en')) {
+        langFlag.classList.add('lang-en');
+        langFlag.classList.remove('lang-es');
+        langFlag.classList.remove('lang-pt');
+        langSelected.innerHTML = '<p>EN</p>';
+      } else if (item.classList.contains('lang-pt')) {
+        langFlag.classList.add('lang-pt');
+        langFlag.classList.remove('lang-es');
+        langFlag.classList.remove('lang-en');
+        langSelected.innerHTML = '<p>PT</p>';
+      }
+      langDropdown.classList.remove('open');
+    });
+  });
+});

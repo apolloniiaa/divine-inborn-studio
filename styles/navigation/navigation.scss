@@ -13,7 +13,7 @@ body {
     height: 8rem;
     width: 8rem;
     position: fixed;
-    top: 0;
+    top: -16px;
     right: 6rem;
     border-radius: 51%;
     z-index: 20000;
@@ -76,7 +76,7 @@ body {
       );
       background-size: 220%;
       transition: all 0.4s;
-      padding: 5px 3rem 5px 1rem;
+      padding: 5px 1rem;
       border-radius: 10px;
       font-family: 'Noto Serif Display';
       display: inline-block;
