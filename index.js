@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function () {
         serviceDescription5: `A projektek tervezése annak érdekében, hogy zökkenőmentes és felhasználóbarát élményt biztosítson különböző eszközökön, beleértve a mobiltelefonokat is`,
         serviceTitle6: `Legújabb technológiák`,
         serviceDescription6: `Tapasztald meg a digitális átalakulást, amint kihasználom a legújabb eszközök és megoldások erejét, és korszerű webfejlesztést nyújtok számodra.`,
-        contactBtn: `Dologzzunk együtt!`,
+        contactBtn: `Dolgozzunk együtt!`,
         ambitiosText: ``,
         backToTopBtn: `Vissza a tetejére ⬆️`,
         contactText: `Kapcsolat`,

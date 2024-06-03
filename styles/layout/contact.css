@@ -108,6 +108,9 @@
   text-align: center;
   font-family: "Avenue", "Times New Roman", Times, serif;
 }
+.contact-page .custom-select {
+  background-color: transparent;
+}
 
 .error-message {
   color: #ffcac3;
