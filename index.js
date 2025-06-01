@@ -264,18 +264,15 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
 `,
         promoTextSecond: ``,
         promoTextThird: ` Miután elkészült a terv, nekilátok a megvalósításnak. Fontos számomra, hogy minden pontosan úgy működjön, ahogy elképzeltük. Korszerű megoldásokkal biztosítom, hogy az oldal gyors, stabil és felhasználóbarát legyen.`,
-        businessTitle: `Erősítsd meg a vállalkozásod alapjait.`,
+        businessTitle: `Erősítsd meg a vállalkozásod alapjait`,
         businessSub: `Egy erős márka ma már nem létezhet jól működő weboldal nélkül. Az online jelenlét nemcsak arra ad lehetőséget, hogy megmutasd, ki vagy és mit képviselsz, hanem aktívan támogatja az ügyfelekkel való kapcsolatépítést is.`,
         // businessBtn: `Legutóbbi munkáim`,
 
         frontendTitle: `Frontend Utazásom`,
-        frontendSub: `Olyan felületeket tervezek és fejlesztek, ahol a design és a funkcionalitás kiegyensúlyozottan működik együtt.
-A frontend technológiák és a vizuális élmény közös nyelve az, amiben igazán otthon érzem magam.
-Célom, hogy minden oldal egyszerre legyen átlátható, esztétikus és könnyen használható.`,
+        frontendSub: `Olyan felületeket tervezek és fejlesztek, ahol a design és a funkcionalitás kiegyensúlyozottan működik együtt. A frontend technológiák és a vizuális élmény közös nyelve az, amiben igazán otthon érzem magam. Célom, hogy minden oldal egyszerre legyen átlátható, esztétikus és könnyen használható.`,
         frontendSec: ` `,
         templateTitleMain: `Hamarosan elérhető: webdesign sablonok`,
-        templateSub: `Ezek a sablonok nemcsak előre elkészített megoldások, hanem rugalmas alapok egy saját weboldalhoz.
-Szinte minden részlet alakítható – a színek, a betűtípusok, az elrendezés –, így az oldal könnyen igazítható a saját igényeidhez.`,
+        templateSub: `Ezek a sablonok nemcsak előre elkészített megoldások, hanem rugalmas alapok egy saját weboldalhoz. Szinte minden részlet alakítható – a színek, a betűtípusok, az elrendezés –, így az oldal könnyen igazítható a saját igényeidhez.`,
         templateBtn: `Sablonok`,
         serviceIntro: `Rendezett, egyedi és funkcionális online arculat.`,
         serviceTitle1: ` Webes környezetre szabott UI/UX`,
@@ -308,8 +305,9 @@ Szinte minden részlet alakítható – a színek, a betűtípusok, az elrendez�
         workPageBtnLink: `Hamarosan..`,
         workPageVisitBtn: `Megtekintés`,
         templateTitle: `Weboldalkészítés kódolás nélkül – könnyen, érthetően.`,
-        templateSub: `Könnyen testreszabhatók, és kész felületi blokkokat kínálnak – így gyorsabban hozhatod létre a saját weboldalad.`,
+        templateSubMain: `Könnyen testreszabhatók, és kész felületi blokkokat kínálnak – így gyorsabban hozhatod létre a saját weboldalad.`,
         templateCardTitle1: `Portfólió  sablon`,
+
         templateCardTitle2: ` Fotós portfólió sablon `,
         templateCardTitle3: `Webshop sablon`,
         templateCardText1: `Tökéletes bárkinek, aki szeretné bemutatni a portfólióját anélkül, hogy nulláról kezdene.`,
