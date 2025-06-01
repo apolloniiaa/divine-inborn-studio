@@ -18,20 +18,19 @@
   display: block;
   height: 576px;
   z-index: 1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   filter: grayscale(1);
 }
 .class .main-content .small-image {
   position: absolute;
   z-index: 2;
   transition: opacity 0.3s ease;
-  height: 400px;
+  height: 320px;
   filter: grayscale(1);
 }
 .class .main-content .left {
-  top: 107;
-  left: calc(50% - 480px);
+  top: 490px;
+  left: calc(50% - 413px);
   transform: translateY(-50%);
 }
 .class .main-content .right {
@@ -165,4 +164,6 @@
 
 .custom-select {
   background-color: black;
-}/*# sourceMappingURL=intro.css.map */
+}
+
+/*# sourceMappingURL=intro.css.map */

@@ -17,8 +17,7 @@
 footer .logo {
   width: 190px;
   height: 147px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .footer-distributed {
@@ -190,4 +189,6 @@ footer .logo {
     margin: 1rem auto;
     line-height: 20px;
   }
-}/*# sourceMappingURL=footer.css.map */
+}
+
+/*# sourceMappingURL=footer.css.map */

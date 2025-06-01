@@ -1,6 +1,5 @@
 .service-container {
   width: 100%;
-  height: 100vh;
   padding: 10rem;
   background-color: #ffffff;
   color: #4a4a4a;
@@ -109,4 +108,6 @@
   .row {
     gap: 2rem;
   }
-}/*# sourceMappingURL=services.css.map */
+}
+
+/*# sourceMappingURL=services.css.map */

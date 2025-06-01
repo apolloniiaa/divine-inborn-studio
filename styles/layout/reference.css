@@ -109,8 +109,7 @@ html {
 .image-container img {
   width: 490px;
   height: 630px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   box-shadow: 20px -19px 1px #ffffff;
 }
 .image-container:nth-child(3) {
@@ -209,4 +208,6 @@ html {
   .desktop-only {
     display: none;
   }
-}/*# sourceMappingURL=reference.css.map */
+}
+
+/*# sourceMappingURL=reference.css.map */
