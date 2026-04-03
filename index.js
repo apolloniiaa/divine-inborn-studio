@@ -221,11 +221,11 @@ My goal is to create websites that are clear, visually appealing, and easy to us
         navTemplates: `Templates`,
         navContact: `Contact`,
         navWorks: `Works`,
-        workPageTitle: `Embark on a visual journey through my most recent works`,
+        workPageTitle: `Below are some of the projects I’ve worked on.`,
         workPageDescription: ` On Brigi's page, captivating makeup artworks await every visitor.`,
         workPageDescription1: ``,
-        workPageDescription2: `This website serves serves as a gateway to cutting-edge technological solutions, offering a glimpse into the future of innovative digital experiences.`,
-        workPageDescription3: `On this page, marvelous photos await the visitor, where each image captures a unique moment.`,
+        workPageDescription2: `A personal site about equestrian life and experiences.`,
+        workPageDescription3: `A little magic is on the way — Unicorn Magic Brew Coffee is coming soon to Reading, England.`,
         workPageBtnLink: `Preparing for Launch`,
         workPageVisitBtn: `Visit Website`,
         workPageBtn: `Portal to Home`,
@@ -237,7 +237,7 @@ My goal is to create websites that are clear, visually appealing, and easy to us
         templateCardText1: `Perfect for anyone who wants to showcase their portfolio without starting from scratch.`,
         templateCardText2: `A ready-to-use webshop template – all it needs is your products.`,
         templateCardText3: `Discover the blend of aesthetics and functionality in this template, designed to showcase your photographic journey with elegance and style.`,
-        templateCardBtbn: `SOLD OUT`,
+        templateCardBtbn: `Coming Soon`,
         // templateDescription1: `Imagine a website template as a unique design concept for your online space. These templates are like ready-made blueprints, and typically, there are about 10 variations available. They serve as a fantastic starting point for your website. Now, if you want a personalized touch or have specific preferences, I offer the option to create a custom template just for you. In this case, I craft a tailored design to match your vision, and the process usually takes 1-3 days. Once it's ready, you can enjoy your very own website with the flexibility to change content whenever you want.`,
         templateDescription2: `My website templates are ready-made foundations to help you launch your online presence with ease. Choose from around 5 clean, modern designs—or request a custom one, delivered in 1–3 days. All templates are fully editable, so you can update your content anytime.
 
@@ -266,7 +266,7 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
         promoTextThird: ` Miután elkészült a terv, nekilátok a megvalósításnak. Fontos számomra, hogy minden pontosan úgy működjön, ahogy elképzeltük. Korszerű megoldásokkal biztosítom, hogy az oldal gyors, stabil és felhasználóbarát legyen.`,
         businessTitle: `Erősítsd meg a vállalkozásod alapjait`,
         businessSub: `Egy erős márka ma már nem létezhet jól működő weboldal nélkül. Az online jelenlét nemcsak arra ad lehetőséget, hogy megmutasd, ki vagy és mit képviselsz, hanem aktívan támogatja az ügyfelekkel való kapcsolatépítést is.`,
-        // businessBtn: `Legutóbbi munkáim`,
+        businessBtn: `Munkáim`,
 
         frontendTitle: `Frontend Utazásom`,
         frontendSub: `Olyan felületeket tervezek és fejlesztek, ahol a design és a funkcionalitás kiegyensúlyozottan működik együtt. A frontend technológiák és a vizuális élmény közös nyelve az, amiben igazán otthon érzem magam. Célom, hogy minden oldal egyszerre legyen átlátható, esztétikus és könnyen használható.`,
@@ -296,12 +296,12 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
         navTemplates: `Sablonok`,
         navContact: `Kapcsolat`,
         navWorks: `Munkáim`,
-        workPageTitle: `Indulj el egy vizuális utazáson legfrissebb munkáimon keresztül.`,
+        workPageTitle: `Az alábbiakban néhány általam készített munkát találsz.`,
         workPageDescription: `Brigi oldalán elragadó sminkművészeti alkotások várnak majd minden látogatóra.`,
         workPageBtn: `Vissza a Főoldalra`,
         workPageDescription1: ``,
-        workPageDescription2: `Ez a weboldal egy kaput szolgáltat a legújabb technológiai megoldásokhoz, betekintést nyújtva az innovatív digitális élmények jövőjébe.`,
-        workPageDescription3: `Jani oldalán csodálatos fotók fogadják majd a látogatót, ahol minden kép egyedi pillanatot örökít meg.`,
+        workPageDescription2: `Lovas élet és tapasztalatok egy személyes oldalon.`,
+        workPageDescription3: `Egy kis varázslat úton van — a Unicorn Magic Brew kávézó hamarosan megérkezik Readingbe, Angliába.`,
         workPageBtnLink: `Hamarosan..`,
         workPageVisitBtn: `Megtekintés`,
         templateTitle: `Weboldalkészítés kódolás nélkül – könnyen, érthetően.`,
@@ -320,7 +320,7 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
         contactPageName: `Név`,
         contactPageEmail: `Email cím`,
         contactPageBtn: `Küldés`,
-        templateCardBtbn: `Elfogyott`,
+        templateCardBtbn: `Hamarosan`,
       };
     }
   }
