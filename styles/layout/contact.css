@@ -5,7 +5,6 @@
   justify-content: center;
   text-align: center;
   position: relative;
-  background-color: #525252;
   height: 70vh;
 }
 
@@ -24,7 +23,7 @@
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 6rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -81,10 +80,6 @@
 }
 .contact-page .contact2 .login-form .login-input-container .input-content:focus {
   outline: none !important;
-}
-.contact-page .contact2 .login-form .login-input-container input:not(:-moz-placeholder-shown) ~ label {
-  margin-top: -60px;
-  font-size: 12px;
 }
 .contact-page .contact2 .login-form .login-input-container input:focus ~ label,
 .contact-page .contact2 .login-form .login-input-container input:not(:placeholder-shown) ~ label {

@@ -50,6 +50,7 @@ html {
     font-weight: 600;
     font-family: 'Noto Serif Display', serif;
     margin-bottom: 3rem;
+    color: #6c0700;
   }
 
   p {
@@ -61,8 +62,8 @@ html {
   }
 
   .button_slide {
-    color: #101010;
-    border: 2px solid rgb(0 0 0);
+    color: #340401;
+    border: 2px solid #6c0700;
     border-radius: 0px;
     padding: 12px 28px;
     display: inline-block;
@@ -81,22 +82,22 @@ html {
   }
 
   .slide_down:hover {
-    box-shadow: inset 0 100px 0 0 rgb(5, 5, 5);
+    box-shadow: inset 0 100px 0 0 #340401;
     color: whitesmoke;
   }
 
   .slide_right:hover {
-    box-shadow: inset 400px 0 0 0 rgb(5, 5, 5);
+    box-shadow: inset 400px 0 0 0 #340401;
     color: whitesmoke;
   }
 
   .slide_left:hover {
-    box-shadow: inset 0 0 0 50px rgb(5, 5, 5);
+    box-shadow: inset 0 0 0 50px #340401;
     color: whitesmoke;
   }
 
   .slide_diagonal:hover {
-    box-shadow: inset 400px 50px 0 0 rgb(5, 5, 5);
+    box-shadow: inset 400px 50px 0 0 #340401;
     color: whitesmoke;
   }
 
@@ -121,21 +122,21 @@ html {
     width: 490px;
     height: 630px;
     object-fit: cover;
-    box-shadow: 20px -19px 1px #ffffff;
+    box-shadow: 20px -19px 1px #350502;
   }
 
   &:nth-child(3) {
     position: relative;
 
     img {
-      content: ''; // Az abszolút pozícióhoz szükséges tartalom
+      content: '';
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
-      left: 18rem; // Állítsd be a megfelelő margint
+      left: 18rem;
       z-index: -1;
-      box-shadow: -20px -19px 1px #ffffff; // Háttérrel való ütközések elkerülése
+      box-shadow: -20px -19px 1px #350502;
     }
   }
 

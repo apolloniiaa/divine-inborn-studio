@@ -1,5 +1,5 @@
 .workee-page {
-  background: #a6a6a6;
+  background: #f1e9dc;
 }
 .workee-page .page {
   width: 100%;
@@ -101,7 +101,7 @@
   stroke-miterlimit: 10;
 }
 .workee-page .st2 {
-  background: linear-gradient(to top, #0b0b0b 0%, #0e0d0d 120%);
+  background: linear-gradient(to top, #0b0b0b 0%, #380404 120%);
 }
 .workee-page .st3 {
   opacity: 0.3;
@@ -112,18 +112,14 @@
   left: 0%;
   height: 68%;
   width: 100%;
-  background: linear-gradient(to top, #0b0b0b 0%, #0e0d0d 120%);
+  background: linear-gradient(to top, #0b0b0b 0%, #380404 120%);
   z-index: 30;
 }
 .workee-page #s1 {
-  background: linear-gradient(to top, #0b0b0b 0%, #0e0d0d 120%);
+  background: linear-gradient(to top, #0b0b0b 0%, #380404 120%);
 }
 .workee-page #s2 {
-  background: linear-gradient(to top, #0b0b0b 0%, #0e0d0d 120%);
-}
-.workee-page .info {
-  position: absolute;
-  top: 16%;
+  background: linear-gradient(to top, #0b0b0b 0%, #380404 120%);
 }
 .workee-page .info .button_pro {
   color: white;
@@ -140,6 +136,10 @@
   text-decoration: none;
   cursor: default;
   margin: 2rem;
+}
+.workee-page .info {
+  position: absolute;
+  top: 16%;
 }
 .workee-page h3 {
   text-align: center;
@@ -197,7 +197,7 @@
   padding: 8px 28px;
   display: inline-block;
   font-family: "Noto Serif Display", serif;
-  background-color: black;
+  background-color: #450407;
   letter-spacing: 5px;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -359,6 +359,4 @@
     width: 100%;
     height: 22%;
   }
-}
-
-/*# sourceMappingURL=works.css.map */
+}/*# sourceMappingURL=works.css.map */

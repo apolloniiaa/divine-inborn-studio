@@ -7,7 +7,6 @@
   }
 }
 .slider {
-  background-color: white !important;
   opacity: 1 !important;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 100px;
@@ -40,6 +39,4 @@
 .slider .slide {
   height: 100px;
   width: 250px;
-}
-
-/*# sourceMappingURL=slider.css.map */
+}/*# sourceMappingURL=slider.css.map */

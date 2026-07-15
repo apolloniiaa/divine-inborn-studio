@@ -20,7 +20,7 @@ body {
   font-family: "Noto Serif Display", serif;
   font-weight: 200;
   scroll-behavior: smooth;
-  background: #e5e4e0;
+  background-color: #f7f2ea;
 }
 
 *,
@@ -34,6 +34,4 @@ body {
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 .class {
   position: relative;
   text-align: center;
-  padding: 13rem 0;
+  padding: 16rem 0;
   background-color: #e5e4e0;
 }
 .class .container {
@@ -25,12 +25,11 @@
   position: absolute;
   z-index: 2;
   transition: opacity 0.3s ease;
-  height: 320px;
-  filter: grayscale(1);
+  height: 230px;
 }
 .class .main-content .left {
-  top: 490px;
-  left: calc(50% - 413px);
+  top: 500px;
+  left: calc(50% - 450px);
   transform: translateY(-50%);
 }
 .class .main-content .right {
@@ -66,7 +65,7 @@
 
 .text-overlay {
   position: absolute;
-  top: 66%;
+  top: 78%;
   left: 70%;
   transform: translate(47%, -6%);
   z-index: 3;
@@ -84,19 +83,20 @@
 
 .class {
   position: relative;
-  background-color: #555555;
+  background-color: #300200;
 }
 .class .title {
-  font-size: 9rem;
+  font-size: 6rem;
   margin: 0;
   position: absolute;
-  top: 22%;
+  z-index: 1;
   left: 50%;
+  top: 16%;
   transform: translate(-50%, -50%);
-  z-index: 5;
-  color: white;
-  font-family: "Avenue", "Times New Roman", Times, serif;
+  color: #fff2ee;
+  font-family: "Noto Serif Display", serif;
   text-shadow: 2px 2px 4px rgba(62, 60, 60, 0.1);
+  width: 64rem;
 }
 
 .main-image,
@@ -117,19 +117,23 @@
 }
 @media screen and (max-width: 1024px) {
   .class .title {
-    font-size: 8rem;
+    font-size: 5rem;
     line-height: 70px;
+    width: auto;
   }
   .class .main-content .small-image {
-    top: 58%;
+    top: 94%;
   }
   .title {
     font-size: 6rem;
   }
   .text-overlay {
-    top: 85%;
-    left: 31%;
+    top: 81%;
+    left: 62%;
     transform: translate(50%, -6%);
+  }
+  .text-overlay p {
+    width: 31rem;
   }
   .image {
     width: 80%;
@@ -137,18 +141,26 @@
 }
 @media screen and (max-width: 768px) {
   .class .title {
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 47px;
+    width: 100%;
+  }
+  .class .text-overlay {
+    top: 93%;
+    left: -21%;
+    transform: translate(50%, -6%);
+  }
+  .class .text-overlay p {
+    width: 31rem;
   }
   .class .main-content .main-image {
-    height: 270px;
+    height: 330px;
   }
   .class .main-content .left {
-    left: calc(50% - 185px);
+    left: calc(50% - 285px);
   }
   .class .main-content .small-image {
-    top: 98%;
-    height: 165px;
+    display: none;
   }
   .image {
     height: 450px;
@@ -163,7 +175,5 @@
 }
 
 .custom-select {
-  background-color: black;
-}
-
-/*# sourceMappingURL=intro.css.map */
+  background-color: #300200;
+}/*# sourceMappingURL=intro.css.map */

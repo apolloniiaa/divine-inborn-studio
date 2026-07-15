@@ -1,3 +1,7 @@
+#templates {
+  background-color: rgb(42, 1, 1);
+}
+
 #templates::before {
   content: "";
   position: fixed;
@@ -65,7 +69,7 @@
   vertical-align: middle;
 }
 .main .btn {
-  color: #cccccc;
+  color: rgba(42, 1, 1, 0.54);
   padding: 0.8rem;
   font-size: 14px;
   text-transform: uppercase;
@@ -74,7 +78,7 @@
   display: block;
   width: 100%;
   cursor: disabling;
-  border: 1px solid rgba(219, 219, 219, 0.2);
+  border: 1px solid rgba(42, 1, 1, 0.041);
   background: transparent;
 }
 .main .btn:hover {
@@ -101,9 +105,9 @@
   }
 }
 .main .cards .cards_item .card {
-  background-color: rgb(156, 156, 156);
+  background-color: rgb(252, 252, 252);
   border-radius: 0.25rem;
-  box-shadow: 20px -19px 0px 0px rgb(96, 95, 95);
+  box-shadow: 20px -19px 0px 0px rgb(42, 1, 1);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -112,7 +116,7 @@
   padding: 3rem;
 }
 .main .cards .cards_item .card .card_content .card_title {
-  color: #fbfbfb;
+  color: rgb(42, 1, 1);
   font-family: "Noto Serif Display", serif;
   font-weight: 600;
   line-height: 2.5rem;
@@ -122,7 +126,7 @@
   margin: 0px;
 }
 .main .cards .cards_item .card .card_content .card_text {
-  color: #ffffff;
+  color: rgb(42, 1, 1);
   font-family: "Noto Serif Display", serif;
   font-weight: 300;
   line-height: 1.7rem;
@@ -153,10 +157,6 @@
   font-weight: 300;
   line-height: 3rem;
   text-align: center;
-}
-
-footer {
-  background-color: rgb(132, 131, 131);
 }
 
 @media screen and (max-width: 1300px) {
@@ -210,6 +210,4 @@ footer {
     font-size: 1.5rem;
     line-height: 28px;
   }
-}
-
-/*# sourceMappingURL=templates.css.map */
+}/*# sourceMappingURL=templates.css.map */

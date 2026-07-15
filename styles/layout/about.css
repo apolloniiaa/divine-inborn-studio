@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   background: #e5e4e0;
-  color: #121212;
+  color: #46080d;
   font-family: "Noto Serif Display", serif;
 }
 .intro .centered {
@@ -101,6 +101,4 @@
     font-weight: 300;
     margin-bottom: 3rem;
   }
-}
-
-/*# sourceMappingURL=about.css.map */
+}/*# sourceMappingURL=about.css.map */
