@@ -41,11 +41,10 @@ body {
     opacity: 0;
     width: 0;
     transition: all 0.8s;
-    // background-image: url('/assets/BD768B7D-0844-45F9-8D00-363A8E9892EB.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background: #260202;
+    background: #240200;
   }
   &_list {
     position: absolute;
@@ -116,7 +115,6 @@ body {
       height: 1px;
       width: 4rem;
       height: 3px;
-      // background-color: #b7b7b6;
       background-color: #e9bbae;
       display: inline-block;
     }
@@ -179,6 +177,7 @@ body {
         font-size: 1rem;
         font-weight: 300;
         line-height: 17px;
+        transition: none;
       }
     }
     &__icon {

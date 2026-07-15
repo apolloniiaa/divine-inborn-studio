@@ -39,7 +39,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background: #260202;
+  background: #240200;
 }
 .navigation_list {
   position: absolute;
@@ -151,6 +151,7 @@ body {
     font-size: 1rem;
     font-weight: 300;
     line-height: 17px;
+    transition: none;
   }
   .navigation__icon {
     margin-top: 2rem;

@@ -1,7 +1,7 @@
 .service-container {
   width: 100%;
   padding: 10rem;
-  background-color: #300502;
+  background-color: rgb(36, 3, 0);
   color: whitesmoke;
 }
 .service-container h2 {
