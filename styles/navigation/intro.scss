@@ -20,7 +20,7 @@
       height: 576px;
       z-index: 1;
       object-fit: cover;
-      filter: grayscale(1);
+      // filter: grayscale(1);
     }
 
     .small-image {
@@ -31,9 +31,7 @@
     }
 
     .left {
-      top: 500px;
-      left: calc(50% - 450px);
-      transform: translateY(-50%);
+      display: none;
     }
 
     .right {
@@ -75,7 +73,7 @@
 .text-overlay {
   position: absolute;
   top: 78%;
-  left: 70%;
+  left: 74%;
   transform: translate(47%, -6%);
   z-index: 3;
   text-align: center;
@@ -102,7 +100,7 @@
     position: absolute;
     z-index: 1;
     left: 50%;
-    top: 16%;
+    top: 11%;
     transform: translate(-50%, -50%);
     color: #fff2ee;
     font-family: 'Noto Serif Display', serif;
@@ -161,15 +159,19 @@
 
 @media screen and (max-width: 768px) {
   .class {
+    padding: 7rem 0 13rem 0;
     .title {
-      font-size: 4rem;
-      line-height: 47px;
-      width: 100%;
+      font-size: 3rem;
+      line-height: 37px;
+      width: 90%;
+      top: 8%;
     }
     .text-overlay {
-      top: 93%;
-      left: -21%;
+      top: 105%;
+      left: -15%;
       transform: translate(50%, -6%);
+      line-height: 18px;
+      font-size: 1rem;
       p {
         width: 31rem;
       }
@@ -177,7 +179,7 @@
 
     .main-content {
       .main-image {
-        height: 330px;
+        height: 370px;
       }
       .left {
         left: calc(50% - 285px);
