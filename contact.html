@@ -1,24 +1,73 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DI STUDIO - Your Source for Web Development and Design">
+    <title>Kapcsolat – Webdesigner és Webfejlesztő | Divine Inborn Studio</title>
+    <meta name="description" content="Weboldal készítést vagy webdesignt tervezel? Írj Szakács Apollóniának, budapesti webdesignernek és frontend fejlesztőnek, és beszéljük át a projekted.">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.divineinborn.dev/contact.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Divine Inborn Studio">
+    <meta property="og:locale" content="hu_HU">
+    <meta property="og:url" content="https://www.divineinborn.dev/contact.html">
+    <meta property="og:title" content="Kapcsolat – Webdesigner és Webfejlesztő | Divine Inborn Studio">
+    <meta property="og:description" content="Weboldal készítés, webdesign vagy frontend fejlesztés? Vedd fel a kapcsolatot a Divine Inborn Studióval.">
+    <meta property="og:image" content="https://www.divineinborn.dev/assets/og-image.jpg">
+    <meta property="og:image:alt" content="Divine Inborn Studio – Brand Identity &amp; Visual Design portfólió">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kapcsolat – Webdesigner és Webfejlesztő | Divine Inborn Studio">
+    <meta name="twitter:description" content="Weboldal készítés, webdesign vagy frontend fejlesztés? Vedd fel a kapcsolatot a Divine Inborn Studióval.">
+    <meta name="twitter:image" content="https://www.divineinborn.dev/assets/og-image.jpg">
+
+    <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <meta name="theme-color" content="#240200">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="shortcut icon" href="./assets/big_whtie_5.jpeg" type="image/x-icon">
-    <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
-    <script src="index.js"></script>
-    <title>DI STUDIO - Web Development and Design</title>
+    <script defer src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script defer src="index.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "@id": "https://www.divineinborn.dev/contact.html#webpage",
+      "url": "https://www.divineinborn.dev/contact.html",
+      "name": "Kapcsolat – Webdesigner és Webfejlesztő | Divine Inborn Studio",
+      "inLanguage": "hu-HU",
+      "isPartOf": { "@id": "https://www.divineinborn.dev/#website" },
+      "about": { "@id": "https://www.divineinborn.dev/#studio" },
+      "mainEntity": {
+        "@id": "https://www.divineinborn.dev/#studio",
+        "@type": "ProfessionalService",
+        "name": "Divine Inborn Studio",
+        "url": "https://www.divineinborn.dev/",
+        "email": "divineinborn@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Budapest", "addressCountry": "HU" },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "divineinborn@gmail.com",
+          "availableLanguage": ["Hungarian", "English"],
+          "areaServed": "HU"
+        }
+      }
+    }
+    </script>
 </head>
 
 <body id="contact" class="contact-page">
     <div id="language-selector">
         <div class="custom-select">
-            <select id="language-dropdown">
+            <select id="language-dropdown" aria-label="Nyelv kiválasztása / Select language">
                 <option value="en">Select language</option>
-                <option value="en">English</option>
-                <option value="hu">Magyar</option>
+                <option value="en" lang="en">English</option>
+                <option value="hu" lang="hu">Magyar</option>
             </select>
 
         </div>
@@ -29,51 +78,52 @@
 
     <div id="content"></div>
     <div class="navigation">
-        <input type="checkbox" class="navigation_checkbox" id="navi_toggle">
+        <input type="checkbox" class="navigation_checkbox" id="navi_toggle" aria-label="Menü megnyitása">
         <label for="navi_toggle" class="navigation_button">
-            <span class="navigation__icon">&nbsp</span>
+            <span class="navigation__icon">&nbsp;</span>
         </label>
-        <div class="navigation_background">&nbsp</div>
+        <div class="navigation_background">&nbsp;</div>
 
-        <nav class="navigation_nav">
+        <nav class="navigation_nav" aria-label="Fő navigáció">
             <ul class="navigation_list">
-                <li class="navigation_item"><a href="index.html" class="navigation_link" data-translate="navHome"></a>
+                <li class="navigation_item"><a href="/" class="navigation_link" data-translate="navHome">Főoldal</a>
                 </li>
 
-                <li class="navigation_item"><a href="works.html" class="navigation_link" data-translate="navWorks"></a>
+                <li class="navigation_item"><a href="works.html" class="navigation_link" data-translate="navWorks">Munkáim</a>
                 </li>
 
-                <li class="navigation_item"><a href=" templates.html" class="navigation_link"
-                        data-translate="navTemplates"></a></li>
-                <li class="navigation_item"><a href=" contact.html" class="navigation_link"
-                        data-translate="navContact"></a>
+                <li class="navigation_item"><a href="templates.html" class="navigation_link"
+                        data-translate="navTemplates">Sablonok</a></li>
+                <li class="navigation_item"><a href="contact.html" class="navigation_link"
+                        data-translate="navContact">Kapcsolat</a>
                 </li>
-                <li class="navigation_item"><a
-                        href="
-                        https://3d-portfolio-nine-tau.vercel.app/?fbclid=IwAR2Zk79yA6rxfaMIXYxhj3t4kxyjnL5bs_r0Ub1lAFAagw6lIIqxqVTiMyA"
-                        class="navigation_link">Frontend Portfolio</a></li>
+                <li class="navigation_item"><a href="https://3d-portfolio-nine-tau.vercel.app/"
+                        class="navigation_link" target="_blank" rel="noopener">Frontend Portfolio</a></li>
             </ul>
         </nav>
     </div>
-    <div class="contact2">
-        <div class="login-form ">
-            <h1 data-translate="contactPageTitle">Get in touch!</h1>
+    <main class="contact2">
+        <div class="login-form">
+            <h1 data-translate="contactPageTitle">Kapcsolatfelvétel</h1>
             <div class="login-input-container">
-                <label class="name" for="name" data-translate="contactPageName">Name</label>
-                <input id="name" class="input-content" type="text" placeholder="" maxlength="50" required />
-                <div id="nameError" class="error-message"></div>
+                <label class="name" for="name" data-translate="contactPageName">Név</label>
+                <input id="name" class="input-content" type="text" placeholder="" maxlength="50" autocomplete="name" required>
+                <div id="nameError" class="error-message" role="alert"></div>
             </div>
             <div class="login-input-container">
-                <label class="email" for="email" data-translate="contactPageEmail">Email</label>
-                <input id="email" class="input-content" type="email" placeholder="" maxlength="50" required />
-                <div id="emailError" class="error-message"></div>
+                <label class="email" for="email" data-translate="contactPageEmail">Email cím</label>
+                <input id="email" class="input-content" type="email" placeholder="" maxlength="50" autocomplete="email" required>
+                <div id="emailError" class="error-message" role="alert"></div>
             </div>
             <div class="login-input-container">
-                <label class="message" for="message" data-translate="contactPageMessage">Message</label>
+                <label class="message" for="message" data-translate="contactPageMessage">Üzenet</label>
                 <textarea id="message" class="input-content" placeholder="" required></textarea>
             </div>
-            <div class="login-btn" onclick="submitForm()">
-                <p data-translate="contactPageBtn">Send</p>
+            <div class="login-btn" role="button" tabindex="0" onclick="submitForm()">
+                <p data-translate="contactPageBtn">Küldés</p>
             </div>
         </div>
-    </div>
+    </main>
+</body>
+
+</html>

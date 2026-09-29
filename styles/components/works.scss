@@ -166,7 +166,9 @@
     top: 16%;
   }
 
-  h3 {
+  h2 {
+    // was h3 – keep the original h3 size after the semantic change
+    font-size: 1.17em;
     text-align: center;
     color: #eee;
     letter-spacing: 2px;
@@ -175,7 +177,7 @@
     font-style: italic;
   }
 
-  h4 {
+  h1 {
     color: #111;
 
     top: 45%;
@@ -193,13 +195,6 @@
     align-items: center;
   }
 
-  h1 {
-    color: #111;
-    position: fixed;
-    top: 0%;
-    left: 30%;
-    letter-spacing: 2px;
-  }
 
   p {
     font-size: 14px;
@@ -319,10 +314,10 @@
       transition: 0.5s all ease;
       z-index: 400;
     }
-    h3 {
+    h2 {
       margin: 2rem 0;
     }
-    h4 {
+    h1 {
       letter-spacing: 2px;
       width: 66rem;
       text-align: center;
@@ -351,7 +346,7 @@
   .workee-page {
     .page {
       margin-top: 5rem;
-      h4 {
+      h1 {
         letter-spacing: 0;
         width: 34rem;
         text-align: center;

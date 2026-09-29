@@ -1,27 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DI STUDIO - Web Development and Web Design">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DI STUDIO - Web Development and Web Design</title>
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="./assets/big_whtie_5.jpeg" type="image/x-icon">
-    <link rel="stylesheet" href="./styles/style.css">
+    <title>Szakács Apollónia – Webdesigner és Webfejlesztő | Divine Inborn Studio</title>
+    <meta name="description" content="Szakács Apollónia budapesti webdesigner és frontend fejlesztő. Egyedi, reszponzív weboldalak, landing page-ek és webshopok tervezése és fejlesztése.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Szakács Apollónia">
+    <link rel="canonical" href="https://www.divineinborn.dev/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Divine Inborn Studio">
+    <meta property="og:locale" content="hu_HU">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta property="og:url" content="https://www.divineinborn.dev/">
+    <meta property="og:title" content="Szakács Apollónia – Webdesigner és Webfejlesztő | Divine Inborn Studio">
+    <meta property="og:description" content="Egyedi, reszponzív weboldalak tervezése és fejlesztése Budapestről: webdesign, UI/UX, frontend fejlesztés, landing page és webshop tervezés.">
+    <meta property="og:image" content="https://www.divineinborn.dev/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Divine Inborn Studio – Brand Identity &amp; Visual Design portfólió">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Szakács Apollónia – Webdesigner és Webfejlesztő | Divine Inborn Studio">
+    <meta name="twitter:description" content="Egyedi, reszponzív weboldalak tervezése és fejlesztése Budapestről: webdesign, UI/UX, frontend fejlesztés, landing page és webshop tervezés.">
+    <meta name="twitter:image" content="https://www.divineinborn.dev/assets/og-image.jpg">
+
+    <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <meta name="theme-color" content="#240200">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="/assets/avatar-burgundy.webp" type="image/webp" fetchpriority="high">
+    <link rel="stylesheet" href="/styles/style.css">
     <script defer src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
     <script defer src="/index.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.divineinborn.dev/#website",
+          "url": "https://www.divineinborn.dev/",
+          "name": "Divine Inborn Studio",
+          "inLanguage": "hu-HU",
+          "publisher": { "@id": "https://www.divineinborn.dev/#studio" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.divineinborn.dev/#person",
+          "name": "Szakács Apollónia",
+          "alternateName": "Apollónia Szakács",
+          "url": "https://www.divineinborn.dev/",
+          "email": "mailto:divineinborn@gmail.com",
+          "jobTitle": ["Webdesigner", "Frontend fejlesztő", "UI/UX designer"],
+          "worksFor": { "@id": "https://www.divineinborn.dev/#studio" },
+          "address": { "@type": "PostalAddress", "addressLocality": "Budapest", "addressCountry": "HU" },
+          "knowsLanguage": ["hu", "en"],
+          "knowsAbout": ["Webdesign", "Webfejlesztés", "Frontend fejlesztés", "UI/UX design", "Landing page tervezés", "Webshop tervezés", "Arculattervezés"],
+          "sameAs": [
+            "https://www.behance.net/apollniaszakcs",
+            "https://3d-portfolio-nine-tau.vercel.app/"
+          ]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://www.divineinborn.dev/#studio",
+          "name": "Divine Inborn Studio",
+          "url": "https://www.divineinborn.dev/",
+          "logo": "https://www.divineinborn.dev/assets/icon-512.png",
+          "image": "https://www.divineinborn.dev/assets/og-image.jpg",
+          "email": "divineinborn@gmail.com",
+          "description": "Webdesign, UI/UX tervezés, frontend fejlesztés, landing page, webshop és arculattervezés Budapestről.",
+          "founder": { "@id": "https://www.divineinborn.dev/#person" },
+          "address": { "@type": "PostalAddress", "addressLocality": "Budapest", "addressCountry": "HU" },
+          "areaServed": [
+            { "@type": "City", "name": "Budapest" },
+            { "@type": "Country", "name": "Magyarország" }
+          ],
+          "knowsLanguage": ["hu", "en"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Szolgáltatások",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Webdesign és UI/UX tervezés" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Frontend fejlesztés" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing page tervezés" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Webshop tervezés" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arculat- és logótervezés" } }
+            ]
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.divineinborn.dev/#webpage",
+          "url": "https://www.divineinborn.dev/",
+          "name": "Szakács Apollónia – Webdesigner és Webfejlesztő | Divine Inborn Studio",
+          "inLanguage": "hu-HU",
+          "isPartOf": { "@id": "https://www.divineinborn.dev/#website" },
+          "about": { "@id": "https://www.divineinborn.dev/#person" },
+          "primaryImageOfPage": "https://www.divineinborn.dev/assets/og-image.jpg"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
 
     <div id="language-selector" class="language-dropdown">
         <div class="custom-select">
-            <select id="language-dropdown">
+            <select id="language-dropdown" aria-label="Nyelv kiválasztása / Select language">
                 <option value="en">Select language</option>
-                <option value="en">English</option>
-                <option value="hu">Magyar</option>
+                <option value="en" lang="en">English</option>
+                <option value="hu" lang="hu">Magyar</option>
             </select>
         </div>
     </div>
@@ -29,217 +124,183 @@
 
     <div id="content"></div>
     <div class="navigation">
-        <input type="checkbox" class="navigation_checkbox" id="navi_toggle">
+        <input type="checkbox" class="navigation_checkbox" id="navi_toggle" aria-label="Menü megnyitása">
         <label for="navi_toggle" class="navigation_button">
-            <span class="navigation__icon">&nbsp</span>
+            <span class="navigation__icon">&nbsp;</span>
         </label>
-        <div class="navigation_background">&nbsp</div>
+        <div class="navigation_background">&nbsp;</div>
 
-        <nav class="navigation_nav">
+        <nav class="navigation_nav" aria-label="Fő navigáció">
             <ul class="navigation_list">
-                <li class="navigation_item"><a href="index.html" class="navigation_link" data-translate="navHome"></a>
+                <li class="navigation_item"><a href="/" class="navigation_link" data-translate="navHome">Főoldal</a>
                 </li>
 
                 <li class="navigation_item"><a href="works.html" class="navigation_link"
                         data-translate="navWorks">Munkáim</a>
                 </li>
 
-                <li class="navigation_item"><a href=" templates.html" class="navigation_link"
-                        data-translate="navTemplates"></a></li>
-                <li class="navigation_item"><a href=" contact.html" class="navigation_link"
-                        data-translate="navContact"></a>
+                <li class="navigation_item"><a href="templates.html" class="navigation_link"
+                        data-translate="navTemplates">Sablonok</a></li>
+                <li class="navigation_item"><a href="contact.html" class="navigation_link"
+                        data-translate="navContact">Kapcsolat</a>
                 </li>
-                <li class="navigation_item"><a href="
-                        https://www.behance.net/apollniaszakcs" class="navigation_link"> Portfolio</a></li>
+                <li class="navigation_item"><a href="https://www.behance.net/apollniaszakcs" class="navigation_link"
+                        target="_blank" rel="noopener"> Portfolio</a></li>
             </ul>
         </nav>
     </div>
 
-    <div class="class" id="home">
-        <h2 class="title" data-translate="greeting">Hi, I'm Apollónia, </h2>
+    <main>
+    <section class="class" id="home">
+        <h1 class="title" data-translate="greeting">Az ötlettől a működő felületig!</h1>
 
         <div class="container">
             <div class="main-content">
-                <img src="/assets/avatar-burgundy.png" alt="web developer " class="main-image">
+                <img src="/assets/avatar-burgundy.webp" alt="Szakács Apollónia stilizált 3D avatárja bordó sapkában, kávéval a kezében" class="main-image" fetchpriority="high">
                 <div class="text-overlay">
                     <div class="lorem-text">
-                        <p data-translate="intro"> </p>
+                        <p data-translate="intro">Szia! Apollónia vagyok - Product Designer, frontend fejlesztői háttérrel. Weboldalakat, digitális termékeket és arculatokat tervezek. Itt beleláthatsz a munkáimba, a szemléletembe és a szakmai utamba.</p>
                     </div>
                 </div>
-                <img src="assets/design.png" alt="aesthetic photo" class="small-image left">
+                <img src="/assets/design.webp" alt="Brand Identity &amp; Visual Design portfólió füzet mockup" class="small-image left" loading="lazy">
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="intro" id="about">
-        <div class="centered" data-translate="introSec"></div>
+    <section class="intro" id="about">
+        <h2 class="centered" data-translate="introSec">A design mögött bővebben</h2>
         <div class="sec">
-            <div class="et" data-translate="about"> </div>
-            <div class="etc" data-translate="aboutSec"></div>
+            <p class="et" data-translate="about">A frontend fejlesztés során vált számomra igazán fontossá, hogy egy digitális termék ne csak technikailag működjön, hanem vizuálisan is következetes és könnyen használható legyen. Ez a szemlélet vezetett a Product Design felé, ahol a technikai tapasztalatot kreatív és felhasználóközpontú gondolkodással kapcsolom össze.</p>
+            <p class="etc" data-translate="aboutSec">Ma weboldalakat, digitális termékeket és arculatokat tervezek, miközben az AI-eszközöket is tudatosan használom a gyorsabb ötleteléshez és tervezéshez — úgy, hogy közben minden munka megőrizze az eredeti gondolatot, az egyedi karaktert és az emberi szemléletet.<br><br></p>
         </div>
-    </div>
+    </section>
 
-    <div class="promo">
+    <section class="promo">
         <div class="promo__text">
-            <h2 data-translate="promoText"></h2>
-            <p class="subtitle" data-translate="promoSub"></p>
+            <h2 data-translate="promoText">Lépésről lépésre a kész megoldásig.</h2>
+            <p class="subtitle" data-translate="promoSub">Ettől a ponttól kezdve minden a te márkádról szól.</p>
 
             <div class="text__promo">
                 <div class="left_text">
-                    <p data-translate="promoTextLeft"></p>
-                    <p data-translate="promoTextSecond"> </p>
+                    <p data-translate="promoTextLeft">Első lépésként egy rövid beszélgetés során megismerem a céljaidat, a márkádat és az elképzeléseidet, hogy a végeredmény valóban rólad szóljon.</p>
+                    <p data-translate="promoTextSecond"><br>        Ezután formát adok az ötleteknek: elkészítem a wireframe-eket, a UI terveket és a prototípust, miközben folyamatosan egyeztetünk a részletekről.</p>
                 </div>
 
-                <div class="right_text" data-translate="promoTextThird">
-                    <p data-translate="promoTextThirds"></p>
-                </div>
+                <div class="right_text" data-translate="promoTextThird"> A visszajelzéseid alapján közösen finomítjuk a részleteket, hogy a végeredmény vizuálisan is teljes legyen.<br>        <br>        A végleges terveket rendezett, fejlesztésre kész fájlokkal adom át, és szükség esetén a megvalósítás során is támogatást nyújtok.</div>
             </div>
         </div>
-    </div>
+    </section>
 
 
-    <div class="slider">
+    <!-- Service wordmark ticker: local text only, duplicated once for a seamless loop.
+         Decorative (the services are listed in full in the Szolgáltatások section), so hidden from assistive tech. -->
+    <div class="slider" aria-hidden="true">
         <div class="slide-track">
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-            </div>
+            <div class="slide"><span class="slide-mark">Web Design</span></div>
+            <div class="slide"><span class="slide-mark">Web Development</span></div>
+            <div class="slide"><span class="slide-mark">UI/UX Design</span></div>
+            <div class="slide"><span class="slide-mark">Frontend Development</span></div>
+            <div class="slide"><span class="slide-mark">Digital Design</span></div>
+            <div class="slide"><span class="slide-mark">Website Design</span></div>
+            <div class="slide"><span class="slide-mark">Brand Identity</span></div>
+            <div class="slide"><span class="slide-mark">Web Design</span></div>
+            <div class="slide"><span class="slide-mark">Web Development</span></div>
+            <div class="slide"><span class="slide-mark">UI/UX Design</span></div>
+            <div class="slide"><span class="slide-mark">Frontend Development</span></div>
+            <div class="slide"><span class="slide-mark">Digital Design</span></div>
+            <div class="slide"><span class="slide-mark">Website Design</span></div>
+            <div class="slide"><span class="slide-mark">Brand Identity</span></div>
         </div>
     </div>
 
 
-    <div class="containers">
+    <section class="containers">
 
-        <div id="reference" class="text-container number01 ">
-            <h2 data-translate="businessTitle"></h2>
-            <p data-translate="businessSub"></p>
-            <p class="last" data-translate="businessSubSec">
-            </p>
+        <div id="reference" class="text-container number01">
+            <h2 data-translate="businessTitle">Stabil alapok a márkádnak</h2>
+            <p data-translate="businessSub">Egy átgondolt, egységes márka bizalmat épít, segít kitűnni a versenytársak közül, és professzionálisabbá teszi a megjelenésedet. Segítek olyan egységes és felismerhető megjelenést kialakítani, amely hitelesebbé teszi a márkádat, megkülönböztet másoktól, és teret ad a későbbi növekedésnek.</p>
+            <p class="last" data-translate="businessSubSec"></p>
 
-            <a href="works.html" class="button_slide slide_left" data-translate="businessBtn"> </a>
+            <a href="works.html" class="button_slide slide_left" data-translate="businessBtn">Munkáim</a>
         </div>
         <div class="image-container">
-            <img src="./assets/mockups32.jpg" alt="web designer and aesthetic">
-
+            <img src="./assets/mockups32.webp" alt="Laptop mockup egy készülő weboldal kezdőlapjával" loading="lazy">
         </div>
 
 
 
         <div class="image-container">
-            <img class="desktop-only" src="./assets/mock.png" Kép">
+            <img class="desktop-only" src="./assets/mock.webp" alt="Unicorn Magic Brew kávémárka arculata: címke, palack és menükártya" loading="lazy">
         </div>
         <div class="text-container second number02" id="portfolio">
-            <h2 data-translate="frontendTitle"></h2>
-            <p data-translate="frontendSub"></p>
-            <p data-translate="frontendSec"></p>
-            <a target="_blank" href="https://www.behance.net/apollniaszakcs" class="button_slide slide_left">portfolio
+            <h2 data-translate="frontendTitle">Arculattervezés</h2>
+            <p data-translate="frontendSub">A logó önmagában még nem teljes arculat. Az egységes színek, betűtípusok és vizuális elemek segítenek abban, hogy vállalkozásod felismerhető, hiteles és professzionális legyen minden felületen. A logótervezés mellett olyan átgondolt vizuális megjelenést alakítok ki, amely következetesen képviseli a márkádat online és offline egyaránt.<br></p>
+            <p data-translate="frontendSec"> </p>
+            <a target="_blank" rel="noopener" href="https://www.behance.net/apollniaszakcs" class="button_slide slide_left">portfolio
             </a>
         </div>
 
 
         <div class="text-container number03">
-            <h2 data-translate="templateTitleMain"></h2>
-            <p data-translate="templateSubMain"></p>
-            <a href="templates.html" class="button_slide slide_left" data-translate="templateBtn"></a>
+            <h2 data-translate="templateTitleMain">Hamarosan elérhető: webdesign sablonok</h2>
+            <p data-translate="templateSubMain">Könnyen testreszabhatók, és kész felületi blokkokat kínálnak – így gyorsabban hozhatod létre a saját weboldalad.</p>
+            <a href="templates.html" class="button_slide slide_left" data-translate="templateBtn">Sablonok</a>
         </div>
-        <div class=" image-container">
-            <img src="./assets/ Laptop Mockup of Fashion Clothing Instagram Post.jpg" alt="Kép">
+        <div class="image-container">
+            <img src="./assets/laptop-mockup-fashion.webp" alt="Sötét tónusú portfólió weboldal sablon laptop mockupon" loading="lazy">
         </div>
-    </div>
+    </section>
 
 
 
-    <div class="service-container" id="services">
-        <h2 data-translate="serviceIntro"></h2>
+    <section class="service-container" id="services">
+        <h2 data-translate="serviceIntro">Szolgáltatások</h2>
         <div class="row">
             <div class="service">
-                <i class="ri-macbook-line"></i>
-                <h3 data-translate="serviceTitle1"></h3>
-                <p data-translate="serviceDescription1"></p>
+                <i class="ri-macbook-line" aria-hidden="true"></i>
+                <h3 data-translate="serviceTitle1"> Weboldaltervezés (UX/UI)</h3>
+                <p data-translate="serviceDescription1">Segítek egy modern, személyre szabott weboldal megtervezésében, amely illik hozzád, tükrözi a márkádat, és támogatja az üzleti céljaidat.</p>
             </div>
 
             <div class="service">
-                <i class="ri-database-2-line"></i>
-                <h3 data-translate="serviceTitle3"></h3>
-                <p data-translate="serviceDescription3"></p>
+                <i class="ri-database-2-line" aria-hidden="true"></i>
+                <h3 data-translate="serviceTitle3">Landing page tervezés</h3>
+                <p data-translate="serviceDescription3">Legyen szó egy új márkáról, termékről vagy kampányról, olyan landing page-et tervezek, amely erős első benyomást kelt, megragadja a látogatók figyelmét, és támogatja a céljaid elérését.</p>
             </div>
 
             <div class="service">
-                <i class="ri-database-2-line"></i>
-                <h3 data-translate="serviceTitle4"></h3>
-                <p data-translate="serviceDescription4"></p>
+                <i class="ri-database-2-line" aria-hidden="true"></i>
+                <h3 data-translate="serviceTitle4">Webshoptervezés</h3>
+                <p data-translate="serviceDescription4">Segítek egy olyan webshop megtervezésében, amely egyszerre tükrözi a márkádat, könnyen használható, és támogatja az értékesítést.</p>
             </div>
 
             <div class="service">
-                <i class="ri-database-2-line"></i>
-                <h3 data-translate="serviceTitle5"></h3>
-                <p data-translate="serviceDescription5"></p>
+                <i class="ri-database-2-line" aria-hidden="true"></i>
+                <h3 data-translate="serviceTitle5">Arculat- és logótervezés</h3>
+                <p data-translate="serviceDescription5">Segítek kialakítani márkád saját vizuális stílusát – a logótól a teljes arculatig.</p>
             </div>
 
             <div class="service">
-                <i class="ri-database-2-line"></i>
-                <h3 data-translate="serviceTitle6"></h3>
-                <p data-translate="serviceDescription6"></p>
+                <i class="ri-database-2-line" aria-hidden="true"></i>
+                <h3 data-translate="serviceTitle6">Egyedi kérések</h3>
+                <p data-translate="serviceDescription6">Nem találtad, amit keresel? Ha egyedi elképzelésed van, keress bátran – szívesen segítek megtalálni a legjobb megoldást.</p>
             </div>
         </div>
-    </div>
+    </section>
 
 
 
 
-    <div class="contact">
-        <img src="https://i.pinimg.com/564x/65/12/32/65123257add7b9d6e9a52bf384c92949.jpg" alt="branding"
-            class="center-image">
-        <a href="contact.html" class="work-together" data-translate="contactBtn"></a>
-    </div>
+    <section class="contact">
+        <img src="https://i.pinimg.com/564x/65/12/32/65123257add7b9d6e9a52bf384c92949.jpg" alt=""
+            class="center-image" loading="lazy">
+        <a href="contact.html" class="work-together" data-translate="contactBtn">Dolgozzunk együtt!</a>
+    </section>
 
     <div class="ambitios-text">
-        <p class="luxury" data-translate="ambitiosText"></p>
-        </p>
+        <p class="luxury" data-translate="ambitiosText">Minimalista forma, maximális jelenlét.</p>
     </div>
-
-
-
-
-
+    </main>
 
 
     <footer class="footer-distributed">
@@ -247,8 +308,8 @@
         <div class="footer-left">
             <h3>Divine Inborn Studio</h3>
             <p class="footer-links">
-                <a href="#home" class=" link-1" data-translate="backToTopBtn"></a>
-                <a href="contact.html" id="contact-link" data-translate="contactText"></a>
+                <a href="#home" class="link-1" data-translate="backToTopBtn">Vissza a tetejére ⬆️</a>
+                <a href="contact.html" id="contact-link" data-translate="contactText">Kapcsolat</a>
             </p>
 
             <p class="footer-company-name">Divine Inborn © 2023</p>
@@ -256,7 +317,7 @@
 
         <div class="footer-center">
             <div>
-                <img class="logo" src="/assets/big_transparent_5.png" alt="dream website">
+                <img class="logo" src="/assets/big_transparent_5.webp" alt="Divine Inborn Studio főnix logó" loading="lazy">
 
             </div>
         </div>
@@ -267,21 +328,15 @@
             <p class="footer-links footer-company-about">
 
                 <a href="#portfolio">Portfolio</a>
-                <a href="works.html" id="contact-link" data-translate="navWorks"></a>
-                <a href="templates.html" data-translate="navTemplates"></a>
+                <a href="works.html" data-translate="navWorks">Munkáim</a>
+                <a href="templates.html" data-translate="navTemplates">Sablonok</a>
             </p>
             <div class="footer-icons">
-                <p class="left-foo" data-translate="contactTextSub"></p>
+                <p class="left-foo" data-translate="contactTextSub">Eljött az ideje, hogy megbeszéljük a projekted?</p>
                 <p class="left-foo-a"><a href="mailto:divineinborn@gmail.com">divineinborn@gmail.com</a></p>
             </div>
         </div>
-        </div>
     </footer>
 </body>
-
-
-
-
-
 
 </html>

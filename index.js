@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (language === 'en') {
       languageData = {
         greeting: 'From concept to reality!',
-        intro: `Hello, I am Apollónia - a Product Designer with a frontend development background.I design websites, digital products, and brand identities with the goal of turning ideas into seamless, high-performing digital experiences. Here, you can explore my work, design approach, and professional journey.`,
+        intro: `Hello, I am Apollónia - a Product Designer with a frontend development background. I design websites, digital products, and brand identities with the goal of turning ideas into seamless, high-performing digital experiences. Here, you can explore my work, design approach, and professional journey.`,
         introSec: `Unique design meets smart development.`,
         about: ` Every great project starts with an honest conversation – understanding what you want and what you truly need. Once that’s clear, the rest is “just” design and code – bringing it all to life in a way that’s genuinely about you.`,
         aboutSec: `My goal is to create a website that not only looks great and works well, but also delivers real value. I believe in solutions that highlight what makes your brand unique, attract the right audience, and support your business goals.`,
@@ -212,7 +212,7 @@ My goal is to create websites that are clear, visually appealing, and easy to us
         serviceTitle5: `Brand Identity & Logo Design`,
         serviceDescription5: `From logo design to a complete brand identity, I create visual systems that reflect your brand and make it memorable.`,
         serviceTitle6: `Custom Solutions`,
-        serviceDescription6: `tHave a unique idea or project in mind? Let's create a custom solution tailored to your goals and bring your vision to life.`,
+        serviceDescription6: `Have a unique idea or project in mind? Let's create a custom solution tailored to your goals and bring your vision to life.`,
         contactBtn: `Let's work together`,
         ambitiosText: `Bold pieces for bold people.`,
         backToTopBtn: `Back to Top ⬆ `,
@@ -231,7 +231,7 @@ My goal is to create websites that are clear, visually appealing, and easy to us
         workPageVisitBtn: `Visit Website`,
         workPageBtn: `Portal to Home`,
         templateTitle: `Craft a stunning website without coding `,
-        templateSub: `all my templates offer seamless customization and pre-designed UI blocks.Simplify your online presence with style!`,
+        templateSub: `All my templates offer seamless customization and pre-designed UI blocks. Simplify your online presence with style!`,
         templateCardTitle1: `Portfolio template`,
         templateCardTitle2: `Photography Template`,
         templateCardTitle3: `Webshop Template`,
@@ -242,7 +242,7 @@ My goal is to create websites that are clear, visually appealing, and easy to us
         // templateDescription1: `Imagine a website template as a unique design concept for your online space. These templates are like ready-made blueprints, and typically, there are about 10 variations available. They serve as a fantastic starting point for your website. Now, if you want a personalized touch or have specific preferences, I offer the option to create a custom template just for you. In this case, I craft a tailored design to match your vision, and the process usually takes 1-3 days. Once it's ready, you can enjoy your very own website with the flexibility to change content whenever you want.`,
         templateDescription2: `My website templates are ready-made foundations to help you launch your online presence with ease. Choose from around 5 clean, modern designs—or request a custom one, delivered in 1–3 days. All templates are fully editable, so you can update your content anytime.
 
-They’ll be available soon on my Etsy shop. Each design is thoughtfully created for a smooth, stylish user experience. Feel free to reach out with any questions. Farawell, and thank you for making Divine Inborn Studio a part of your digital story! ♡`,
+They’ll be available soon on my Etsy shop. Each design is thoughtfully created for a smooth, stylish user experience. Feel free to reach out with any questions. Farewell, and thank you for making Divine Inborn Studio a part of your digital story! ♡`,
         contactPageTitle: `Get in touch!`,
         contactPageMessage: `Message`,
         contactPageName: `Name`,
@@ -268,7 +268,7 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
         
         A végleges terveket rendezett, fejlesztésre kész fájlokkal adom át, és szükség esetén a megvalósítás során is támogatást nyújtok.`,
         businessTitle: `Stabil alapok a márkádnak`,
-        businessSub: `Egy átgondolt, egységes márka bizalmat épít, segít kitűnni a versenytársak közül, és professzionálisabbá teszi a megjelenésedet.Segítek olyan egységes és felismerhető megjelenést kialakítani, amely hitelesebbé teszi a márkádat, megkülönböztet másoktól, és teret ad a későbbi növekedésnek.`,
+        businessSub: `Egy átgondolt, egységes márka bizalmat épít, segít kitűnni a versenytársak közül, és professzionálisabbá teszi a megjelenésedet. Segítek olyan egységes és felismerhető megjelenést kialakítani, amely hitelesebbé teszi a márkádat, megkülönböztet másoktól, és teret ad a későbbi növekedésnek.`,
         businessBtn: `Munkáim`,
 
         frontendTitle: `Arculattervezés`,
@@ -310,14 +310,14 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
         workPageVisitBtn: `Megtekintés`,
         templateTitle: `Weboldalkészítés kódolás nélkül – könnyen, érthetően.`,
         templateSubMain: `Könnyen testreszabhatók, és kész felületi blokkokat kínálnak – így gyorsabban hozhatod létre a saját weboldalad.`,
-        templateCardTitle1: `Portfólió  sablon`,
+        templateCardTitle1: `Portfólió sablon`,
 
-        templateCardTitle2: ` Fotós portfólió sablon `,
+        templateCardTitle2: `Fotós portfólió sablon`,
         templateCardTitle3: `Webshop sablon`,
         templateCardText1: `Tökéletes bárkinek, aki szeretné bemutatni a portfólióját anélkül, hogy nulláról kezdene.`,
         templateCardText2: `Ez a sablon segít abban, hogy a fotóidra essen a hangsúly – semmi fölösleges, csak letisztult megjelenés és jól átgondolt elrendezés.`,
         templateCardText3: `Egy kész webshop alap, amibe csak a termékeid hiányoznak.`,
-        templateDescription2: `A weboldal sablonjaim előre elkészített alapok, amelyekkel könnyedén elindíthatod az online felületed. Kb. öt változat közül választhatsz, de ha személyre szabott megoldást szeretnél, egyedi sablont is készítek 1–3 napon belül. A tartalmakat bármikor szabadon módosíthatod.Hamarosan elérhetők lesznek az Etsy oldalamon. Minden sablont átgondoltan, letisztult stílusban terveztem, hogy egyszerű és látványos élményt nyújtson. Ha kérdésed van, írj nyugodtan – örömmel segítek. Addig is alegjobbakat kívánom, és köszönöm, hogy a Divine Inborn Studio része lehetett a digitális történetednek! ♡ 
+        templateDescription2: `A weboldal sablonjaim előre elkészített alapok, amelyekkel könnyedén elindíthatod az online felületed. Kb. öt változat közül választhatsz, de ha személyre szabott megoldást szeretnél, egyedi sablont is készítek 1–3 napon belül. A tartalmakat bármikor szabadon módosíthatod. Hamarosan elérhetők lesznek az Etsy oldalamon. Minden sablont átgondoltan, letisztult stílusban terveztem, hogy egyszerű és látványos élményt nyújtson. Ha kérdésed van, írj nyugodtan – örömmel segítek. Addig is a legjobbakat kívánom, és köszönöm, hogy a Divine Inborn Studio része lehetett a digitális történetednek! ♡
 `,
         contactPageTitle: `Kapcsolatfelvétel`,
         contactPageMessage: `Üzenet`,
@@ -339,36 +339,53 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
     });
   }
 
+  const SUPPORTED_LANGUAGES = ['hu', 'en'];
+  // Hungarian is the primary language: it is also the text shipped in the static HTML.
+  const DEFAULT_LANGUAGE = 'hu';
+
   function changeLanguage(language, updateStorage = false) {
+    if (!SUPPORTED_LANGUAGES.includes(language)) language = DEFAULT_LANGUAGE;
     loadLanguageData(language);
     translateContent();
+    document.documentElement.lang = language;
 
     if (updateStorage) {
-      localStorage.setItem('selectedLanguage', language);
+      try {
+        localStorage.setItem('selectedLanguage', language);
+      } catch (e) {}
     }
   }
-  languageDropdown.addEventListener('change', function () {
-    const selectedLanguage = languageDropdown.value;
-    changeLanguage(selectedLanguage, true);
-  });
 
-  window.addEventListener('load', function () {
-    const storedLanguage = localStorage.getItem('selectedLanguage');
-    if (storedLanguage) {
-      changeLanguage(storedLanguage);
-    }
-  });
+  if (languageDropdown) {
+    languageDropdown.addEventListener('change', function () {
+      const selectedLanguage = languageDropdown.value;
+      changeLanguage(selectedLanguage, true);
+    });
+  }
 
-  // URL paraméter alapján történő beállítás
-  window.addEventListener('load', function () {
-    const url = new URL(window.location.href);
-    const langParam = url.searchParams.get('lang');
-    if (langParam) {
-      changeLanguage(langParam);
-    }
-  });
+  // Priority: ?lang= URL parameter → saved choice → Hungarian default
+  function getInitialLanguage() {
+    const langParam = new URL(window.location.href).searchParams.get('lang');
+    if (SUPPORTED_LANGUAGES.includes(langParam)) return langParam;
+    let storedLanguage = null;
+    try {
+      storedLanguage = localStorage.getItem('selectedLanguage');
+    } catch (e) {}
+    if (SUPPORTED_LANGUAGES.includes(storedLanguage)) return storedLanguage;
+    return DEFAULT_LANGUAGE;
+  }
 
-  changeLanguage('en');
+  changeLanguage(getInitialLanguage());
+
+  // Keyboard support for the contact form's send button (div with role="button")
+  document.querySelectorAll('.login-btn').forEach(function (btn) {
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        submitForm();
+      }
+    });
+  });
 });
 
 // FORM VALIDATION AND SUBMISSION
@@ -430,6 +447,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var langDropdown = document.querySelector('.language-dropdown');
   var langListItems = document.querySelectorAll('ul.lang-list li');
   var langSelected = document.getElementById('lang_selected');
+
+  // This legacy flag switcher is not present in the current markup
+  if (!langFlag || !langDropdown) return;
 
   langFlag.addEventListener('click', function () {
     langDropdown.classList.toggle('open');

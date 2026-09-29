@@ -1,99 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Divine Inborn STUDIO - create a professional website">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <title>Weboldal Sablonok Kódolás Nélkül | Divine Inborn Studio</title>
+    <meta name="description" content="Hamarosan elérhető, könnyen testreszabható webdesign sablonok portfólióhoz, fotósoknak és webshophoz – letisztult, modern weboldal kódolás nélkül.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://www.divineinborn.dev/templates.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Divine Inborn Studio">
+    <meta property="og:locale" content="hu_HU">
+    <meta property="og:url" content="https://www.divineinborn.dev/templates.html">
+    <meta property="og:title" content="Weboldal Sablonok Kódolás Nélkül | Divine Inborn Studio">
+    <meta property="og:description" content="Portfólió, fotós és webshop sablonok – letisztult, könnyen testreszabható webdesign. Hamarosan elérhető.">
+    <meta property="og:image" content="https://www.divineinborn.dev/assets/og-image.jpg">
+    <meta property="og:image:alt" content="Divine Inborn Studio – Brand Identity &amp; Visual Design portfólió">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Weboldal Sablonok Kódolás Nélkül | Divine Inborn Studio">
+    <meta name="twitter:description" content="Portfólió, fotós és webshop sablonok – letisztult, könnyen testreszabható webdesign. Hamarosan elérhető.">
+    <meta name="twitter:image" content="https://www.divineinborn.dev/assets/og-image.jpg">
+
+    <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <meta name="theme-color" content="#240200">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="shortcut icon" href="./assets/big_whtie_5.jpeg" type="image/x-icon">
-    <title>DI STUDIO - Minosegi letisztult webhely keszites </title>
-    <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
-    <script src="index.js"></script>
+    <script defer src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script defer src="index.js"></script>
 
-
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.divineinborn.dev/templates.html#webpage",
+      "url": "https://www.divineinborn.dev/templates.html",
+      "name": "Weboldal Sablonok Kódolás Nélkül | Divine Inborn Studio",
+      "inLanguage": "hu-HU",
+      "isPartOf": { "@id": "https://www.divineinborn.dev/#website" },
+      "author": { "@id": "https://www.divineinborn.dev/#person" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Főoldal", "item": "https://www.divineinborn.dev/" },
+          { "@type": "ListItem", "position": 2, "name": "Sablonok", "item": "https://www.divineinborn.dev/templates.html" }
+        ]
+      }
+    }
+    </script>
 </head>
 
 <body id="templates">
 
     <div id="language-selector">
-        <select id="language-dropdown">
+        <select id="language-dropdown" aria-label="Nyelv kiválasztása / Select language">
             <option value="en">Select language</option>
-            <option value="en">English</option>
-            <option value="hu">Magyar</option>
+            <option value="en" lang="en">English</option>
+            <option value="hu" lang="hu">Magyar</option>
         </select>
     </div>
 
     <div id="content"></div>
     <div class="navigation">
-        <input type="checkbox" class="navigation_checkbox" id="navi_toggle">
+        <input type="checkbox" class="navigation_checkbox" id="navi_toggle" aria-label="Menü megnyitása">
         <label for="navi_toggle" class="navigation_button">
-            <span class="navigation__icon">&nbsp</span>
+            <span class="navigation__icon">&nbsp;</span>
         </label>
-        <div class="navigation_background">&nbsp</div>
+        <div class="navigation_background">&nbsp;</div>
 
-        <nav class="navigation_nav">
+        <nav class="navigation_nav" aria-label="Fő navigáció">
             <ul class="navigation_list">
-                <li class="navigation_item"><a href="index.html" class="navigation_link" data-translate="navHome"></a>
+                <li class="navigation_item"><a href="/" class="navigation_link" data-translate="navHome">Főoldal</a>
                 </li>
 
                 <!-- <li class="navigation_item"><a href="works.html" class="navigation_link" data-translate="navWorks"></a>
                 </li> -->
 
-                <li class="navigation_item"><a href=" templates.html" class="navigation_link"
-                        data-translate="navTemplates"></a></li>
-                <li class="navigation_item"><a href=" contact.html" class="navigation_link"
-                        data-translate="navContact"></a>
+                <li class="navigation_item"><a href="templates.html" class="navigation_link"
+                        data-translate="navTemplates">Sablonok</a></li>
+                <li class="navigation_item"><a href="contact.html" class="navigation_link"
+                        data-translate="navContact">Kapcsolat</a>
                 </li>
-                <li class="navigation_item"><a
-                        href="
-                            https://3d-portfolio-nine-tau.vercel.app/?fbclid=IwAR2Zk79yA6rxfaMIXYxhj3t4kxyjnL5bs_r0Ub1lAFAagw6lIIqxqVTiMyA"
-                        class="navigation_link">Frontend Portfolio</a></li>
+                <li class="navigation_item"><a href="https://3d-portfolio-nine-tau.vercel.app/"
+                        class="navigation_link" target="_blank" rel="noopener">Frontend Portfolio</a></li>
             </ul>
         </nav>
     </div>
-    </div>
-    <div class=" main"">
-        <video autoplay muted playsinline loop class=" background-video" id="backgroundVideo">
-        <source src="/assets/video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+    <main class="main">
+        <video autoplay muted playsinline loop class="background-video" id="backgroundVideo" preload="metadata" aria-hidden="true">
+            <source src="/assets/video.mp4" type="video/mp4">
         </video>
-        <div class=" title">
-            <h1 data-translate="templateTitle"></h1>
-            <p data-translate="templateSub"></p>
+        <div class="title">
+            <h1 data-translate="templateTitle">Weboldalkészítés kódolás nélkül – könnyen, érthetően.</h1>
+            <p data-translate="templateSub">Ezek a sablonok nemcsak előre elkészített megoldások, hanem rugalmas alapok egy saját weboldalhoz. Szinte minden részlet alakítható – a színek, a betűtípusok, az elrendezés –, így az oldal könnyen igazítható a saját igényeidhez.</p>
 
         </div>
-        <ul class=" cards">
+        <ul class="cards">
             <li class="cards_item">
                 <div class="card">
-                    <div class="card_image"><img src="assets/mockups1.jpg"></div>
-                    <div class=" card_content">
-                        <h2 class="card_title" data-translate="templateCardTitle1"></h2>
-                        <p class="card_text" data-translate="templateCardText1"> </p>
-                        <button class="btn card_btn" data-translate="templateCardBtbn"></button>
+                    <div class="card_image"><img src="assets/laptop-mockup-fashion.webp" alt="Portfólió weboldal sablon előnézete laptop mockupon" loading="lazy"></div>
+                    <div class="card_content">
+                        <h2 class="card_title" data-translate="templateCardTitle1">Portfólió sablon</h2>
+                        <p class="card_text" data-translate="templateCardText1">Tökéletes bárkinek, aki szeretné bemutatni a portfólióját anélkül, hogy nulláról kezdene.</p>
+                        <button type="button" class="btn card_btn" data-translate="templateCardBtbn">Hamarosan</button>
                     </div>
                 </div>
             </li>
             <li class="cards_item">
                 <div class="card">
-                    <div class="card_image"><img src="assets/phototemplate.png">
+                    <div class="card_image"><img src="assets/phototemplate.webp" alt="Fotós portfólió weboldal sablon laptopon" loading="lazy">
                     </div>
                     <div class="card_content">
-                        <h2 class="card_title" data-translate="templateCardTitle2"> </h2>
-                        <p class="card_text" data-translate="templateCardText2"></p>
-                        <button class="btn card_btn" data-translate="templateCardBtbn"></button>
+                        <h2 class="card_title" data-translate="templateCardTitle2">Fotós portfólió sablon</h2>
+                        <p class="card_text" data-translate="templateCardText2">Ez a sablon segít abban, hogy a fotóidra essen a hangsúly – semmi fölösleges, csak letisztult megjelenés és jól átgondolt elrendezés.</p>
+                        <button type="button" class="btn card_btn" data-translate="templateCardBtbn">Hamarosan</button>
                     </div>
                 </div>
             </li>
             <li class="cards_item">
                 <div class="card">
-                    <div class="card_image"><img src="assets/mockups32.jpg"></div>
+                    <div class="card_image"><img src="assets/mockups32.webp" alt="Webshop sablon előnézete laptop mockupon" loading="lazy"></div>
                     <div class="card_content">
-                        <h2 class="card_title" data-translate="templateCardTitle3"></h2>
-                        <p class="card_text" data-translate="templateCardText3"></p>
-                        <button class="btn card_btn" data-translate="templateCardBtbn"></button>
+                        <h2 class="card_title" data-translate="templateCardTitle3">Webshop sablon</h2>
+                        <p class="card_text" data-translate="templateCardText3">Egy kész webshop alap, amibe csak a termékeid hiányoznak.</p>
+                        <button type="button" class="btn card_btn" data-translate="templateCardBtbn">Hamarosan</button>
                     </div>
                 </div>
             </li>
@@ -101,9 +134,9 @@
 
         <div class="explan">
             <p data-translate="templateDescription1"></p>
-            <p data-translate="templateDescription2"></p>
+            <p data-translate="templateDescription2">A weboldal sablonjaim előre elkészített alapok, amelyekkel könnyedén elindíthatod az online felületed. Kb. öt változat közül választhatsz, de ha személyre szabott megoldást szeretnél, egyedi sablont is készítek 1–3 napon belül. A tartalmakat bármikor szabadon módosíthatod. Hamarosan elérhetők lesznek az Etsy oldalamon. Minden sablont átgondoltan, letisztult stílusban terveztem, hogy egyszerű és látványos élményt nyújtson. Ha kérdésed van, írj nyugodtan – örömmel segítek. Addig is a legjobbakat kívánom, és köszönöm, hogy a Divine Inborn Studio része lehetett a digitális történetednek! ♡ <br></p>
         </div>
-    </div>
+    </main>
 
 </body>
 
