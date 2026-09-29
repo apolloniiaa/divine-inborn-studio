@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.divineinborn.dev/sitemap.xml
+Sitemap: https://www.divineinborn.co/sitemap.xml
