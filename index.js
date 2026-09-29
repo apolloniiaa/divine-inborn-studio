@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Animations need GSAP (loaded from a CDN). If it is slow/blocked, skip them instead of
+  // throwing — otherwise the language restore below would never run.
+  if (typeof gsap !== 'undefined') {
   gsap.to('.main-image', {
     opacity: 1,
     y: 20,
@@ -170,6 +173,8 @@ document.addEventListener('DOMContentLoaded', function () {
     ease: 'power2.out',
     delay: 1.8,
   });
+
+  } // end GSAP animations
 
   const languageDropdown = document.getElementById('language-dropdown');
   let languageData;
@@ -348,6 +353,8 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
     loadLanguageData(language);
     translateContent();
     document.documentElement.lang = language;
+    // content is now in the saved language → reveal it (see the early script in <head>)
+    document.documentElement.classList.remove('i18n-pending');
 
     if (updateStorage) {
       try {
@@ -474,6 +481,153 @@ document.addEventListener('DOMContentLoaded', function () {
         langSelected.innerHTML = '<p>PT</p>';
       }
       langDropdown.classList.remove('open');
+    });
+  });
+});
+
+// LANGUAGE SWITCHER UI
+// Presentation layer only: it drives the existing (hidden) #language-dropdown select
+// and fires its normal "change" event, so the translation logic above runs unchanged.
+document.addEventListener('DOMContentLoaded', function () {
+  var root = document.querySelector('.lang-switch');
+  var select = document.getElementById('language-dropdown');
+  if (!root || !select) return;
+
+  var toggle = root.querySelector('.lang-switch__toggle');
+  var current = root.querySelector('.lang-switch__current');
+  var options = Array.prototype.slice.call(root.querySelectorAll('.lang-switch__option'));
+
+  function activeLanguage() {
+    return document.documentElement.lang === 'en' ? 'en' : 'hu';
+  }
+
+  // Reflect the active language (set by changeLanguage via <html lang>) in the UI
+  function sync() {
+    var lang = activeLanguage();
+    current.textContent = lang.toUpperCase();
+    options.forEach(function (option) {
+      var isActive = option.getAttribute('data-lang') === lang;
+      option.setAttribute('aria-checked', isActive ? 'true' : 'false');
+      option.classList.toggle('is-active', isActive);
+    });
+  }
+
+  function isOpen() {
+    return root.classList.contains('is-open');
+  }
+
+  function focusOption(index) {
+    var i = (index + options.length) % options.length;
+    options[i].focus();
+  }
+
+  function open(focusActive) {
+    root.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    if (focusActive) {
+      var activeIndex = options.findIndex(function (o) {
+        return o.getAttribute('data-lang') === activeLanguage();
+      });
+      focusOption(activeIndex < 0 ? 0 : activeIndex);
+    }
+  }
+
+  function close(returnFocus) {
+    if (!isOpen()) return;
+    root.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    if (returnFocus) toggle.focus();
+  }
+
+  function choose(lang) {
+    if (lang !== activeLanguage()) {
+      select.value = lang;
+      select.dispatchEvent(new Event('change'));
+    }
+    close(true);
+  }
+
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    // e.detail === 0 → activated from the keyboard (Enter / Space)
+    isOpen() ? close(false) : open(e.detail === 0);
+  });
+
+  toggle.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      open(true);
+    } else if (e.key === 'Escape') {
+      close(true);
+    }
+  });
+
+  options.forEach(function (option, index) {
+    option.addEventListener('click', function (e) {
+      e.stopPropagation();
+      choose(option.getAttribute('data-lang'));
+    });
+    option.addEventListener('keydown', function (e) {
+      switch (e.key) {
+        case 'ArrowDown':
+          e.preventDefault();
+          focusOption(index + 1);
+          break;
+        case 'ArrowUp':
+          e.preventDefault();
+          focusOption(index - 1);
+          break;
+        case 'Home':
+          e.preventDefault();
+          focusOption(0);
+          break;
+        case 'End':
+          e.preventDefault();
+          focusOption(options.length - 1);
+          break;
+        case 'Escape':
+          e.preventDefault();
+          close(true);
+          break;
+        case 'Tab':
+          close(false);
+          break;
+      }
+    });
+  });
+
+  // Close when clicking or focusing outside
+  document.addEventListener('click', function (e) {
+    if (!root.contains(e.target)) close(false);
+  });
+  document.addEventListener('focusin', function (e) {
+    if (!root.contains(e.target)) close(false);
+  });
+
+  new MutationObserver(sync).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['lang'],
+  });
+  sync();
+});
+
+// BACK NAVIGATION
+// "← BACK" links go to the real previous page; with no meaningful history
+// (opened directly / from another site / new tab) they follow their href (homepage).
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('[data-back]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var ref = document.referrer;
+      var cameFromThisSite = false;
+      try {
+        var refUrl = new URL(ref);
+        cameFromThisSite =
+          refUrl.origin === window.location.origin && refUrl.href !== window.location.href;
+      } catch (err) {}
+      if (cameFromThisSite && window.history.length > 1) {
+        e.preventDefault();
+        window.history.back();
+      }
     });
   });
 });

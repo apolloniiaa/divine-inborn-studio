@@ -407,3 +407,24 @@
 // .contact-page .select-language {
 //   display: none;
 // }
+
+/* Works: shared navigation — same dark top strip as the Home page navigation area */
+.workee-page #language-selector {
+  background-color: #240200;
+}
+/* keep the page's project-card li/span rules away from the shared navigation */
+.workee-page .navigation_list .navigation_item {
+  position: static;
+  top: auto;
+  left: auto;
+  right: auto;
+  animation: none;
+}
+.workee-page .navigation__icon {
+  position: relative;
+  top: auto;
+  left: auto;
+  border-radius: 0;
+  background-color: #e9bbae;
+  z-index: auto;
+}

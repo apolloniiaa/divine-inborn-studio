@@ -206,3 +206,182 @@
   // background-color: black;
   background-color: #240200;
 }
+
+/* ---------- Language switcher (editorial "HU ⌄" control) ---------- */
+#language-selector {
+  position: relative;
+  z-index: 900; /* above page content, below the open navigation overlay */
+}
+#language-selector .lang-switch {
+  position: relative;
+  display: inline-block;
+}
+/* neutralise page-level element rules (e.g. .workee-page span) inside the switcher */
+#language-selector .lang-switch span {
+  position: static;
+  top: auto;
+  left: auto;
+  border-radius: 0;
+  background: none;
+  z-index: auto;
+}
+#language-selector .lang-switch__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  height: 7.7rem; /* same footprint as the previous select: nothing below moves */
+  padding: 0 3.4rem;
+  background: transparent;
+  border: 0;
+  color: #f7f2ea;
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.82;
+  transition: opacity 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+#language-selector .lang-switch__toggle:hover,
+#language-selector .lang-switch.is-open .lang-switch__toggle {
+  opacity: 1;
+}
+#language-selector .lang-switch span.lang-switch__current {
+  display: inline-block;
+  position: relative;
+  padding: 0.4rem 0;
+  margin-right: -0.28em; /* optical: cancel trailing letter-spacing */
+}
+#language-selector .lang-switch__current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0.28em;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+#language-selector .lang-switch__toggle:hover .lang-switch__current::after,
+#language-selector .lang-switch.is-open .lang-switch__current::after {
+  transform: scaleX(1);
+}
+#language-selector .lang-switch__chevron {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.25s ease;
+}
+#language-selector .lang-switch.is-open .lang-switch__chevron {
+  transform: translateY(1px) rotate(225deg);
+}
+#language-selector .lang-switch__toggle:focus-visible,
+#language-selector .lang-switch__option:focus-visible {
+  outline: 1px solid rgba(247, 242, 234, 0.6);
+  outline-offset: -6px;
+}
+
+/* dropdown */
+#language-selector .lang-switch__menu {
+  position: absolute;
+  top: calc(100% - 1.6rem);
+  left: 2rem;
+  min-width: 17rem;
+  padding: 0.6rem 0;
+  background: #240200;
+  border: 1px solid rgba(247, 242, 234, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0s linear 0.22s;
+}
+#language-selector .lang-switch.is-open .lang-switch__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+#language-selector .lang-switch__option {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 1.4rem;
+  width: 100%;
+  padding: 1.2rem 2rem 1.2rem 3rem;
+  background: transparent;
+  border: 0;
+  color: #f7f2ea;
+  font-family: "Noto Serif Display", serif;
+  text-align: left;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+#language-selector .lang-switch__option:hover,
+#language-selector .lang-switch__option:focus-visible {
+  opacity: 1;
+  background-color: #46080d;
+}
+#language-selector .lang-switch__option.is-active {
+  opacity: 1;
+  cursor: default;
+}
+/* small diamond marks the active language (echoes the service ticker) */
+#language-selector .lang-switch__option.is-active::before {
+  content: "";
+  position: absolute;
+  left: 1.3rem;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  background: #f7f2ea;
+  transform: translateY(-50%) rotate(45deg);
+}
+#language-selector .lang-switch__code {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+}
+#language-selector .lang-switch__name {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  #language-selector .lang-switch__toggle,
+  #language-selector .lang-switch__current::after,
+  #language-selector .lang-switch__chevron,
+  #language-selector .lang-switch__menu,
+  #language-selector .lang-switch.is-open .lang-switch__menu,
+  #language-selector .lang-switch__option {
+    transition: none;
+  }
+  #language-selector .lang-switch__menu {
+    transform: none;
+  }
+}
+
+/* Contact page: its body is a centred flex column, so pin the global selector to the same
+   top-left navigation spot it has on the other pages instead of sitting above the form. */
+.contact-page #language-selector {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Saved language = EN: hide the Hungarian source text until changeLanguage() has run
+   (class set by the early script in <head>, removed by changeLanguage or a 3s failsafe). */
+html.i18n-pending [data-translate],
+html.i18n-pending #language-selector .lang-switch__current {
+  visibility: hidden;
+}

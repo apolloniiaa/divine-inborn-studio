@@ -1,0 +1,72 @@
+/* Unified "← BACK" control: returns to the previous page (history.back),
+   falls back to the homepage via its href when there is no meaningful history. */
+.back-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 3rem;
+  padding: 0.6rem 0;
+  background: transparent;
+  border: 0;
+  color: #46080d;
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.back-link::before {
+  content: "←";
+  font-size: 1.4rem;
+  letter-spacing: 0;
+  transition: transform 0.3s ease;
+}
+.back-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0.28em;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.back-link:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+/* Contact page: dark background → the page's existing white text colour, below the form */
+.contact-page .back-link {
+  color: #ffffff;
+}
+
+/* Templates page: dark background → use the page's existing white (as its title/intro) */
+#templates .back-link {
+  display: flex;
+  width: max-content;
+  margin: 3rem auto 0;
+  color: white;
+}
+
+/* subtle hover on desktop pointers only (no hover effect on mobile / touch) */
+@media (hover: hover) and (min-width: 781px) {
+  .back-link:hover::before {
+    transform: translateX(-3px);
+  }
+  .back-link:hover::after {
+    transform: scaleX(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .back-link::before,
+  .back-link::after {
+    transition: none;
+  }
+}

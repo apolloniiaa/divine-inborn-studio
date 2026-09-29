@@ -207,3 +207,16 @@ body {
     // display: none;
   }
 }
+
+/* Mobile / touch: no hover effect on the menu links (and no "sticky" hover after a tap).
+   Keeps the normal link appearance; desktop mouse hover is unchanged. */
+@media screen and (max-width: 780px), (hover: none) {
+  .navigation_link:link:hover,
+  .navigation_link:visited:hover,
+  .navigation_link:link:active,
+  .navigation_link:visited:active {
+    background-position: 0% 0%;
+    background-color: transparent;
+    transition: none;
+  }
+}
