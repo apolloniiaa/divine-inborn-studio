@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (language === 'en') {
       languageData = {
         greeting: 'From concept to reality!',
-        intro: `Hello, I am Apollónia - a Product Designer with a frontend development background. I design websites, digital products, and brand identities with the goal of turning ideas into seamless, high-performing digital experiences. Here, you can explore my work, design approach, and professional journey.`,
+        intro: `Hello, I am a Product Designer with a frontend development background. I design websites, digital products, and brand identities with the goal of turning ideas into seamless, high-performing digital experiences. Here, you can explore my work, design approach, and professional journey.`,
         introSec: `Unique design meets smart development.`,
         about: ` Every great project starts with an honest conversation – understanding what you want and what you truly need. Once that’s clear, the rest is “just” design and code – bringing it all to life in a way that’s genuinely about you.`,
         aboutSec: `My goal is to create a website that not only looks great and works well, but also delivers real value. I believe in solutions that highlight what makes your brand unique, attract the right audience, and support your business goals.`,
@@ -247,7 +247,7 @@ My goal is to create websites that are clear, visually appealing, and easy to us
         // templateDescription1: `Imagine a website template as a unique design concept for your online space. These templates are like ready-made blueprints, and typically, there are about 10 variations available. They serve as a fantastic starting point for your website. Now, if you want a personalized touch or have specific preferences, I offer the option to create a custom template just for you. In this case, I craft a tailored design to match your vision, and the process usually takes 1-3 days. Once it's ready, you can enjoy your very own website with the flexibility to change content whenever you want.`,
         templateDescription2: `My website templates are ready-made foundations to help you launch your online presence with ease. Choose from around 5 clean, modern designs—or request a custom one, delivered in 1–3 days. All templates are fully editable, so you can update your content anytime.
 
-They’ll be available soon on my Etsy shop. Each design is thoughtfully created for a smooth, stylish user experience. Feel free to reach out with any questions. Farewell, and thank you for making Divine Inborn Studio a part of your digital story! ♡`,
+They’ll be available soon on my Etsy shop. Each design is thoughtfully created for a smooth, stylish user experience. Feel free to reach out with any questions. Farewell, and thank you for making DIV.Studio a part of your digital story! ♡`,
         contactPageTitle: `Get in touch!`,
         contactPageMessage: `Message`,
         contactPageName: `Name`,
@@ -258,7 +258,7 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
       languageData = {
         greeting: 'Az ötlettől a működő felületig!',
         intro:
-          'Szia! Apollónia vagyok - Product Designer, frontend fejlesztői háttérrel. Weboldalakat, digitális termékeket és arculatokat tervezek. Itt beleláthatsz a munkáimba, a szemléletembe és a szakmai utamba.',
+          'Szia! Product Designer vagyok, frontend fejlesztői háttérrel. Weboldalakat, digitális termékeket és arculatokat tervezek. Itt beleláthatsz a munkáimba, a szemléletembe és a szakmai utamba.',
         introSec: `A design mögött bővebben`,
         about: `A frontend fejlesztés során vált számomra igazán fontossá, hogy egy digitális termék ne csak technikailag működjön, hanem vizuálisan is következetes és könnyen használható legyen. Ez a szemlélet vezetett a Product Design felé, ahol a technikai tapasztalatot kreatív és felhasználóközpontú gondolkodással kapcsolom össze.`,
         aboutSec: `Ma weboldalakat, digitális termékeket és arculatokat tervezek, miközben az AI-eszközöket is tudatosan használom a gyorsabb ötleteléshez és tervezéshez — úgy, hogy közben minden munka megőrizze az eredeti gondolatot, az egyedi karaktert és az emberi szemléletet.
@@ -322,7 +322,7 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
         templateCardText1: `Tökéletes bárkinek, aki szeretné bemutatni a portfólióját anélkül, hogy nulláról kezdene.`,
         templateCardText2: `Ez a sablon segít abban, hogy a fotóidra essen a hangsúly – semmi fölösleges, csak letisztult megjelenés és jól átgondolt elrendezés.`,
         templateCardText3: `Egy kész webshop alap, amibe csak a termékeid hiányoznak.`,
-        templateDescription2: `A weboldal sablonjaim előre elkészített alapok, amelyekkel könnyedén elindíthatod az online felületed. Kb. öt változat közül választhatsz, de ha személyre szabott megoldást szeretnél, egyedi sablont is készítek 1–3 napon belül. A tartalmakat bármikor szabadon módosíthatod. Hamarosan elérhetők lesznek az Etsy oldalamon. Minden sablont átgondoltan, letisztult stílusban terveztem, hogy egyszerű és látványos élményt nyújtson. Ha kérdésed van, írj nyugodtan – örömmel segítek. Addig is a legjobbakat kívánom, és köszönöm, hogy a Divine Inborn Studio része lehetett a digitális történetednek! ♡
+        templateDescription2: `A weboldal sablonjaim előre elkészített alapok, amelyekkel könnyedén elindíthatod az online felületed. Kb. öt változat közül választhatsz, de ha személyre szabott megoldást szeretnél, egyedi sablont is készítek 1–3 napon belül. A tartalmakat bármikor szabadon módosíthatod. Hamarosan elérhetők lesznek az Etsy oldalamon. Minden sablont átgondoltan, letisztult stílusban terveztem, hogy egyszerű és látványos élményt nyújtson. Ha kérdésed van, írj nyugodtan – örömmel segítek. Addig is a legjobbakat kívánom, és köszönöm, hogy a DIV.Studio része lehetett a digitális történetednek! ♡ 
 `,
         contactPageTitle: `Kapcsolatfelvétel`,
         contactPageMessage: `Üzenet`,

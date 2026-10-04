@@ -8,7 +8,7 @@ html {
 }
 
 .number01::before {
-  content: "Divine Inborn Studio";
+  content: "DIV.Studio";
   display: block;
   position: fixed;
   font-size: 25rem;
