@@ -375,4 +375,238 @@
   background-color: #e9bbae;
   z-index: auto;
 }
+
+/* ==========================================================================
+   Works — targeted fixes on top of the ORIGINAL card stage above.
+   Kept as-is: cards lying back (rotateX 60deg, scale .7), the hover rise
+   (rotate 0, scale 1, translateY 10px), the one-time entry, the dark story
+   panel laid over the lower edge of the image.
+   Changed: reading order (Brigitta, Krucsó, Unicorn), the image fills the
+   whole upper block, the hover only runs on a real mouse (a tap/click never
+   moves a card), the stage sits in the page flow, mobile is a clean column.
+   ========================================================================== */
+.workee-page .page h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+/* image: fills the complete upper block of the card, never distorted */
+.workee-page .image {
+  height: 34%; /* runs 2% under the story panel, so there is no gap */
+  overflow: hidden;
+}
+.workee-page .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+.workee-page #i0 img {
+  object-position: 50% 0%;
+}
+.workee-page .info {
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 1025px) {
+  /* the original 300 x 460 stage, centred and in the page flow */
+  .workee-page .wrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 2.4rem auto 0;
+  }
+  /* readable type once a card stands up */
+  .workee-page .info h2 {
+    font-size: 2rem;
+  }
+  .workee-page .info p {
+    margin: 1.4rem 2.4rem;
+    font-size: 1.5rem;
+  }
+
+  /* reading order left to right: Brigitta Nóra Beauty, Krucsó, Unicorn Magic Brew */
+  .workee-page #c0 {
+    left: -100%;
+    z-index: 0;
+  }
+  .workee-page #c1 {
+    left: 0;
+    z-index: 300;
+  }
+  .workee-page #c2 {
+    left: 100%;
+    z-index: 0;
+  }
+  /* the card being hovered is always on top of its neighbours */
+  .workee-page #c0:hover,
+  .workee-page #c1:hover,
+  .workee-page #c2:hover {
+    z-index: 400;
+  }
+}
+/* touch screens: a tap must never rise / move a card */
+@media (min-width: 1025px) and (hover: none), (min-width: 1025px) and (pointer: coarse) {
+  .workee-page .container:hover {
+    transform: rotateX(60deg) scale(0.7);
+  }
+}
+
+/* "NÉZD MEG A TELJES PORTFÓLIÓT ↗" — simple editorial text link */
+.workee-page .works-more {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 2rem 9rem;
+}
+.workee-page .works-more__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 44px;
+  padding: 0.6rem 0;
+  color: #46080d;
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+.workee-page .works-more__link span {
+  position: static;
+  top: auto;
+  left: auto;
+  border-radius: 0;
+  background: none;
+  z-index: auto;
+}
+.workee-page .works-more__arrow {
+  display: inline-block;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  transition: transform 0.35s ease;
+}
+.workee-page .works-more__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0.3em;
+  bottom: 0.4rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.45;
+  transition: opacity 0.4s ease;
+}
+.workee-page .works-more__link:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .workee-page .works-more__link:hover::after {
+    opacity: 1;
+  }
+  .workee-page .works-more__link:hover .works-more__arrow {
+    transform: translate(3px, -3px);
+  }
+}
+
+/* tablet + mobile: the same card, stacked in one centred column, static */
+@media (max-width: 1024px) {
+  .workee-page .page h1 {
+    width: auto;
+    max-width: 66rem;
+    padding: 0 2.4rem;
+    line-height: 1.35;
+  }
+  .workee-page .wrapper {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    width: 100%;
+    height: auto;
+    margin: 2rem auto 0;
+    padding: 0 2.4rem;
+    perspective: none;
+  }
+  .workee-page #c0,
+  .workee-page #c1,
+  .workee-page #c2 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(46rem, 100%);
+    height: auto;
+    margin: 0;
+    z-index: auto;
+  }
+  .workee-page .image {
+    position: relative;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+  .workee-page .story,
+  .workee-page #s1,
+  .workee-page #s2 {
+    position: relative;
+    top: auto;
+    height: auto;
+    margin-top: -2.4rem; /* the panel still laps over the image edge */
+  }
+  .workee-page .info {
+    position: static;
+    padding: 3.2rem 2.4rem 3.6rem;
+  }
+  .workee-page .info h2 {
+    margin: 0 0 1.2rem;
+    font-size: 2.6rem;
+  }
+  .workee-page .info p {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 34ch;
+    font-size: 1.7rem;
+    line-height: 1.65;
+    letter-spacing: 0.02em;
+  }
+  .workee-page .works-more {
+    padding: 6rem 2.4rem 8rem;
+  }
+  /* the original hid the mouse cursor on narrow windows */
+  .workee-page .info p,
+  .workee-page .wrapper .container:hover {
+    cursor: auto;
+  }
+}
+@media (max-width: 780px) {
+  .workee-page .page {
+    margin-top: 5.6rem;
+  }
+  .workee-page .page h1 {
+    font-size: 2.6rem;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-wrap: balance;
+  }
+  .workee-page .info h2 {
+    font-size: 2.4rem;
+  }
+  .workee-page .works-more__link {
+    letter-spacing: 0.22em;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .workee-page .container {
+    animation: none;
+  }
+  .workee-page .works-more__arrow {
+    transition: none;
+  }
+}
 /*# sourceMappingURL=works.css.map */

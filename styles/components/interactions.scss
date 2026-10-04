@@ -1,0 +1,527 @@
+/* ==========================================================================
+   Interactions — homepage hero (editorial composition with the seated 3D
+   character) and the Works project links.
+   Motion: one entrance sequence on load (wordmark → headline → character lands
+   → copy → CTA), then everything is still. The character group answers the
+   mouse by ~1.5px at most. Touch + prefers-reduced-motion: final state at once.
+   ========================================================================== */
+
+/* ---------- HERO: layout ---------- */
+.class.hero-v2 {
+  --hero-h: clamp(56rem, calc(100vh - 7.7rem), 100rem);
+  --ivory: #f7f2ea;
+  position: relative;
+  z-index: 11; /* own layer: covers the page-wide fixed watermark while the hero is on screen */
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-rows: 1fr auto auto 1fr;
+  min-height: var(--hero-h);
+  padding: 0 clamp(3.2rem, 5vw, 9.6rem);
+  text-align: left;
+  background:
+    radial-gradient(ellipse 60% 55% at 54% 62%, rgba(110, 22, 24, 0.55) 0%, rgba(110, 22, 24, 0) 70%),
+    radial-gradient(ellipse 120% 90% at 50% 40%, #2e0505 0%, #240200 55%, #1a0100 100%);
+}
+
+/* giant editorial watermark, behind everything */
+.hero-wordmark {
+  position: absolute;
+  z-index: 0;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: rgba(150, 40, 40, 0.16);
+  font-family: "Noto Serif Display", serif;
+  font-size: clamp(9rem, 19vw, 38rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  animation: hero-fade-in 1.2s ease-out both;
+}
+
+/* headline — left */
+.hero-v2 .hero-title {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+  position: relative;
+  z-index: 3;
+  margin: 0 3.2rem 0 0; /* breathing room: never runs into the character */
+  color: var(--ivory);
+  font-family: "Noto Serif Display", serif;
+  font-weight: 700;
+  font-size: clamp(3.8rem, 3.8vw, 7.2rem);
+  line-height: 1.06;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 18px rgba(26, 1, 0, 0.55);
+}
+.hero-line {
+  display: block;
+  /* clip only below the line so the rising text is masked, accents stay visible */
+  clip-path: inset(-60% -20% 0 -20%);
+}
+.hero-line__inner {
+  display: inline-block;
+  transition: transform 1s cubic-bezier(0.2, 0.75, 0.1, 1);
+}
+.hero-line:nth-child(2) .hero-line__inner {
+  transition-delay: 0.12s;
+}
+.hero-line:nth-child(3) .hero-line__inner {
+  transition-delay: 0.24s;
+}
+.hero-line--move .hero-line__inner {
+  font-style: italic;
+  font-weight: 400;
+}
+/* hidden until the one-time reveal runs (class "js" is set by the early script in <head>) */
+html.js .hero-title:not(.is-in) .hero-line__inner {
+  transform: translateY(110%);
+}
+/* failsafe: never leave the headline hidden if interactions.js does not run */
+html.js .hero-title:not(.is-in) .hero-line .hero-line__inner {
+  animation: hero-failsafe-inner 0.01s 3s forwards;
+}
+@keyframes hero-failsafe-inner {
+  to {
+    transform: none;
+  }
+}
+
+/* CTA — under the headline; hover only */
+.hero-v2 .hero-cta {
+  grid-column: 1;
+  grid-row: 3;
+  justify-self: start;
+  align-self: start;
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.4rem;
+  min-height: 44px;
+  margin-top: 3.6rem;
+  padding: 1rem 0;
+  border: 0;
+  background: none;
+  color: var(--ivory);
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: text-shadow 0.4s ease, color 0.4s ease;
+  animation: hero-fade-in 0.8s ease-out 1.9s both;
+  -webkit-tap-highlight-color: transparent;
+}
+.hero-cta__arrow {
+  display: inline-block;
+  font-size: 1.7rem;
+  letter-spacing: 0;
+  transition: transform 0.35s ease;
+}
+.hero-v2 .hero-cta::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0.24em;
+  bottom: 0.4rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.45;
+  transition: opacity 0.4s ease, box-shadow 0.4s ease;
+}
+.hero-v2 .hero-cta:focus-visible {
+  outline: 1px solid var(--ivory);
+  outline-offset: 6px;
+}
+
+/* character — centre, foreground, sits on the bottom edge */
+.hero-v2 .hero-figure {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  align-self: end;
+  position: relative;
+  z-index: 2;
+  margin: 0 -4vw;
+  /* near-static mouse response (values set by interactions.js) */
+  transform: translate3d(calc(var(--hero-mx, 0) * -1.5px), calc(var(--hero-my, 0) * -1px), 0);
+}
+/* soft floor shadow the character lands on */
+.hero-v2 .hero-figure::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 8%;
+  right: 8%;
+  bottom: 1.5%;
+  height: 7%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(10, 0, 0, 0.7), rgba(10, 0, 0, 0));
+  animation: hero-shadow-land 1.5s cubic-bezier(0.22, 0.8, 0.3, 1) 0.55s both;
+}
+.hero-character {
+  display: block;
+  width: auto;
+  height: calc(var(--hero-h) * 0.9);
+  max-width: none;
+  transform-origin: 50% 100%;
+  animation: hero-land 1.5s linear 0.55s both;
+  will-change: transform, opacity;
+}
+
+/* editorial copy — right */
+.hero-v2 .hero-aside {
+  grid-column: 3;
+  grid-row: 2 / 4;
+  align-self: center;
+  position: relative;
+  z-index: 3;
+  padding-left: clamp(2.4rem, 3vw, 5.6rem);
+  animation: hero-fade-in 0.9s ease-out 1.6s both;
+}
+.hero-statement {
+  margin: 0;
+  padding-left: 2.4rem;
+  border-left: 1px solid rgba(247, 242, 234, 0.55);
+  color: var(--ivory);
+  font-family: "Noto Serif Display", serif;
+  font-size: clamp(2.6rem, 2.25vw, 4.4rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.22;
+  text-shadow: 0 2px 14px rgba(26, 1, 0, 0.5);
+}
+.hero-statement span {
+  display: block;
+}
+.hero-sub {
+  position: relative;
+  max-width: 30ch;
+  margin: 2.8rem 0 0 2.4rem;
+  padding-bottom: 2.8rem;
+  color: rgba(247, 242, 234, 0.86);
+  font-family: "Noto Serif Display", serif;
+  font-size: clamp(1.6rem, 1.15vw, 2.1rem);
+  line-height: 1.55;
+}
+.hero-sub::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 5.6rem;
+  height: 1px;
+  background: rgba(247, 242, 234, 0.55);
+}
+
+/* ---------- HERO: entrance (runs once, then everything is still) ---------- */
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* arrives from above → lands → one small settle → rests */
+@keyframes hero-land {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -12vh, 0) rotate(-2.5deg);
+    animation-timing-function: cubic-bezier(0.3, 0.05, 0.6, 1);
+  }
+  22% {
+    opacity: 1;
+  }
+  58% {
+    transform: translate3d(0, 0.8rem, 0) rotate(0.5deg) scale(1.006, 0.988);
+    animation-timing-function: cubic-bezier(0.25, 0.7, 0.35, 1);
+  }
+  78% {
+    transform: translate3d(0, -0.6rem, 0) rotate(-0.15deg) scale(0.998, 1.004);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.3, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes hero-shadow-land {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.45);
+  }
+  58% {
+    opacity: 1;
+    transform: scaleX(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* small laptops / tablet landscape: keep the headline clear of the coffee cup */
+@media screen and (min-width: 1025px) and (max-width: 1180px) {
+  .hero-v2 .hero-title {
+    font-size: 3.4vw;
+  }
+}
+
+/* ---------- HERO: tablet + mobile (≤1024px) — centred: headline → character → copy → CTA ---------- */
+@media screen and (max-width: 1024px) {
+  .class.hero-v2 {
+    --hero-h: auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto;
+    justify-items: center;
+    min-height: 0;
+    padding: 6.4rem 2.4rem 7.2rem;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 90% 40% at 50% 46%, rgba(110, 22, 24, 0.5) 0%, rgba(110, 22, 24, 0) 70%),
+      radial-gradient(ellipse 140% 80% at 50% 30%, #2e0505 0%, #240200 55%, #1a0100 100%);
+  }
+  .hero-wordmark {
+    top: 3.2rem;
+    font-size: 22vw;
+    color: rgba(150, 40, 40, 0.11);
+  }
+  .hero-v2 .hero-title {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: auto;
+    margin: 0;
+    font-size: clamp(3.6rem, 10.4vw, 6.4rem);
+    line-height: 1.06;
+  }
+  .hero-line__inner {
+    text-wrap: balance;
+  }
+  .hero-v2 .hero-figure {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 2.4rem 0 0;
+    transform: none;
+  }
+  .hero-character {
+    width: min(100%, 46rem, 72vw);
+    height: auto;
+    margin: 0 auto;
+    animation-duration: 1.25s;
+    animation-delay: 0.45s;
+  }
+  .hero-v2 .hero-figure::after {
+    animation-duration: 1.25s;
+    animation-delay: 0.45s;
+  }
+  .hero-v2 .hero-aside {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 3.2rem;
+    padding: 0;
+    animation-delay: 1.35s;
+  }
+  .hero-statement {
+    padding: 0;
+    border-left: 0;
+    font-size: clamp(2.4rem, 6.6vw, 3.6rem);
+  }
+  .hero-sub {
+    max-width: 32ch;
+    margin: 1.6rem auto 0;
+    padding: 0;
+    font-size: 1.6rem;
+  }
+  .hero-sub::after {
+    display: none;
+  }
+  .hero-v2 .hero-cta {
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: center;
+    margin-top: 3.6rem;
+    animation-delay: 1.6s;
+  }
+}
+@media screen and (max-width: 767px) {
+  .class.hero-v2 {
+    padding: 4.8rem 2rem 6.4rem;
+  }
+  .hero-character {
+    width: min(100%, 86vw);
+  }
+  .hero-v2 .hero-cta {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  @keyframes hero-land-m {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -6rem, 0) rotate(-2deg);
+      animation-timing-function: cubic-bezier(0.3, 0.05, 0.6, 1);
+    }
+    22% {
+      opacity: 1;
+    }
+    58% {
+      transform: translate3d(0, 0.6rem, 0) rotate(0.4deg) scale(1.005, 0.99);
+      animation-timing-function: cubic-bezier(0.25, 0.7, 0.35, 1);
+    }
+    78% {
+      transform: translate3d(0, -0.4rem, 0) rotate(-0.1deg);
+      animation-timing-function: cubic-bezier(0.4, 0, 0.3, 1);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .hero-character {
+    animation-name: hero-land-m;
+  }
+}
+
+/* ---------- desktop pointer only: hover states ---------- */
+@media (hover: hover) and (pointer: fine) {
+  /* soft ivory glow, the arrow nudges 2px — nothing else moves */
+  .hero-v2 .hero-cta:hover {
+    color: #fffaf2;
+    text-shadow: 0 0 12px rgba(247, 242, 234, 0.55), 0 0 28px rgba(247, 242, 234, 0.22);
+  }
+  .hero-v2 .hero-cta:hover::after {
+    opacity: 0.9;
+    box-shadow: 0 0 8px rgba(247, 242, 234, 0.6);
+  }
+  .hero-v2 .hero-cta:hover .hero-cta__arrow {
+    transform: translate(2px, -2px);
+  }
+}
+
+/* ---------- WORKS: project cards ---------- */
+/* (card layout + rise interaction live in works.css) */
+
+/* "VIEW PROJECT ↗" — the existing live-site link */
+.workee-page .info .project-link {
+  position: relative;
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 40px;
+  margin: 2rem auto 0;
+  padding: 0.5rem 0;
+  color: #f7f2ea;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/* neutralise the page-level `.workee-page span` rule inside the link */
+.workee-page .project-link span {
+  position: static;
+  top: auto;
+  left: auto;
+  border-radius: 0;
+  background: none;
+  z-index: auto;
+}
+.workee-page .project-link__arrow {
+  display: inline-block;
+  font-size: 1.3rem;
+  letter-spacing: 0;
+  transition: transform 0.35s ease;
+}
+.workee-page .project-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0.28em;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.workee-page .project-link:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+@media (max-width: 1024px) {
+  .workee-page .info .project-link {
+    min-height: 44px;
+    margin: 2.6rem auto 0;
+    font-size: 1.4rem;
+    letter-spacing: 0.22em;
+  }
+  .workee-page .project-link__arrow {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 360px) {
+  .workee-page .info .project-link {
+    font-size: 1.3rem;
+    letter-spacing: 0.14em;
+  }
+}
+.workee-page .project-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* ---------- desktop pointer only ---------- */
+@media (hover: hover) and (pointer: fine) {
+  .hero-cta:hover::after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  .hero-cta:hover .hero-cta__arrow {
+    transform: translate(3px, -3px);
+  }
+  .workee-page .project-link:hover::after,
+  .workee-page .container:hover .project-link::after {
+    transform: scaleX(1);
+  }
+  .workee-page .container:hover .project-link__arrow,
+  .workee-page .project-link:focus-visible .project-link__arrow {
+    transform: translate(3px, -3px);
+  }
+}
+/* ---------- reduced motion: final state at once, no entrance ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html.js .hero-title:not(.is-in) .hero-line__inner,
+  .hero-line__inner {
+    transform: none;
+    transition: none;
+  }
+  .hero-wordmark,
+  .hero-v2 .hero-cta,
+  .hero-v2 .hero-aside,
+  .hero-character,
+  .hero-v2 .hero-figure::after {
+    animation: none;
+  }
+  .hero-v2 .hero-figure {
+    transform: none;
+  }
+  .hero-v2 .hero-cta,
+  .hero-cta__arrow {
+    transition: none;
+  }
+  .workee-page .project-link__arrow {
+    transition: none;
+  }
+}

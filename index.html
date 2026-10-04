@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
       // Apply the saved language before first paint (same key as changeLanguage() in index.js)
+      document.documentElement.classList.add('js');
       (function () {
         try {
           var q = new URLSearchParams(window.location.search).get('lang');
@@ -48,10 +49,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="/assets/avatar-burgundy.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="/assets/divine-character-sitting.webp" imagesrcset="/assets/divine-character-sitting-640.webp 640w, /assets/divine-character-sitting.webp 1024w" imagesizes="(max-width: 1024px) 80vw, 40vw" type="image/webp" fetchpriority="high">
     <link rel="stylesheet" href="/styles/style.css">
     <script defer src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
     <script defer src="/index.js"></script>
+    <script defer src="/interactions.js"></script>
 
     <script type="application/ld+json">
     {
@@ -218,20 +220,32 @@
     </div>
 
     <main>
-    <section class="class" id="home">
-        <h1 class="title" data-translate="greeting">Az ötlettől a működő felületig!</h1>
+    <section class="class hero-v2" id="home">
+        <div class="hero-wordmark" aria-hidden="true">DIV.Studio</div>
 
-        <div class="container">
-            <div class="main-content">
-                <img src="/assets/avatar-burgundy.webp" alt="Stilizált 3D avatár bordó sapkában, kávéval a kezében" class="main-image" fetchpriority="high">
-                <div class="text-overlay">
-                    <div class="lorem-text">
-                        <p data-translate="intro">Szia! Product Designer vagyok, frontend fejlesztői háttérrel. Weboldalakat, digitális termékeket és arculatokat tervezek. Itt beleláthatsz a munkáimba, a szemléletembe és a szakmai utamba.</p>
-                    </div>
-                </div>
-                <img src="/assets/design.webp" alt="Brand Identity &amp; Visual Design portfólió füzet mockup" class="small-image left" loading="lazy">
-            </div>
+        <h1 class="hero-title">
+            <span class="hero-line"><span class="hero-line__inner" data-translate="heroLine1">Tervezek.</span></span>
+            <span class="hero-line"><span class="hero-line__inner" data-translate="heroLine2">Fejlesztek.</span></span>
+            <span class="hero-line hero-line--move"><span class="hero-line__inner" data-translate="heroLine3">Megvalósítom.</span></span>
+        </h1>
+
+        <div class="hero-figure">
+            <img class="hero-character" src="/assets/divine-character-sitting.webp"
+                srcset="/assets/divine-character-sitting-640.webp 640w, /assets/divine-character-sitting.webp 1024w"
+                sizes="(max-width: 1024px) 80vw, 40vw" width="1024" height="1536"
+                alt="Stilizált 3D karakter bordó DIVINE sapkában és krémszínű pulóverben, kávéval a kezében ül" fetchpriority="high" decoding="async">
         </div>
+
+        <div class="hero-aside">
+            <p class="hero-statement">
+                <span data-translate="heroStatement1">Kreatív ötletekből</span>
+                <span data-translate="heroStatement2">valós megoldásokat</span>
+                <span data-translate="heroStatement3">tervezek.</span>
+            </p>
+            <p class="hero-sub" data-translate="heroSub">Weboldalak, digitális termékek és arculatok, amelyek valóban támogatják a márkád fejlődését.</p>
+        </div>
+
+        <a href="works.html" class="hero-cta"><span data-translate="heroCta">Munkáim</span><span class="hero-cta__arrow" aria-hidden="true">↗</span></a>
     </section>
 
     <section class="intro" id="about">
@@ -291,13 +305,13 @@
             <a href="works.html" class="button_slide slide_left" data-translate="businessBtn">Munkáim</a>
         </div>
         <div class="image-container">
-            <img src="./assets/mockups32.webp" alt="Laptop mockup egy készülő weboldal kezdőlapjával" loading="lazy">
+            <img src="./assets/mockups32.webp" alt="Laptop mockup egy készülő weboldal kezdőlapjával" width="972" height="737" loading="lazy">
         </div>
 
 
 
         <div class="image-container">
-            <img class="desktop-only" src="./assets/mock.webp" alt="Unicorn Magic Brew kávémárka arculata: címke, palack és menükártya" loading="lazy">
+            <img class="desktop-only" src="./assets/mock.webp" alt="Unicorn Magic Brew kávémárka arculata: címke, palack és menükártya" width="1202" height="1309" loading="lazy">
         </div>
         <div class="text-container second number02" id="portfolio">
             <h2 data-translate="frontendTitle">Arculattervezés</h2>
@@ -314,7 +328,7 @@
             <a href="templates.html" class="button_slide slide_left" data-translate="templateBtn">Sablonok</a>
         </div>
         <div class="image-container">
-            <img src="./assets/laptop-mockup-fashion.webp" alt="Sötét tónusú portfólió weboldal sablon laptop mockupon" loading="lazy">
+            <img src="./assets/laptop-mockup-fashion.webp" alt="Sötét tónusú portfólió weboldal sablon laptop mockupon" width="1021" height="845" loading="lazy">
         </div>
     </section>
 
@@ -371,37 +385,14 @@
 
 
     <footer class="footer-distributed">
-
         <div class="footer-left">
+            <img class="logo" src="/assets/big_transparent_5.webp" alt="DIV.Studio logó" loading="lazy">
             <h3>DIV.Studio</h3>
             <p class="footer-links">
-                <a href="#home" class="link-1" data-translate="backToTopBtn">Vissza a tetejére ⬆️</a>
+                <a href="#home" class="link-1" data-translate="backToTopBtn">Vissza a tetejére</a>
                 <a href="contact.html" id="contact-link" data-translate="contactText">Kapcsolat</a>
             </p>
-
             <p class="footer-company-name">DIV.Studio © 2023</p>
-        </div>
-
-        <div class="footer-center">
-            <div>
-                <img class="logo" src="/assets/big_transparent_5.webp" alt="DIV.Studio logó" loading="lazy">
-
-            </div>
-        </div>
-
-        <div class="footer-right">
-
-
-            <p class="footer-links footer-company-about">
-
-                <a href="#portfolio">Portfolio</a>
-                <a href="works.html" data-translate="navWorks">Munkáim</a>
-                <a href="templates.html" data-translate="navTemplates">Sablonok</a>
-            </p>
-            <div class="footer-icons">
-                <p class="left-foo" data-translate="contactTextSub">Eljött az ideje, hogy megbeszéljük a projekted?</p>
-                <p class="left-foo-a"><a href="mailto:divineinborn@gmail.com">divineinborn@gmail.com</a></p>
-            </div>
         </div>
     </footer>
 </body>

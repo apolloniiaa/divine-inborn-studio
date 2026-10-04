@@ -230,3 +230,71 @@ html {
     display: none;
   }
 }
+
+/* ---------- One-column layout (≤1390px): IMAGE → TEXT, three times, every image visible ---------- */
+@media (max-width: 1390px) {
+  .containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0 6rem;
+  }
+  /* DOM: text1, img1, img2, text2 (Arculattervezés), text3, img3 → shown as img, text pairs */
+  .containers > :nth-child(2) { order: 1; }
+  .containers > :nth-child(1) { order: 2; }
+  .containers > :nth-child(3) { order: 3; }
+  .containers > :nth-child(4) { order: 4; }
+  .containers > :nth-child(6) { order: 5; }
+  .containers > :nth-child(5) { order: 6; }
+  .containers .desktop-only {
+    display: block;
+  }
+  .containers .image-container {
+    width: 100%;
+    margin: 0;
+    padding: 6.4rem 2.4rem 0;
+  }
+  .containers .image-container img,
+  .containers .image-container:nth-child(3) img {
+    position: static;
+    width: min(100% - 2rem, 60rem);
+    height: auto;
+    margin: 0;
+    object-fit: contain;
+    z-index: auto;
+    box-shadow: 14px -14px 1px #240400;
+  }
+  .containers .text-container,
+  .containers .second {
+    width: 100%;
+    max-width: 64rem;
+    margin: 0;
+    padding: 4.8rem 2.4rem 2.4rem;
+    text-align: center;
+  }
+  .containers .text-container p {
+    margin-bottom: 1.6rem;
+  }
+}
+@media (max-width: 760px) {
+  .containers .image-container {
+    padding: 5.6rem 2.4rem 0;
+  }
+  .containers .image-container img,
+  .containers .image-container:nth-child(3) img {
+    width: calc(100% - 1.4rem);
+    box-shadow: 10px -10px 1px #240400;
+  }
+  .containers .text-container,
+  .containers .second {
+    padding: 4rem 2.4rem 1.6rem;
+  }
+  .containers .text-container h2 {
+    font-size: clamp(2.6rem, 7.4vw, 3.2rem);
+    line-height: 1.25;
+  }
+  .containers .text-container p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+  }
+}

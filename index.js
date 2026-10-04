@@ -183,6 +183,14 @@ document.addEventListener('DOMContentLoaded', function () {
     if (language === 'en') {
       languageData = {
         greeting: 'From concept to reality!',
+        heroLine1: `I design.`,
+        heroLine2: `I build.`,
+        heroLine3: `I make it real.`,
+        heroCta: `Explore my work`,
+        heroStatement1: `I turn creative ideas`,
+        heroStatement2: `into real-world`,
+        heroStatement3: `solutions.`,
+        heroSub: `Websites, digital products and brand identities that genuinely support your brand's growth.`,
         intro: `Hello, I am a Product Designer with a frontend development background. I design websites, digital products, and brand identities with the goal of turning ideas into seamless, high-performing digital experiences. Here, you can explore my work, design approach, and professional journey.`,
         introSec: `Unique design meets smart development.`,
         about: ` Every great project starts with an honest conversation – understanding what you want and what you truly need. Once that’s clear, the rest is “just” design and code – bringing it all to life in a way that’s genuinely about you.`,
@@ -220,20 +228,24 @@ My goal is to create websites that are clear, visually appealing, and easy to us
         serviceDescription6: `Have a unique idea or project in mind? Let's create a custom solution tailored to your goals and bring your vision to life.`,
         contactBtn: `Let's work together`,
         ambitiosText: `Bold pieces for bold people.`,
-        backToTopBtn: `Back to Top ⬆ `,
+        backToTopBtn: `Back to top`,
         contactText: `Contact`,
         contactTextSub: `Curious or have ideas? Connect and collaborate by dropping me an email. Let's bring your visions to life!`,
         navHome: `Home`,
         navTemplates: `Templates`,
         navContact: `Contact`,
         navWorks: `Works`,
-        workPageTitle: `Below are some of the projects I’ve worked on.`,
+        workPageTitle: `Latest work`,
         workPageDescription: ` On Brigi's page, captivating makeup artworks await every visitor.`,
         workPageDescription1: ``,
         workPageDescription2: `A personal site about equestrian life and experiences.`,
         workPageDescription3: `A little magic is on the way — Unicorn Magic Brew Coffee is coming soon to Reading, England.`,
         workPageBtnLink: `Preparing for Launch`,
         workPageVisitBtn: `Visit Website`,
+        workPageViewProject: `View project`,
+        workPageMore: `View full portfolio`,
+        backLabel: `Back`,
+        backAria: `Go back`,
         workPageBtn: `Portal to Home`,
         templateTitle: `Craft a stunning website without coding `,
         templateSub: `All my templates offer seamless customization and pre-designed UI blocks. Simplify your online presence with style!`,
@@ -257,6 +269,14 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
     } else if (language === 'hu') {
       languageData = {
         greeting: 'Az ötlettől a működő felületig!',
+        heroLine1: `Tervezek.`,
+        heroLine2: `Fejlesztek.`,
+        heroLine3: `Megvalósítom.`,
+        heroCta: `Munkáim`,
+        heroStatement1: `Kreatív ötletekből`,
+        heroStatement2: `valós megoldásokat`,
+        heroStatement3: `tervezek.`,
+        heroSub: `Weboldalak, digitális termékek és arculatok, amelyek valóban támogatják a márkád fejlődését.`,
         intro:
           'Szia! Product Designer vagyok, frontend fejlesztői háttérrel. Weboldalakat, digitális termékeket és arculatokat tervezek. Itt beleláthatsz a munkáimba, a szemléletembe és a szakmai utamba.',
         introSec: `A design mögött bővebben`,
@@ -298,14 +318,14 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
         serviceDescription6: `Nem találtad, amit keresel? Ha egyedi elképzelésed van, keress bátran – szívesen segítek megtalálni a legjobb megoldást.`,
         contactBtn: `Dolgozzunk együtt!`,
         ambitiosText: `Minimalista forma, maximális jelenlét.`,
-        backToTopBtn: `Vissza a tetejére ⬆️`,
+        backToTopBtn: `Vissza a tetejére`,
         contactText: `Kapcsolat`,
         contactTextSub: `Eljött az ideje, hogy megbeszéljük a projekted?`,
         navHome: `Főoldal`,
         navTemplates: `Sablonok`,
         navContact: `Kapcsolat`,
         navWorks: `Munkáim`,
-        workPageTitle: `Az alábbiakban néhány általam készített munkát találsz.`,
+        workPageTitle: `Legutóbbi munkáim`,
         workPageDescription: `Brigi oldalán elragadó sminkművészeti alkotások várnak majd minden látogatóra.`,
         workPageBtn: `Vissza a Főoldalra`,
         workPageDescription1: ``,
@@ -313,6 +333,10 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
         workPageDescription3: `Egy kis varázslat úton van — a Unicorn Magic Brew kávézó hamarosan megérkezik Readingbe, Angliába.`,
         workPageBtnLink: `Hamarosan..`,
         workPageVisitBtn: `Megtekintés`,
+        workPageViewProject: `Projekt megtekintése`,
+        workPageMore: `Nézd meg a teljes portfóliót`,
+        backLabel: `Vissza`,
+        backAria: `Vissza az előző oldalra`,
         templateTitle: `Weboldalkészítés kódolás nélkül – könnyen, érthetően.`,
         templateSubMain: `Könnyen testreszabhatók, és kész felületi blokkokat kínálnak – így gyorsabban hozhatod létre a saját weboldalad.`,
         templateCardTitle1: `Portfólió sablon`,
@@ -340,6 +364,13 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
       const key = element.getAttribute('data-translate');
       if (languageData && languageData[key]) {
         element.innerText = languageData[key];
+      }
+    });
+    // translated accessible names (e.g. the BACK link's aria-label)
+    document.querySelectorAll('[data-translate-aria]').forEach((element) => {
+      const key = element.getAttribute('data-translate-aria');
+      if (languageData && languageData[key]) {
+        element.setAttribute('aria-label', languageData[key]);
       }
     });
   }

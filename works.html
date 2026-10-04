@@ -112,7 +112,7 @@
 </head>
 
 
-<body class="workee-page">
+<body class="workee-page" id="top">
     <div class="navigation">
         <div id="language-selector">
             <div class="lang-switch">
@@ -162,9 +162,9 @@
     </div>
 
     <div class="page">
-        <h1 data-translate="workPageTitle">Az alábbiakban néhány általam készített munkát találsz.</h1>
+        <h1 data-translate="workPageTitle">Legutóbbi munkáim</h1>
         <div class="home-page">
-            <a href="/" class="back-link" data-back aria-label="Go back">Back</a>
+            <a href="/" class="back-link" data-back aria-label="Vissza az előző oldalra" data-translate-aria="backAria" data-translate="backLabel">Vissza</a>
         </div>
 
     </div>
@@ -173,70 +173,40 @@
         <article class="container" id="c0">
             <div class="image" id="i0">
 
-                <div class="city">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 225"
-                        style="enable-background:new 0 0 300 225;" xml:space="preserve" role="img"
-                        aria-labelledby="img0-title">
-                        <title id="img0-title">Brigitta Nóra Beauty sminkes portfólió weboldal képernyőképe</title>
-                        <image href="assets/mockup.webp" x="0" y="0" width="100%" height="162px" />
-                    </svg>
-                </div>
+                <img src="assets/mockup.webp" alt="Brigitta Nóra Beauty sminkes portfólió weboldal képernyőképe" width="564" height="1002" decoding="async">
             </div>
 
 
 
             <div class="story" id="s0">
                 <div class="info">
-                    <h2>Brigitta Nóra Beauty</h2>
+                    <h2 id="project-title-0">Brigitta Nóra Beauty</h2>
                     <p data-translate="workPageDescription">Brigi oldalán elragadó sminkművészeti alkotások várnak majd minden látogatóra.</p>
-                    <a target="_blank" rel="noopener" href="https://www.glowandmakeup.com" class="button_pro"
-                        data-translate="workPageVisitBtn">Megtekintés</a>
+                    <a target="_blank" rel="noopener" href="https://www.glowandmakeup.com" class="button_pro project-link" aria-describedby="project-title-0"><span data-translate="workPageViewProject">Projekt megtekintése</span><span class="project-link__arrow" aria-hidden="true">↗</span></a>
                 </div>
             </div>
         </article>
         <article class="container" id="c1">
             <div class="image" id="i1">
-                <div class="city">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 225"
-                        style="enable-background:new 0 0 300 225;" xml:space="preserve" role="img"
-                        aria-labelledby="img1-title">
-                        <title id="img1-title">Krucsó lovas weboldal laptop mockupon</title>
-                        <image href="assets/mockups2.webp" x="0" y="0" width="100%" height="162px" />
-                    </svg>
-
-
-                </div>
+                <img src="assets/mockups2.webp" alt="Krucsó lovas weboldal laptop mockupon" width="1068" height="922" decoding="async">
             </div>
             <div class="story" id="s1">
                 <div class="info">
-                    <h2>Krucsó</h2>
+                    <h2 id="project-title-1">Krucsó</h2>
                     <p data-translate="workPageDescription2">Lovas élet és tapasztalatok egy személyes oldalon.</p>
-                    <a target="_blank" rel="noopener" href="https://www.krucso.com" class="button_pro"
-                        data-translate="workPageVisitBtn">Megtekintés</a>
+                    <a target="_blank" rel="noopener" href="https://www.krucso.com" class="button_pro project-link" aria-describedby="project-title-1"><span data-translate="workPageViewProject">Projekt megtekintése</span><span class="project-link__arrow" aria-hidden="true">↗</span></a>
                 </div>
             </div>
         </article>
         <article class="container" id="c2">
             <div class="image" id="i2">
-                <div class="city">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 225"
-                        style="enable-background:new 0 0 300 225;" xml:space="preserve" role="img"
-                        aria-labelledby="img2-title">
-                        <title id="img2-title">Unicorn Magic Brew kávézó weboldal laptopon</title>
-                        <image href="assets/unicornCoffe.webp" x="0" y="0" width="100%" height="162px" />
-                    </svg>
-
-                </div>
+                <img src="assets/unicornCoffe.webp" alt="Unicorn Magic Brew kávézó weboldal laptopon" width="1200" height="800" decoding="async">
             </div>
             <div class="story" id="s2">
                 <div class="info">
-                    <h2>Unicorn Magic Brew</h2>
+                    <h2 id="project-title-2">Unicorn Magic Brew</h2>
                     <p data-translate="workPageDescription3">Egy kis varázslat úton van — a Unicorn Magic Brew kávézó hamarosan megérkezik Readingbe, Angliába.</p>
-                    <a target="_blank" rel="noopener" href="https://www.unicornmagicbrew.com" class="button_pro"
-                        data-translate="workPageVisitBtn">Megtekintés</a>
+                    <a target="_blank" rel="noopener" href="https://www.unicornmagicbrew.com" class="button_pro project-link" aria-describedby="project-title-2"><span data-translate="workPageViewProject">Projekt megtekintése</span><span class="project-link__arrow" aria-hidden="true">↗</span></a>
 
                 </div>
             </div>
@@ -244,6 +214,21 @@
 
 
     </main>
+
+    <div class="works-more">
+        <a class="works-more__link" href="https://www.behance.net/apollniaszakcs" target="_blank" rel="noopener"><span data-translate="workPageMore">Nézd meg a teljes portfóliót</span><span class="works-more__arrow" aria-hidden="true">↗</span></a>
+    </div>
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <img class="logo" src="/assets/big_transparent_5.webp" alt="DIV.Studio logó" loading="lazy">
+            <h3>DIV.Studio</h3>
+            <p class="footer-links">
+                <a href="#top" class="link-1" data-translate="backToTopBtn">Vissza a tetejére</a>
+                <a href="contact.html" id="contact-link" data-translate="contactText">Kapcsolat</a>
+            </p>
+            <p class="footer-company-name">DIV.Studio © 2023</p>
+        </div>
+    </footer>
 </body>
 
 </html>
