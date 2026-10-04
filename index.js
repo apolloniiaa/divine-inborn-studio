@@ -147,19 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ease: 'power2.out',
     delay: 1.8,
   });
-  gsap.to('label.navigation_button', {
-    opacity: 1,
-    y: 20,
-    duration: 1,
-    ease: 'power2.out',
-    delay: 2,
-  });
-
-  gsap.to('label.navigation_button', {
-    y: 0,
-    duration: 1,
-    ease: 'power2.out',
-  });
+  // (the menu button is visible immediately — no delayed fade-in; see navigation.css)
 
   gsap.set('.name', {
     opacity: 0,
@@ -187,9 +175,8 @@ document.addEventListener('DOMContentLoaded', function () {
         heroLine2: `I build.`,
         heroLine3: `I make it real.`,
         heroCta: `Explore my work`,
-        heroStatement1: `I turn creative ideas`,
-        heroStatement2: `into real-world`,
-        heroStatement3: `solutions.`,
+        heroStatement1: `From creative ideas`,
+        heroStatement2: `to real-world solutions.`,
         heroSub: `Websites, digital products and brand identities that genuinely support your brand's growth.`,
         intro: `Hello, I am a Product Designer with a frontend development background. I design websites, digital products, and brand identities with the goal of turning ideas into seamless, high-performing digital experiences. Here, you can explore my work, design approach, and professional journey.`,
         introSec: `Unique design meets smart development.`,
@@ -273,9 +260,8 @@ They’ll be available soon on my Etsy shop. Each design is thoughtfully created
         heroLine2: `Fejlesztek.`,
         heroLine3: `Megvalósítom.`,
         heroCta: `Munkáim`,
-        heroStatement1: `Kreatív ötletekből`,
-        heroStatement2: `valós megoldásokat`,
-        heroStatement3: `tervezek.`,
+        heroStatement1: `Kreatív ötletektől`,
+        heroStatement2: `a valós megoldásig.`,
         heroSub: `Weboldalak, digitális termékek és arculatok, amelyek valóban támogatják a márkád fejlődését.`,
         intro:
           'Szia! Product Designer vagyok, frontend fejlesztői háttérrel. Weboldalakat, digitális termékeket és arculatokat tervezek. Itt beleláthatsz a munkáimba, a szemléletembe és a szakmai utamba.',
@@ -660,5 +646,86 @@ document.addEventListener('DOMContentLoaded', function () {
         window.history.back();
       }
     });
+  });
+});
+
+// MENU OVERLAY (all pages, all viewport sizes)
+// The existing checkbox + label drive the overlay (CSS). This adds: keyboard access,
+// aria state, Esc to close, background scroll lock, and a smooth close before navigating.
+document.addEventListener('DOMContentLoaded', function () {
+  var toggle = document.getElementById('navi_toggle');
+  var button = document.querySelector('label.navigation_button');
+  var nav = document.querySelector('.navigation_nav');
+  if (!toggle || !button || !nav) return;
+  var root = document.documentElement;
+  var CLOSE_MS = 380; // matches the overlay fade-out in navigation.css
+
+  if (!nav.id) nav.id = 'site-menu';
+  button.setAttribute('role', 'button');
+  button.setAttribute('tabindex', '0');
+  button.setAttribute('aria-controls', nav.id);
+  button.setAttribute('aria-label', toggle.getAttribute('aria-label') || 'Menu');
+
+  function sync() {
+    var open = toggle.checked;
+    button.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) {
+      // keep the page from jumping when the scrollbar disappears
+      var sw = window.innerWidth - root.clientWidth;
+      document.body.style.paddingRight = sw > 0 ? sw + 'px' : '';
+      root.classList.add('nav-open');
+    } else {
+      root.classList.remove('nav-open');
+      document.body.style.paddingRight = '';
+    }
+  }
+  function setOpen(open, focusTarget) {
+    if (toggle.checked === open) return;
+    toggle.checked = open;
+    sync();
+    if (open) {
+      var first = nav.querySelector('.navigation_link');
+      if (first) setTimeout(function () { first.focus({ preventScroll: true }); }, 60);
+    } else if (focusTarget) {
+      focusTarget.focus({ preventScroll: true });
+    }
+  }
+
+  toggle.addEventListener('change', sync);
+  sync();
+
+  button.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+      e.preventDefault();
+      setOpen(!toggle.checked);
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if ((e.key === 'Escape' || e.key === 'Esc') && toggle.checked) setOpen(false, button);
+  });
+
+  // close the overlay smoothly, then follow the link
+  nav.addEventListener('click', function (e) {
+    var link = e.target.closest('a.navigation_link');
+    if (!link || !toggle.checked) return;
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if (link.target === '_blank') {
+      setOpen(false); // new tab opens normally; just close the menu here
+      return;
+    }
+    e.preventDefault();
+    setOpen(false);
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setTimeout(function () {
+      window.location.href = link.href;
+    }, reduce ? 0 : CLOSE_MS);
+  });
+
+  // coming back via the browser back button: never restore an open menu
+  window.addEventListener('pageshow', function () {
+    if (toggle.checked) {
+      toggle.checked = false;
+      sync();
+    }
   });
 });
